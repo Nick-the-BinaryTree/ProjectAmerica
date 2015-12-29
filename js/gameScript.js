@@ -1,4 +1,4 @@
-vvar marginX = window.innerWidth/4;
+var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/5;
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
@@ -23,6 +23,7 @@ $(document).ready(function(){
     setBlock("#b4");
     console.log("MarginX " + marginX);
     console.log("MarginY " + marginY);
+
     
 });
 
@@ -79,5 +80,7 @@ function updateScore(newScore){
     $( "p.scoreText" ).html("Score: "+newScore);
     currentScore+=newScore;
 }
+
+
 
 
