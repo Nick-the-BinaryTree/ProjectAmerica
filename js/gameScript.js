@@ -7,13 +7,13 @@ var deduction = 0.1; //percent deduction for wrong answers
 var speedBonus = 0.05; //percent bonus for each second left
 var stdScore = 100; //score for question without bonuses or deductions
 
-//time per question, in seconds
-var timeLen=10;
+var timeElapsed=0;
 //keeps track of score
 var currentScore=0;
 
 
 $(document).ready(function(){
+    startTimer();
     setBlock("#a1");
     setBlock("#a2");
     setBlock("#a3");
@@ -71,11 +71,13 @@ $(document).ready(function(){
     });
 });
 
+//currently set up to be called once at start of game. can be adjusted to pause
+//during loading if we can't load quickly enough
 function startTimer(){
-    var counter= timeLen;
+    var counter=0;
     $( "p.timeText" ).html("Time: "+counter);
     var timer= setInterval(function() {
-    counter--;
+    counter++;
     if(counter < 0) {
         nextQuestion();
         clearInterval(timer);
@@ -86,6 +88,7 @@ function startTimer(){
 }, 1000);
 
 }
+
 
 function nextQuestion(){
     //will eventually be implemented. for now exists only to test timer
@@ -119,7 +122,7 @@ function genY() {
 
 function calculateScore(numWrong, secondsLeft){
     var score = stdScore - (stdScore * deduction * numWrong);
-    score = score + (score * speedBonus * secondsLeft);
+    //time will also be factored in somehow 
     return score;
 
 }
