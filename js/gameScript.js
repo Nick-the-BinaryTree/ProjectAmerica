@@ -23,8 +23,20 @@ $(document).ready(function(){
     setBlock("#b4");
     console.log("MarginX " + marginX);
     console.log("MarginY " + marginY);
+    $( ".option" ).draggable({
+        containment: "window",
+        scroll: false
+    });
+    $(".answerBox").droppable({
+        accept: ".option",
+        hooverClass: "answerBoxHoover",
+        activeClass:"answerBoxActive",
+        drop: function() {
+        $( this )
+          .addClass( "answerBoxDropped" )
+      }
 
-    
+    });
 });
 
 function startTimer(){
@@ -80,7 +92,5 @@ function updateScore(newScore){
     $( "p.scoreText" ).html("Score: "+newScore);
     currentScore+=newScore;
 }
-
-
 
 

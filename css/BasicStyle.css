@@ -1,3 +1,12 @@
+*{
+    -webkit-touch-callout: none;
+   -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .topContainer{
     font-size: 1.5em;
     font-family: sans-serif;
@@ -27,8 +36,9 @@
     padding: .2em;
     margin: 1em;
 	text-align: center;
-	transition: 1s;
+	/*transition: 1s;*/
     position: absolute;
+    z-index: 1;
 }
 
 .optionA{
@@ -59,22 +69,27 @@
     font-size: 1.5em;
     font-family: sans-serif;
     width: 100%;
+    height: 14%;
     background: rgba(255, 255, 255, .5);
     position: absolute;
     bottom: 0%;
+
 }
 
 table{
     width: 100%;
     border: none;
+    height:100%;
 }
 
 .question1{
     text-align: center;
+    width: 25%;
 }
 
 .question2{
     text-align: center;
+    width: 25%;
 }
 
 body{
@@ -84,6 +99,30 @@ body{
   	-o-background-size: cover;
   	background-size: cover;
     overflow-x: hidden;
+}
+
+.answerBox{
+    width: 45%;
+    height: 105%;
+    border-radius: 1em;
+    padding: .2em;
+    margin: 1em;
+}
+
+.answerBox1{
+    background: rgba(235, 0, 0, .5);
+}
+
+.answerBox2{
+    background: rgba(0, 0, 255, .5);
+}
+
+.answerBoxActive{
+    background: rgb(255, 255, 255);;
+
+}
+.answerBoxDropped{
+    background: rgb(0,0,0);
 }
 
 
