@@ -133,8 +133,20 @@ body{
     height: 105%;
 
 }
-.answerBoxDropped{
-    background: rgb(0,0,0);
+.answerBox1Dropped{
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
+    box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
+    height: 105%;
+    
 }
+.answerBox2Dropped{
+    height: 105%;
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
+    box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
+}
+
+
 
 

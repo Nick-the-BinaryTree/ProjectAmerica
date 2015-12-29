@@ -12,6 +12,7 @@ var timeLen=10;
 //keeps track of score
 var currentScore=0;
 
+
 $(document).ready(function(){
     setBlock("#a1");
     setBlock("#a2");
@@ -25,17 +26,48 @@ $(document).ready(function(){
     console.log("MarginY " + marginY);
     $( ".option" ).draggable({
         containment: "window",
-        scroll: false
+        scroll: false,
     });
-    $(".answerBox").droppable({
-        accept: ".option",
-        hooverClass: "answerBoxHoover",
-        activeClass:"answerBoxActive",
-        drop: function() {
-        $( this )
-          .addClass( "answerBoxDropped" )
-      }
 
+
+    $(".answerBox1").droppable({
+        accept: ".optionA",
+        activeClass:"answerBox1Active",
+        drop: function(event, ui) {
+            if(isCorrect("#"+ui.draggable.attr("id"))){
+                $(this).addClass( "answerBox1Dropped" )
+                ui.draggable.position({
+                    my: "center",
+                    at: "center",
+                    of: $(this)
+                    });
+
+            }
+            else{
+                setBlock("#"+ui.draggable.attr("id"));
+            }
+
+      }
+      });
+
+      $(".answerBox2").droppable({
+        accept: ".optionB",
+        activeClass:"answerBox2Active",
+        drop: function(event, ui) {
+            if(isCorrect("#"+ui.draggable.attr("id"))){
+                $(this).addClass( "answerBox2Dropped" )
+                ui.draggable.position({
+                    my: "center",
+                    at: "center",
+                    of: $(this)
+                    });
+
+            }
+            else{
+                setBlock("#"+ui.draggable.attr("id"));
+            }
+
+      }
     });
 });
 
@@ -58,6 +90,11 @@ function startTimer(){
 function nextQuestion(){
     //will eventually be implemented. for now exists only to test timer
     console.log("next question!");
+}
+
+function isCorrect(ans){
+    //temporary implementation 
+    return $(ans).hasClass("correct");
 }
 
 function setBlock(tile) {
