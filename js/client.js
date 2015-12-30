@@ -57,17 +57,18 @@ Client.prototype.get = function(uri, callback) {
 };
 
 Client.prototype.connect = function(name, onConnect) {
+    var client = this;
     this.get("/api/connect?name=" + name, function(response) {
 	if (response.type == "connected") {
-	    this._id = response.data.id;
+	    client._id = response.data.id;
 	    
 	    // Start the polling for new events
-	    var poller = this.checkEvents.bind(this);
+	    var poller = client.checkEvents.bind(client);
 	    
 	    // check for new events every 500ms
-	    this._pollerID = setInterval(poller, 500);
+	    client._pollerID = setInterval(poller, 500);
 
-	    onConnect();
+	    if (onConnect) onConnect();
 	} else if (response.type == "error") {
 	    this.handleError(response);
 	}
@@ -77,6 +78,9 @@ Client.prototype.connect = function(name, onConnect) {
 Client.prototype.disconnect = function(onDisconnect) {
     this.get("/api/disconnect?id=" + this._id, function(response) {
 	if (response.type == "disconnected") {
+	    clearInterval(this._pollerID);
+	    this._pollerID = -1;
+
 	    onDisconnect();
 	} else if (response.type == "error") {
 	    this.handleError(response);
@@ -165,8 +169,15 @@ Client.prototype.startGame = function(gameName, isPublic, numQuestions, sections
     });    
 };
 
+// game can either be a game or an id
 Client.prototype.joinGame = function(game, onJoined) {
-    this.get("/api/joinGame?id=" + this._id + "&gameID=" + game.getID(), function(response) {
+    var gameID = 0;
+    if (typeof(game) === "number") {
+	gameID = game;
+    } else {
+	gameID = game.getID();
+    }
+    this.get("/api/joinGame?id=" + this._id + "&gameID=" + gameID, function(response) {
 	if (response.type == "joined") {
 	    onJoined();
 	} else if (response.type == "error") {
