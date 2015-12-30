@@ -1,22 +1,55 @@
 {
 	“era1”: {
 		“battles”:{
-			“7 Year War”:{
-				“year”:”1754-1763”,
-				“location”:”Kind of everywhere”,
-					“result”:{
-						“victor”:”British”,
-						“loser”:”French”
-					},
-						“notables”:{
-							“fact1”:”Opened Mississippi Valley to westward expansion”,
-							“fact2”:”France bitterness resulted in American-French millitary alliance”
-						},
-					},
-			“Battle of Bunker Hill”:{
-
+			“Battles of Lexington and Concord”:{
+				“year”:”1775”,
+				“location”:”Massachusetts”,
+				“result”:{
+					“victor”:”British and Colonists (respectively)”,
+					“loser”:”Colonists and British (respectively)”
+				},
+				“notables”:{
+					“fact1”:”Start of revolutionary war”,
+					“fact2”:”\"Shot heard 'round the world\"”
+				},
 			},
-
+			“Fort Ticonderoga”:{
+				“year”:”1775”,
+				“location”:”New York”,
+				“result”:{
+					“victor”:”Americans”,
+					“loser”:”British”
+				},
+				“notables”:{
+					“fact1”:”This location contained a much needed military equipment (including cannons)”,
+					“fact2”:”First rebel victory of the Revolutionary War”
+				},
+			},
+			"Battle of Bunker Hill":{
+				"year":"1775",
+				"location":"Massachusetts",
+				"result":{
+					"victor":"Americans",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"British casualities over a thousand, Americans only 400",
+					"fact2":"Americans ordered not to fire until they could see \"the whites of their eyes\"",
+				},
+				
+			},
+			"Battle of Long Island":{
+				"year":"1776",
+				"location":"New York",
+				"result":{
+					"victor":"British",
+					"loser":"Americans"
+				},
+				"notables":{
+					"fact1":"Severe defeat for Americans (outnumbered 2-1)"
+				},
+			},
+			
 		},
 
 		“inventions” : {
@@ -25,7 +58,7 @@
 				“notables”:{
 					“fact1”:”No one knew what a potato was until the 20th    century.”,
 
-				}
+				},
 			},
 
 		},
@@ -36,7 +69,7 @@
 				“notables”:{
 					“fact1”:”3 parties is fun”,
 					“fact2”:”Theodore should have won”
-				}
+				},
 			},
 
 		},
