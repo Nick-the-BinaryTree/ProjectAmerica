@@ -2,17 +2,17 @@
 	“era1”: {
 	“battles”:{
 		“7 Year War”:{
-	“year”:”1754-1763”,
-	“location”:”'Kind of everywhere'”
-	“result”:{
-	“victor”:”British”,
-	“loser”:”French”
-},
-“notables”:{
-	“fact1”:”Opened Mississippi Valley to westward expansion”,
-	“fact2”:”France bitterness t”
-}
-},
+			“year”:”1754-1763”,
+			“location”:”Kind of everywhere”,
+				“result”:{
+					“victor”:”British”,
+					“loser”:”French”
+				},
+					“notables”:{
+						“fact1”:”Opened Mississippi Valley to westward expansion”,
+						“fact2”:”France bitterness resulted in American-French millitary alliance”
+					},
+				},
 “Battle of Bunker Hill”:{
 	...
 },
