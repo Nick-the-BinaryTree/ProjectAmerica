@@ -59,15 +59,15 @@ body{
 }
 
 .optionA:hover{ 
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
-    box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
 }
 
 .optionB:hover{
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
-    box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
 }
 
 .optionText{
@@ -119,33 +119,33 @@ body{
 }
 
 .answerBox1Active{
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
-    box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
     border-radius: 1em;
     height: 105%;
 
 }
 .answerBox2Active{
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
-    box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
     border-radius: 1em;
     height: 105%;
 
 }
 .answerBox1Dropped{
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
-    box-shadow: 0px 0px 15px 2px rgba(0,21,255,1);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
     height: 105%;
     
 }
 .answerBox2Dropped{
     height: 105%;
-    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
-    -moz-box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
-    box-shadow: 0px 0px 15px 2px rgba(255,0,0,1);
+    -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
 }
 
 #title{
