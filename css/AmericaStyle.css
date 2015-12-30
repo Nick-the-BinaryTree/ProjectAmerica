@@ -154,7 +154,7 @@ body{
     border-radius: 1em;
 }
 
-#title{
+.title{
     font-size: 8em;
     color: #181818;
     width: 100%;

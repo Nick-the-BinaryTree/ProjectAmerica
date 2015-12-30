@@ -18,11 +18,15 @@ var q1=false;
 var q2=false;
 
 //Temporary question control. count1 is odd, count2 is even
+var qSet = 0;
 var count1=-1;
 var count2=0;
 
+//Question Limit
+var qLimit;
+
 //Game settings
-var selection; //[era id string, battles boolean, inventions boolean, elections boolean, court boolean, other boolean, length id string]
+var selection; //[era id string, battles boolean, inventions boolean, elections boolean, court boolean, other boolean, length string]
 
 
 $(document).ready(function(){
@@ -46,19 +50,37 @@ function gameSetup(){
             var court = $('#court')[0].checked;
             var other = $('#other')[0].checked;
             var length = $('input[name="length"]:checked', '#lengthForm').val();
+            setQuestionLimit(length);
             var choice = [era, battles, inventions, elections, court, other, length];
-            alert(choice);
             $(".pregame").hide();
             $(document.body).css('background-image','url(img/CrossingDelaware.jpg)');
             $(".game").show();
-            komalSetup();
+            gameStart();
             return choice;
         });
     });
 
 }
 
-function komalSetup(){
+function setQuestionLimit(lengthSelect){
+    var limit = lengthSelect;
+    alert (limit);
+    
+    if(limit==="quick"){
+        qLimit = 10;
+    }
+    else if(limit==="medium"){
+        qLimit = 20;
+    }
+    else if(limit==="long"){
+        qLimit = 30;
+    }
+    else{
+        qLimit = -1; //Code to use every event
+    }
+}
+
+function gameStart(){
     startTimer();
     questionSetup();
     dragManager();
@@ -81,7 +103,7 @@ function dragManager(){
                     of: $(this)
                     });
                 if(q2){ //If other question was also answered correctly, go to next set
-                    questionSetUp();
+                    questionSetup();
                 }
 
             }
@@ -105,7 +127,7 @@ function dragManager(){
                     of: $(this)
                     });
                 if(q1){
-                    questionSetUp();
+                    questionSetup();
                 }
 
             }
@@ -126,48 +148,52 @@ function dragManager(){
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
 function getQuestion(){
+    qSet++;
     count1+=2;
     count2+=2;
-    return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2];
+    return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2]; //Remember to keep the qSet increments but not this
 
 }
 
 function questionSetup(){
+    if(qSet <= qLimit){
+        var qa = getQuestion();
+        $('#questionBox td').eq(0).html(qa[0]);
 
-    var qa = getQuestion();
-    $('#questionBox td').eq(0).html(qa[0]);
+        $('#questionBox td').eq(2).html(qa[5]);
 
-    $('#questionBox td').eq(2).html(qa[5]);
+        $( "#a1" ).html(qa[1]);
+        $( "#a2" ).html(qa[2]);
+        $( "#a3" ).html(qa[3]);
+        $( "#a4" ).html(qa[4]);
+        $( "#b1" ).html(qa[6]);
+        $( "#b2" ).html(qa[7]);
+        $( "#b3" ).html(qa[8]);
+        $( "#b4" ).html(qa[9]);
 
-    $( "#a1" ).html(qa[1]);
-    $( "#a2" ).html(qa[2]);
-    $( "#a3" ).html(qa[3]);
-    $( "#a4" ).html(qa[4]);
-    $( "#b1" ).html(qa[6]);
-    $( "#b2" ).html(qa[7]);
-    $( "#b3" ).html(qa[8]);
-    $( "#b4" ).html(qa[9]);
-
-    setBlock("#a1");
-    setBlock("#a2");
-    setBlock("#a3");
-    setBlock("#a4");
-    setBlock("#b1");
-    setBlock("#b2");
-    setBlock("#b3");
-    setBlock("#b4");
-    //$(".option").each(animateDiv);
-    console.log("MarginX " + marginX);
-    console.log("MarginY " + marginY);
-    $( ".option" ).draggable({
-        containment: "window",
-        scroll: false,
-    });
-    q1=false;
-    q2=false;
-
-
+        setBlock("#a1");
+        setBlock("#a2");
+        setBlock("#a3");
+        setBlock("#a4");
+        setBlock("#b1");
+        setBlock("#b2");
+        setBlock("#b3");
+        setBlock("#b4");
+        //$(".option").each(animateDiv);
+        console.log("MarginX " + marginX);
+        console.log("MarginY " + marginY);
+        $( ".option" ).draggable({
+            containment: "window",
+            scroll: false,
+        });
+        q1=false;
+        q2=false;
+    }
+    else{
+        toScore();
+    }
 }
+
 //currently set up to be called once at start of game. can be adjusted to pause
 //during loading if we can't load quickly enough
 function startTimer(){
@@ -191,6 +217,34 @@ function startTimer(){
 function isCorrect(ans){
     //temporary implementation 
     return $(ans).hasClass("correct");
+}
+
+function toScore(){
+    $("#yourScore").text("Your Score: " + currentScore);
+    $(".game").hide();
+    $(".scoreBoard").show();
+    
+    $(".returnOption").click(function(){
+        resetGame();
+        backToMenu();
+    });
+}
+
+function backToMenu(){
+    $(".scoreBoard").hide();
+    $(".pregame").show();
+    selection = gameSetup(); //The cycle never ends! What is life?
+}
+
+function resetGame(){
+    currentScore = 0;
+    qSet = 0;
+    count1=-1;
+    count2=0;
+    //Stop timer from counting further, please. Komal, do you want to make it global?
+    timeElapsed = 0;
+    
+    $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
 }
 
 function setBlock(tile) {
