@@ -14,7 +14,12 @@
 }
 },
 “Battles of Lexington and Concord”:{
-	
+	"year":"",
+	"location":""
+	"result" :{
+		"victor":"",
+		"loser":"",
+	}
 },
 
 },
