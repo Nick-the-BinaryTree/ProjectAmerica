@@ -46,10 +46,94 @@
 					"loser":"Americans"
 				},
 				"notables":{
-					"fact1":"Severe defeat for Americans (outnumbered 2-1)"
+					"fact1":"Severe defeat for Americans (outnumbered 2-1)",
+					"fact2":"Americans evacuate Manhattan"
 				},
 			},
-			
+			"Battle of Trenton":{
+				"year":"1776",
+				"locaton": "New Jersey",
+				"result":{
+					"victor":"Americans",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"On Christmas, surprise raid on British Hessians (German mercenaries)",
+					"fact2":"1000 taken prisoner, only 6 American soldiers wounded"
+				},
+			},
+			"Battle of Saratoga":{
+				"year":"1777",
+				"location":"New York",
+				"result":{
+					"victor":"Americans",
+					"loser":"British",
+				},
+				"notables":{
+					"fact1":"First major American victory of the Revolutionary War",
+					"fact2":"600 British casualties while American losses are only 150",
+				},
+			},
+			"Siege of Rhode Island":{
+				"year":"1778",
+				"location":"Rhode Island",
+				"result":{
+					"victor":"British",
+					"loser":"Americans and French",
+				},
+				"notables":{
+					"fact1":"Bad weather and delays of the land troops resulted in failure",
+					"fact2":"This showed that alliance with France would not speedily end the war",
+				},
+			},
+			"Battle of Charleston":{
+				"year":"1780",
+				"location":"South Carolina",
+				"result":{
+					"victor":"British",
+					"loser":"Americans",
+				},
+				"notables":{
+					"fact1":"The worst American defeat of the Revolutionary War",
+					"fact2":"Charleston and the Americans' 5400-man garrison captured, British losses only 225",
+				},
+			},
+			"Battle of Cowpens":{
+				"year":"1781",
+				"location":"South Carolina",
+				"result":{
+					"victor":"Americans",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"The battle lasted a little over one hour and was an overwhelming American victory",
+					"fact2":"Stopped British offensive momentum in the South"
+				},
+			},
+			"Battle of Yorktown":{
+				"year":"1781",
+				"location":"New York",
+				"result":{
+					"victor":"Americans and French",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"Americans lay siege to Yorktown until British surrender",
+					"fact2":"Last battle of the Revolutionary war"
+				},
+			},
+			"Battle of":{
+				"year":"17",
+				"location":"",
+				"result":{
+					"victor":"",
+					"loser":""
+				},
+				"notables":{
+					"fact1":"",
+					"fact2":""
+				},
+			},
 		},
 
 		“inventions” : {
