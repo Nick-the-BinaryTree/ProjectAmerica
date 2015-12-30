@@ -122,29 +122,21 @@
 					"fact2":"Last battle of the Revolutionary war"
 				},
 			},
-			"Battle of":{
-				"year":"17",
-				"location":"",
-				"result":{
-					"victor":"",
-					"loser":""
-				},
-				"notables":{
-					"fact1":"",
-					"fact2":""
-				},
-			},
 		},
 
 		“inventions” : {
-			“potato”:{
-				“year”:”1972”,
-				“notables”:{
-					“fact1”:”No one knew what a potato was until the 20th    century.”,
-
+			"Lighting rod":{
+				"year":"1752",
+				"notables":{
+					"fact1":"protected homes from lighting strikes"
 				},
 			},
-
+			"Cotton Gin"{
+				"year":"1794",
+				"notables":{
+					"fact1":"Offered Southern planters a justification to maintain and expand slavery"
+				},
+			},
 		},
 
 		“elections” : {
