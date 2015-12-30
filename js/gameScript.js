@@ -1,3 +1,4 @@
+
 //Sizing
 var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/4;
@@ -12,13 +13,17 @@ var currentScore=0;
 
 //Timer
 var timeElapsed=0;
+//true during gameplay, for timer use
+var inGame;
+
 
 //Set to false at the start of question, true when correct: control gameplay
 var q1=false;
 var q2=false;
 
+//controls question number
+var qSet = 1;
 //Temporary question control. count1 is odd, count2 is even
-var qSet = 0;
 var count1=-1;
 var count2=0;
 
@@ -67,7 +72,7 @@ function setQuestionLimit(lengthSelect){
     alert (limit);
     
     if(limit==="quick"){
-        qLimit = 10;
+        qLimit = 1;
     }
     else if(limit==="medium"){
         qLimit = 20;
@@ -81,6 +86,7 @@ function setQuestionLimit(lengthSelect){
 }
 
 function gameStart(){
+    inGame =true;
     startTimer();
     questionSetup();
     dragManager();
@@ -137,18 +143,13 @@ function dragManager(){
 
         }
     });
-
-      /*if($("#box1").hasClass("answerBox1Dropped") && $("#box2").hasClass("answerBox2Dropped"){
-        console.log("pls work");
-      }
-      */
-      console.log($("#box1").hasClass("answerBox1Dropped"));
 }
 
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
 function getQuestion(){
     qSet++;
+    //everything after this is temporary
     count1+=2;
     count2+=2;
     return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2]; //Remember to keep the qSet increments but not this
@@ -194,22 +195,15 @@ function questionSetup(){
     }
 }
 
-//currently set up to be called once at start of game. can be adjusted to pause
-//during loading if we can't load quickly enough
+//called once at start of game
 function startTimer(){
-    var counter=0;
-    $( "p.timeText" ).html("Time: "+counter);
+    $( "p.timeText" ).html("Time: "+timeElapsed);
     var timer= setInterval(function() {
-    counter++;
-    if(counter < 0) {
-        nextQuestion(); //KOMAL, THIS DOESN'T EXIST. Best wishes, Nick
-        clearInterval(timer);
-    } 
-    else {
-        $( "p.timeText" ).html("Time: "+counter);
+    timeElapsed++;
+    if(inGame){
+        $( "p.timeText" ).html("Time: "+timeElapsed);
     }
-}, 1000);
-
+    }, 1000);
 }
 
 
@@ -223,7 +217,7 @@ function toScore(){
     $("#yourScore").text("Your Score: " + currentScore);
     $(".game").hide();
     $(".scoreBoard").show();
-    
+    inGame=false;
     $(".returnOption").click(function(){
         resetGame();
         backToMenu();
@@ -241,7 +235,6 @@ function resetGame(){
     qSet = 0;
     count1=-1;
     count2=0;
-    //Stop timer from counting further, please. Komal, do you want to make it global?
     timeElapsed = 0;
     
     $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
