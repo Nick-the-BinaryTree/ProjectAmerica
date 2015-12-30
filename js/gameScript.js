@@ -11,24 +11,18 @@ var timeElapsed=0;
 //keeps track of score
 var currentScore=0;
 
+//set to false at the start of question, true when correct: control gameplay
+var q1=false;
+var q2=false;
+
+//temporary question control. count1 is odd, count2 is even
+var count1=-1;
+var count2=0;
+
 
 $(document).ready(function(){
     startTimer();
-    setBlock("#a1");
-    setBlock("#a2");
-    setBlock("#a3");
-    setBlock("#a4");
-    setBlock("#b1");
-    setBlock("#b2");
-    setBlock("#b3");
-    setBlock("#b4");
-	//$(".option").each(animateDiv);
-    console.log("MarginX " + marginX);
-    console.log("MarginY " + marginY);
-    $( ".option" ).draggable({
-        containment: "window",
-        scroll: false,
-    });
+    questionSetUp();
 
 
     $(".answerBox1").droppable({
@@ -36,12 +30,16 @@ $(document).ready(function(){
         activeClass:"answerBox1Active",
         drop: function(event, ui) {
             if(isCorrect("#"+ui.draggable.attr("id"))){
+                q1=true;
                 $(this).addClass( "answerBox1Dropped" )
                 ui.draggable.position({
                     my: "center",
                     at: "center",
                     of: $(this)
                     });
+                if(q2){
+                    questionSetUp();
+                }
 
             }
             else{
@@ -56,22 +54,78 @@ $(document).ready(function(){
         activeClass:"answerBox2Active",
         drop: function(event, ui) {
             if(isCorrect("#"+ui.draggable.attr("id"))){
+                q2=true;
                 $(this).addClass( "answerBox2Dropped" )
                 ui.draggable.position({
                     my: "center",
                     at: "center",
                     of: $(this)
                     });
+                if(q1){
+                    questionSetUp();
+                }
 
             }
             else{
                 setBlock("#"+ui.draggable.attr("id"));
             }
 
-      }
+        }
     });
+
+      /*if($("#box1").hasClass("answerBox1Dropped") && $("#box2").hasClass("answerBox2Dropped"){
+        console.log("pls work");
+      }
+      */
+      console.log($("#box1").hasClass("answerBox1Dropped"))
+
 });
 
+//temporary implementation for testing. 
+//returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
+function getQuestion(){
+    count1+=2;
+    count2+=2;
+    return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2];
+
+}
+
+function questionSetUp(){
+
+    var qa = getQuestion();
+    $('#questionBox td').eq(0).html(qa[0]);
+
+    $('#questionBox td').eq(2).html(qa[5]);
+
+    $( "#a1" ).html(qa[1]);
+    $( "#a2" ).html(qa[2]);
+    $( "#a3" ).html(qa[3]);
+    $( "#a4" ).html(qa[4]);
+    $( "#b1" ).html(qa[6]);
+    $( "#b2" ).html(qa[7]);
+    $( "#b3" ).html(qa[8]);
+    $( "#b4" ).html(qa[9]);
+
+    setBlock("#a1");
+    setBlock("#a2");
+    setBlock("#a3");
+    setBlock("#a4");
+    setBlock("#b1");
+    setBlock("#b2");
+    setBlock("#b3");
+    setBlock("#b4");
+    //$(".option").each(animateDiv);
+    console.log("MarginX " + marginX);
+    console.log("MarginY " + marginY);
+    $( ".option" ).draggable({
+        containment: "window",
+        scroll: false,
+    });
+    q1=false;
+    q2=false;
+
+
+}
 //currently set up to be called once at start of game. can be adjusted to pause
 //during loading if we can't load quickly enough
 function startTimer(){
@@ -91,10 +145,6 @@ function startTimer(){
 }
 
 
-function nextQuestion(){
-    //will eventually be implemented. for now exists only to test timer
-    console.log("next question!");
-}
 
 function isCorrect(ans){
     //temporary implementation 
@@ -109,8 +159,7 @@ function setBlock(tile) {
         "left": x,
         "top": y       
      });
-	 
-	
+ 
 }
 
 function genX() {
@@ -120,7 +169,7 @@ function genX() {
 
 function genY() {
     var y = Math.floor(Math.random() * (window.innerHeight-marginY*2))+marginY;
-	return y;
+return y;
 }
 
 /*http://codepen.io/anon/pen/myyzXV
@@ -129,7 +178,6 @@ function animateDiv(){
     var newq = [makeNewPosition()];
     var oldq = $('.option').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
-	
     $('.option').animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
     });
@@ -164,18 +212,4 @@ function calcSpeed(prev, next) {
 
 }
 */
-
-
-function calculateScore(numWrong, secondsLeft){
-    var score = stdScore - (stdScore * deduction * numWrong);
-    //time will also be factored in somehow 
-    return score;
-
-}
-
-function updateScore(newScore){
-   
-    $( "p.scoreText" ).html("Score: "+newScore);
-    currentScore+=newScore;
-}
 
