@@ -1,6 +1,7 @@
 var selection;
 $(document).ready(function(){
     var selection = gameSetup(); //era id, events booleans, length id
+
 });
 
 function gameSetup(){
@@ -21,7 +22,10 @@ function gameSetup(){
             var length = $('input[name="length"]:checked', '#lengthForm').val();
             var choice = [era, battles, inventions, elections, court, other, length];
             alert(choice);
+            $(".pregame").hide();
+            $(".game").show();
             return choice;
         });
     });
+
 }

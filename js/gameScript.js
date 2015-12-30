@@ -72,13 +72,6 @@ $(document).ready(function(){
     });
 });
 
-<<<<<<< HEAD
-function setBlock(block) {
-    var x = genX();
-    var y = genY();
-	
-    $(block).css({
-=======
 //currently set up to be called once at start of game. can be adjusted to pause
 //during loading if we can't load quickly enough
 function startTimer(){
@@ -113,7 +106,6 @@ function setBlock(tile) {
     var y = genY();
     
     $(tile).css({
->>>>>>> origin/master
         "left": x,
         "top": y       
      });
@@ -128,14 +120,13 @@ function genX() {
 
 function genY() {
     var y = Math.floor(Math.random() * (window.innerHeight-marginY*2))+marginY;
-<<<<<<< HEAD
 	return y;
 }
 
-//http://codepen.io/anon/pen/myyzXV
-/*
+/*http://codepen.io/anon/pen/myyzXV
+
 function animateDiv(){
-    var newq = makeNewPosition();
+    var newq = [makeNewPosition()];
     var oldq = $('.option').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
 	
@@ -173,9 +164,7 @@ function calcSpeed(prev, next) {
 
 }
 */
-=======
-    return y;
-}
+
 
 function calculateScore(numWrong, secondsLeft){
     var score = stdScore - (stdScore * deduction * numWrong);
@@ -190,5 +179,3 @@ function updateScore(newScore){
     currentScore+=newScore;
 }
 
-
->>>>>>> origin/master

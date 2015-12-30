@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
 <div class = "topContainer">
 	<div class = "score">
 		<p class = "scoreText">Score: 42</p>
@@ -25,7 +24,7 @@
 
 <div class = "answersContainer">
 
-	<div class = "optionA option" id = "a1">
+	<div class = "optionA option correct" id = "a1">
 		<p class = "optionText">Correct Answer Q1</p>
 	</div>
 	
@@ -41,14 +40,14 @@
 		<p class = "optionText">Wrong Answer Q1</p>
 	</div>
 	
-	<div class = "optionB option" id = "b1">
+	<div class = "optionB option correct" id = "b1">
 		<p class = "optionText">Correct Answer Q2</p>
 	</div>
 	
 	<div class = "optionB option" id = "b2">
 		<p class = "optionText">Wrong Answer Q2</p>
 	</div>
-	
+	 
 	<div class = "optionB option" id = "b3">
 		<p class = "optionText">Wrong Answer Q2</p>
 	</div>
@@ -61,16 +60,18 @@
 
 <div class = "bottomContainer">
     
-    <table border="1">
+    <table>
     <tr>
 	   <td class = "question1"> <p class = "questionText">What is America?</p></td>
+	   <td class ="answer1"> <div class ="answerBox answerBox1"> </div></td>
 	   <td class = "question2"><p class = "questionText">Why a bald eagle?</td>
+	    <td class ="answer2"> <div class ="answerBox answerBox2"> </div></td>
     </tr>
     </table>
-<div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="js/gameScript.js"></script>
 </div>
 </body>
