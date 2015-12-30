@@ -11,7 +11,7 @@
 				“notables”:{
 					“fact1”:”Start of revolutionary war”,
 					“fact2”:”Paul Revere’s midnight ride to Concord warned the people in advance”
-				},
+				}
 			},
 			“Fort Ticonderoga”:{
 				“year”:”1775”,
@@ -23,7 +23,7 @@
 				“notables”:{
 					“fact1”:”This location contained a much needed military equipment (including cannons)”,
 					“fact2”:”First rebel victory of the Revolutionary War”
-				},
+				}
 			},
 			"Battle of Bunker Hill":{
 				"year":"1775",
@@ -34,9 +34,8 @@
 				},
 				"notables":{
 					"fact1":"British casualities over a thousand, Americans only 400",
-					"fact2":"Americans ordered not to fire until they could see the whites of their eyes",
-				},
-				
+					"fact2":"Americans ordered not to fire until they could see the whites of their eyes"
+				}
 			},
 			"Battle of Long Island":{
 				"year":"1776",
@@ -48,7 +47,7 @@
 				"notables":{
 					"fact1":"Severe defeat for Americans (outnumbered 2-1)",
 					"fact2":"Americans evacuate Manhattan"
-				},
+				}
 			},
 			"Battle of Trenton":{
 				"year":"1776",
@@ -60,7 +59,7 @@
 				"notables":{
 					"fact1":"On Christmas, surprise raid on British Hessians (German mercenaries)",
 					"fact2":"1000 taken prisoner, only 6 American soldiers wounded"
-				},
+				}
 			},
 			"Battle of Saratoga":{
 				"year":"1777",
@@ -71,8 +70,8 @@
 				},
 				"notables":{
 					"fact1":"First major American victory of the Revolutionary War",
-					"fact2":"600 British casualties while American losses are only 150",
-				},
+					"fact2":"600 British casualties while American losses are only 150"
+				}
 			},
 			"Siege of Rhode Island":{
 				"year":"1778",
@@ -83,8 +82,8 @@
 				},
 				"notables":{
 					"fact1":"Bad weather and delays of the land troops resulted in failure",
-					"fact2":"This showed that alliance with France would not speedily end the war",
-				},
+					"fact2":"This showed that alliance with France would not speedily end the war"
+				}
 			},
 			"Battle of Charleston":{
 				"year":"1780",
@@ -95,8 +94,8 @@
 				},
 				"notables":{
 					"fact1":"The worst American defeat of the Revolutionary War",
-					"fact2":"Charleston and the Americans' 5400-man garrison captured, British losses only 225",
-				},
+					"fact2":"Charleston and the Americans' 5400-man garrison captured, British losses only 225"
+				}
 			},
 			"Battle of Cowpens":{
 				"year":"1781",
@@ -108,7 +107,7 @@
 				"notables":{
 					"fact1":"The battle lasted a little over one hour and was an overwhelming American victory",
 					"fact2":"Stopped British offensive momentum in the South"
-				},
+				}
 			},
 			"Battle of Yorktown":{
 				"year":"1781",
@@ -120,8 +119,8 @@
 				"notables":{
 					"fact1":"Americans lay siege to Yorktown until British surrender",
 					"fact2":"Last battle of the Revolutionary war"
-				},
-			},
+				}
+			}
 		},
 
 		“inventions” : {
@@ -129,41 +128,77 @@
 				"year":"1752",
 				"notables":{
 					"fact1":"protected homes from lighting strikes"
-				},
+				}
 			},
 			"Cotton Gin"{
 				"year":"1794",
 				"notables":{
 					"fact1":"Offered Southern planters a justification to maintain and expand slavery"
-				},
-			},
+				}
+			}
 		},
 
 		“elections” : {
-			“1912”:{
-				“result”:”Democrat Wilson defeated Bull Moose Roosevelt and Republican Taft”,
+			“1789”:{
+				“result”:”Washington defeated Federalist Adams”,
 				“notables”:{
-					“fact1”:”3 parties is fun”,
-					“fact2”:”Theodore should have won”
-				},
+					“fact1”:”The winner was reluctant to become president due to raging debates concerning the new government”,
+					“fact2”:”The new president was careful to avoid any symbolic references to European monarchy”
+				}
 			},
-
+			"1792":{
+				"result":"Washington defeated Adams again",
+				"notables":{
+					"fact1":"The winner was re-elected unanimously by the Electoral College",
+					"fact2":"Two political parties emerged during this election, the Federalists and the Democratic-Republicans"
+				}
+			},
+			"1796":{
+				"result":"Federalist Adams defeated Democratic-Republican Jefferson",
+				"notables":{
+					"fact1":"Washington refused a third term",
+					"fact2":"Only election cycle to elect a President and Vice President from opposing parties"
+				}
+			}
 		},
 
 		“court” : {
-			“Suave vs Undead Soul He Harassed”:{
-					“year”:”2006”,
-					“ruling”:”Suave ran away”
-			},
+			“Judiciary Act”:{
+					“year”:”1789”,
+					“ruling”:”Created Judiciary Branch”
+			}
 
-		},
+		}
 
 		“other” : {
-			“Giant Tortoise Attacks North Dakota”:{
-				“year”:”1884”,
-				“significance”: “No one notice that the economy of North Dakota was permanently stunted”
+			“Boston Massacre”:{
+				“year”:”1770”,
+				“significance”: “A milestone in turning colonial sentiment against British authority”
 			},
-			
+			"Boston Tea Party":{
+				"year":"1773",
+				"significance": "Culmination of a resistance movement against the Tea Act (no taxation without representation)"
+			},
+			"Publication of Thomas Paine's 'Common Sense'":{
+				"year": "1776",
+				"significance":"Provided strong arguments for America’s independance, read by many"
+			},
+			"United States Declaration of Independance":{
+				"year":"1776",
+				"significance":"Officially justified the people's right to revolt against the British"
+			}
+			"Treaty of Paris":{
+				"year":"1783-1784",
+				"significance":"Ended the Revolutionary War and recognized American independence"
+			},
+			"Northwest Ordinance":{
+				"year":"1787",
+				"significance":"Established formal procedures for transforming territories into states, and includes a Bill of Rights"
+			},
+			"Bill of Rights":{
+				"year":"1789",
+				"significance":"List of fundamental rights of U.S. citizens and serves to protect them from government infringement"
+			}
 		}
 	
 	},
