@@ -1,3 +1,4 @@
+//Sizing
 var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/4;
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -6,25 +7,67 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var deduction = 0.1; //percent deduction for wrong answers
 var speedBonus = 0.05; //percent bonus for each second left
 var stdScore = 100; //score for question without bonuses or deductions
-
-var timeElapsed=0;
 //keeps track of score
 var currentScore=0;
 
-//set to false at the start of question, true when correct: control gameplay
+//Timer
+var timeElapsed=0;
+
+//Set to false at the start of question, true when correct: control gameplay
 var q1=false;
 var q2=false;
 
-//temporary question control. count1 is odd, count2 is even
+//Temporary question control. count1 is odd, count2 is even
 var count1=-1;
 var count2=0;
 
+//Game settings
+var selection; //[era id string, battles boolean, inventions boolean, elections boolean, court boolean, other boolean, length id string]
+
 
 $(document).ready(function(){
+    selection = gameSetup(); //era id, events booleans, length id
+    //Komal's setup methods done in gameSetup to avoid timer starting before game start, etc
+
+});
+
+function gameSetup(){
+    $(".eraOption").click(function(){
+        
+        var era = this.id;
+        
+        $(".eraOption").hide();
+        $(".settings").show();
+        
+        $(".goButton").click(function(){
+            var battles = $('#battles')[0].checked;
+            var inventions = $('#inventions')[0].checked;
+            var elections = $('#elections')[0].checked;
+            var court = $('#court')[0].checked;
+            var other = $('#other')[0].checked;
+            var length = $('input[name="length"]:checked', '#lengthForm').val();
+            var choice = [era, battles, inventions, elections, court, other, length];
+            alert(choice);
+            $(".pregame").hide();
+            $(document.body).css('background-image','url(img/CrossingDelaware.jpg)');
+            $(".game").show();
+            komalSetup();
+            return choice;
+        });
+    });
+
+}
+
+function komalSetup(){
     startTimer();
-    questionSetUp();
+    questionSetup();
+    dragManager();
+}
 
+//keeps track of score
+var currentScore=0;
 
+function dragManager(){
     $(".answerBox1").droppable({
         accept: ".optionA",
         activeClass:"answerBox1Active",
@@ -37,7 +80,7 @@ $(document).ready(function(){
                     at: "center",
                     of: $(this)
                     });
-                if(q2){
+                if(q2){ //If other question was also answered correctly, go to next set
                     questionSetUp();
                 }
 
@@ -77,9 +120,8 @@ $(document).ready(function(){
         console.log("pls work");
       }
       */
-      console.log($("#box1").hasClass("answerBox1Dropped"))
-
-});
+      console.log($("#box1").hasClass("answerBox1Dropped"));
+}
 
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
@@ -90,7 +132,7 @@ function getQuestion(){
 
 }
 
-function questionSetUp(){
+function questionSetup(){
 
     var qa = getQuestion();
     $('#questionBox td').eq(0).html(qa[0]);
@@ -134,7 +176,7 @@ function startTimer(){
     var timer= setInterval(function() {
     counter++;
     if(counter < 0) {
-        nextQuestion();
+        nextQuestion(); //KOMAL, THIS DOESN'T EXIST. Best wishes, Nick
         clearInterval(timer);
     } 
     else {
@@ -171,6 +213,7 @@ function genY() {
     var y = Math.floor(Math.random() * (window.innerHeight-marginY*2))+marginY;
 return y;
 }
+
 
 /*http://codepen.io/anon/pen/myyzXV
 

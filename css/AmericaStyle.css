@@ -14,6 +14,8 @@ body{
     -o-background-size: cover;
     background-size: cover;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 .topContainer{
@@ -112,10 +114,12 @@ body{
 
 .answerBox1{
     background: rgba(235, 0, 0, .5);
+    transition: border-radius .5s;
 }
 
 .answerBox2{
     background: rgba(0, 0, 255, .5);
+    transition: border-radius .5s;
 }
 
 .answerBox1Active{
@@ -139,6 +143,7 @@ body{
     -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
     box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
     height: 105%;
+    border-radius: 1em;
     
 }
 .answerBox2Dropped{
@@ -146,6 +151,7 @@ body{
     -webkit-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
     -moz-box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
     box-shadow: 0px 0px 15px 2px rgba(255,255,255,1);
+    border-radius: 1em;
 }
 
 #title{
