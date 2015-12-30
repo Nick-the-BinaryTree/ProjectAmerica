@@ -1,0 +1,191 @@
+{
+	“era1”: {
+		“battles”:{
+			“Battles of Lexington and Concord”:{
+				“year”:”1775”,
+				“location”:”Massachusetts”,
+				“result”:{
+					“victor”:”British and Colonists (respectively)”,
+					“loser”:”Colonists and British (respectively)”
+				},
+				“notables”:{
+					“fact1”:”Start of revolutionary war”,
+					“fact2”:”\"Shot heard 'round the world\"”
+				},
+			},
+			“Fort Ticonderoga”:{
+				“year”:”1775”,
+				“location”:”New York”,
+				“result”:{
+					“victor”:”Americans”,
+					“loser”:”British”
+				},
+				“notables”:{
+					“fact1”:”This location contained a much needed military equipment (including cannons)”,
+					“fact2”:”First rebel victory of the Revolutionary War”
+				},
+			},
+			"Battle of Bunker Hill":{
+				"year":"1775",
+				"location":"Massachusetts",
+				"result":{
+					"victor":"Americans",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"British casualities over a thousand, Americans only 400",
+					"fact2":"Americans ordered not to fire until they could see \"the whites of their eyes\"",
+				},
+				
+			},
+			"Battle of Long Island":{
+				"year":"1776",
+				"location":"New York",
+				"result":{
+					"victor":"British",
+					"loser":"Americans"
+				},
+				"notables":{
+					"fact1":"Severe defeat for Americans (outnumbered 2-1)"
+				},
+			},
+			
+		},
+
+		“inventions” : {
+			“potato”:{
+				“year”:”1972”,
+				“notables”:{
+					“fact1”:”No one knew what a potato was until the 20th    century.”,
+
+				},
+			},
+
+		},
+
+		“elections” : {
+			“1912”:{
+				“result”:”Democrat Wilson defeated Bull Moose Roosevelt and Republican Taft”,
+				“notables”:{
+					“fact1”:”3 parties is fun”,
+					“fact2”:”Theodore should have won”
+				},
+			},
+
+		},
+
+		“court” : {
+			“Suave vs Undead Soul He Harassed”:{
+					“year”:”2006”,
+					“ruling”:”Suave ran away”
+			},
+
+		},
+
+		“other” : {
+			“Giant Tortoise Attacks North Dakota”:{
+				“year”:”1884”,
+				“significance”: “No one notice that the economy of North Dakota was permanently stunted”
+			},
+			
+		}
+	
+	},
+
+	“era2”:{
+		
+		“battles”:{
+
+		},
+
+		“inventions” : {
+
+		},
+
+		“elections” : {
+
+		},
+
+		“court” : {
+
+		},
+
+		“other” : {
+
+		}
+
+	},
+	
+	“era3” : {
+
+		“battles” : {
+
+		},
+
+		“inventions” :{
+
+		},
+
+		“elections” : {
+
+		},
+
+		“court” : {
+
+		},
+
+		“other” : {
+
+		}
+
+	},
+
+	“era4” : {
+
+		“battles” : {
+
+		},
+
+		“inventions” : {
+
+		},
+
+		“elections” : {
+
+		},
+
+		“court” : {
+
+		},
+
+		“other” : {
+
+		}
+
+	},
+
+	“era5” : {
+
+		“battles” : {
+
+		},
+
+		“inventions” : {
+
+		},
+
+		“elections” : {
+
+		},
+
+		“court” {
+
+		},
+
+		“other” : {
+
+		}
+
+	},
+
+}

@@ -11,7 +11,6 @@ function gameSetup(){
         
         $(".eraOption").hide();
         $(".settings").show();
-        $(".goButton").show();
         
         $(".goButton").click(function(){
             var battles = $('#battles')[0].checked;
