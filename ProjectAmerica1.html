@@ -6,7 +6,7 @@
 
   <title>Project America</title>
   <meta name="description" content="The only way to learn US History.">
-  <link rel="stylesheet" href="css/OptionsStyle.css">
+  <link rel="stylesheet" href="css/EraStyle.css">
 
 </head>
 
@@ -14,9 +14,29 @@
 <div class = "mainContainer">
 	<h1 id = "title">Project America</h1>
 
-    <div class = "settings">
+	<div class = "eraOption" id = "era1">
+		<p class = "buttonText">1750 - 1800</p>
+	</div>
+
+	<div class = "eraOption" id = "era2">
+		<p class = "buttonText">1800 - 1850</p>
+	</div>
+
+	<div class = "eraOption" id = "era3">
+		<p class = "buttonText">1850 - 1900</p>
+	</div>
+
+	<div class = "eraOption" id = "era4">
+		<p class = "buttonText">1900 - 1950</p>
+	</div>
+
+	<div class = "eraOption" id = "era5">
+		<p class = "buttonText">1950 - 2000</p>
+	</div>
+    
+    <div class = "settings" hidden>
         
-        <label class = "settingsHeader">Event Types?</label><br>
+    <label class = "settingsHeader">Event Types?</label><br>
         
         <label>Battles <input type = "checkbox" class = "eventOption" id = "battles" checked = true></label><br>
 
@@ -37,10 +57,12 @@
         </form>
     </div>
         
-    <div class = "goButton">
+    <div class = "goButton" hidden>
         <p class = "goText">Start</p>
     </div>
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/transitionScript.js"></script>
 </div>
 </body>
 </html>
