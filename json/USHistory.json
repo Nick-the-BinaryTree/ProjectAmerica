@@ -14,9 +14,9 @@
 					},
 				},
 “Battle of Bunker Hill”:{
-	...
+
 },
-...
+
 },
 
 “inventions” : {
@@ -24,10 +24,10 @@
 		“year”:”1972”,
 		“notables”:{
 	“fact1”:”No one knew what a potato was until the 20th    century.”,
-	...
+
 }
 },
-...
+
 },
 
 “elections” : {
@@ -38,7 +38,7 @@
 	“fact2”:”Theodore should have won”
 }
 },
-...
+
 },
 
 “court” : {
@@ -46,7 +46,7 @@
 			“year”:”2006”,
 		“ruling”:”Suave ran away”
 },
-...
+
 },
 
 “other” : {
@@ -54,7 +54,7 @@
 	“year”:”1884”,
 	“significance”: “No one notice that the economy of North Dakota was permanently stunted”
 },
-...
+
 }
 },
 
@@ -152,5 +152,5 @@
 },
 
 },
-...
+
 }
