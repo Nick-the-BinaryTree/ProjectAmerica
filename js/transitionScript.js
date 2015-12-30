@@ -23,6 +23,7 @@ function gameSetup(){
             var choice = [era, battles, inventions, elections, court, other, length];
             alert(choice);
             $(".pregame").hide();
+            $(document.body).css('background-image','url(img/CrossingDelaware.jpg)');
             $(".game").show();
             return choice;
         });
