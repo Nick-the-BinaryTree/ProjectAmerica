@@ -119,40 +119,55 @@ function gameSetup(){
 }
 
 
-function getEvents(){ //NOT DONE
+function getEvents(){ //Working! (At least w/ server)
     //Create data set for game from master set
-    var master;
-    
-    $.getJSON("json/USHistory.json", function(json){
-        console.log(json);
-        master = JSON.parse(json);
-        console.log(master);
+    $.ajax({
+        url:"json/USHistory.json",
+        dataType:"text",
+        success:function(data){
+            
+            var master = JSON.parse(data);
+            
+            var era;
+            
+            if(selection[0]==="era1"){
+                //Set newEvents = to JSON Object only containing that era
+                era = master.era1;
+            }
+            else if(selection[0]==="era2"){
+                era = master.era2;
+            }
+            else if(selection[0]==="era3"){
+                era = master.era3;
+            }
+            else if(selection[0]==="era4"){
+                era = master.era4;
+            }
+            else if(selection[0]==="era5"){
+                era = master.era5;
+            }
+            
+            var blankCopy = '{"battles" : [],"inventions" : [],"elections" : [],"court": [], "other" : [] }';
         
-    });
-    
-    //Era data set
-    var era;
-    
-    //Dot notation shortcut possible here?
-    if(selection[0]==="era1"){
-        //Set newEvents = to JSON Object only containing that era
-        era = master.era1;
-    }
-    else if(selection[0]==="era2"){
-        era = master.era2;
-    }
-    else if(selection[0]==="era3"){
-        era = master.era3;
-    }
-    else if(selection[0]==="era4"){
-        era = master.era4;
-    }
-    else if(selection[0]==="era5"){
-        era = master.era5;
-    }
-    
-    //Remove subsets not needed?
-    var newCopy = era;
+            console.log(blankCopy);
+              
+            var newCopy=JSON.parse(blankCopy);
+            
+            if(selection[1]===true){
+                newCopy["battles"] = era.battles;
+            }
+            if(selection[2]===true){
+                newCopy["inventions"] = era.inventions;
+            }
+            if(selection[3]===true){
+                newCopy["elections"] = era.elections;
+            }
+            if(selection[4]===true){
+                newCopy["court"] = era.court;
+            }
+            if(selection[5]===true){
+                newCopy["other"] = era.other;
+            }
     
     return newCopy;
 }
