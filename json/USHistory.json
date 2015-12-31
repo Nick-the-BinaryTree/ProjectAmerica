@@ -512,6 +512,102 @@
 		],
 
 		"elections" : [
+			{
+				"name":"1852",
+				"result":"Democratic Pierce defeated Whig Scott",
+				"notables":{
+					"fact1":"California becomes a state during this election cycle",
+					"fact2":"Whig party collapsed after the 1852 election"
+				}
+			},
+			{
+				"name":"1856",
+				"result":"Democratic Buchanan defeated Republican Fremont and American Fillmore",
+				"notables":{
+					"fact1":"The Whig Party had disintegrated over the issue of slavery, and new organizations such as the Republican Party and the American Party competed to replace them",
+					"fact2":"Winner Buchanan received only about 45% of the popular vote"
+				}
+			},
+			{
+				"name":"1860",
+				"result":"Republican Lincoln defeated Constitutional Union Bell and Democratics Breckinridge and Douglass",
+				"notables":{
+					"fact1":"Questions of states' rights and slavery fractured the formerly dominant Democratic Party into Southern and Northern factions",
+					"fact2":"Lincoln was elected with support from a single southern state"
+				}
+			},
+			{
+				"name":"1864",
+				"result":"Republican Lincoln defeated Democratic McClellan",
+				"notables":{
+					"fact1":"The 1864 election occurred during the Civil War, so none of the states loyal to the Confederate States of America participated",
+					"fact2":"Several states allowed their citizens serving as soldiers in the field to cast ballots (a first in United States history)"
+				}
+			},
+			{
+				"name":"1868",
+				"result":"Republican Grant defeated Democratic Seymour",
+				"notables":{
+					"fact1":"Texas, Mississippi, and Virginia (former Confederate states) were not yet restored to the Union and therefore could not vote in the election",
+					"fact2":"The Republican campaign theme—"Let us have peace,"—was popular in the post-war nation"
+				}
+			},
+			{
+				"name":"1872",
+				"result":"Republican Grant defeated Democratics Hendricks and Greeley",
+				"notables":{
+					"fact1":"Greeley died after the popular vote but before the Electoral College cast its votes (as a result, electors previously committed to Greeley voted for four different candidates for President)",
+					"fact2":"Arkansas and Louisiana did not participate"
+				}
+			},
+			{
+				"name":"1876",
+				"result":"Republican Hayes defeated Democratic Tilden",
+				"notables":{
+					"fact1":"While Tilden narrowly won the popular vote, Hayes won the electoral vote by only 1 vote after much dispute",
+					"fact2":"Many historians believe that an informal deal was struck to resolve the dispute: the Republicans agreed to end Reconstruction in return for Hayes’ election"
+				}
+			},
+			{
+				"name":"1880",
+				"result":"Republican Garfield defeated Democratic Hancock",
+				"notables":{
+					"fact1":"It is to date the smallest popular vote victory in American history",
+					"fact2":"Incumbent President Rutherford Hayes did not seek re-election, keeping a promise made during the 1876 campaign"
+				}
+			},
+			{
+				"name":"1884",
+				"result":"Democratic Cleveland defeated Republican Blaine",
+				"notables":{
+					"fact1":"First Democrat elected President of the United States since before the American Civil War",
+					"fact2":"This election featured excessive mudslinging and personal acrimony"
+				}
+			},
+			{
+				"name":"1888",
+				"result":"Republican Harrison defeated Democratic Cleveland",
+				"notables":{
+					"fact1":"One of only 4 elections (1824, 1876, 1888, 2000) where the popular vote winner was defeated",
+					"fact2":"Harrison won by buying votes from groups of electors called “Blocks of Five"
+				}
+			},
+			{
+				"name":"1892",
+				"result":"Democratic Cleveland defeated Republican Harrison and People's Weaver",
+				"notables":{
+					"fact1":"Cleveland became the only person in US history to be elected to a second, non-consecutive presidential term",
+					"fact2":"Cleveland also became the first Democrat to be nominated by his party three consecutive times"
+				}
+			},
+			{
+				"name":"1896",
+				"result":"Republican McKinley defeated Democrat-Populist Bryan",
+				"notables":{
+					"fact1":"Bryan was the first ever to criss-cross the nation and meet voters in person",
+					"fact2":"McKinley’s political manager brought 500,000 voters by train to McKinley's home in Ohio, where he would give a speech to the men from his porch"
+				}
+			}
 
 		],
 
