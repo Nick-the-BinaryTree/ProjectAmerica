@@ -1,31 +1,34 @@
-{
-	“era1”: {
-		“battles”:{
-			“Battles of Lexington and Concord”:{
-				“year”:”1775”,
-				“location”:”Massachusetts”,
-				“result”:{
-					“victor”:”British and Colonists (respectively)”,
-					“loser”:”Colonists and British (respectively)”
+﻿{
+	"era1": {
+		"battles":[
+			{
+				"name":"Battles of Lexington and Concord",
+				"year":"1775",
+				"location":"Massachusetts",
+				"result":{
+					"victor":"British",
+					"loser: Colonists, but it was a good run"
 				},
-				“notables”:{
-					“fact1”:”Start of revolutionary war”,
-					“fact2”:”Paul Revere’s midnight ride to Concord warned the people in advance”
+				"notables"::{
+					"fact1":"Start of revolutionary war",
+					"fact2":"Paul Revere's midnight ride to Concord warned the people in advance"
 				}
 			},
-			“Fort Ticonderoga”:{
-				“year”:”1775”,
-				“location”:”New York”,
-				“result”:{
-					“victor”:”Americans”,
-					“loser”:”British”
+			{
+				"name":"Fort Ticonderoga",
+				"year":"1775",
+				"location":"New York",
+				"result":{
+					"victor":"Americans",
+					"loser":"British"
 				},
-				“notables”:{
-					“fact1”:”This location contained a much needed military equipment (including cannons)”,
-					“fact2”:”First rebel victory of the Revolutionary War”
+				"notables":{
+					"fact1":"This location contained much needed military equipment (including cannons),
+					"fact2":"First rebel victory of the Revolutionary War"
 				}
 			},
-			"Battle of Bunker Hill":{
+			{
+				"name":"Battle of Bunker Hill",
 				"year":"1775",
 				"location":"Massachusetts",
 				"result":{
@@ -34,10 +37,11 @@
 				},
 				"notables":{
 					"fact1":"British casualities over 1000, Americans only 400",
-					"fact2":"Americans ordered not to fire until they could see the whites of their eyes"
+					"fact2":"American General Putnam ordered: Don't fire until you see the whites of their eyes"
 				}
 			},
-			"Battle of Long Island":{
+			{
+				"name":"Battle of Long Island",
 				"year":"1776",
 				"location":"New York",
 				"result":{
@@ -46,10 +50,12 @@
 				},
 				"notables":{
 					"fact1":"Severe defeat for Americans (outnumbered 2-1)",
-					"fact2":"Americans evacuate Manhattan"
+					"fact2":"Americans evacuate Manhattan",
+					"fact3":"General Washington threw his hat on the ground in anger"
 				}
 			},
-			"Battle of Trenton":{
+			{
+				"name":"Battle of Trenton",
 				"year":"1776",
 				"locaton": "New Jersey",
 				"result":{
@@ -61,7 +67,8 @@
 					"fact2":"1000 taken prisoner, only 6 American soldiers wounded"
 				}
 			},
-			"Battle of Saratoga":{
+			{
+				"name":"Battle of Saratoga",
 				"year":"1777",
 				"location":"New York",
 				"result":{
@@ -73,7 +80,8 @@
 					"fact2":"600 British casualties while American losses are only 150"
 				}
 			},
-			"Siege of Rhode Island":{
+			{
+				"name":"Siege of Rhode Island",
 				"year":"1778",
 				"location":"Rhode Island",
 				"result":{
@@ -85,19 +93,20 @@
 					"fact2":"This showed that alliance with France would not speedily end the war"
 				}
 			},
-			"Battle of Charleston":{
+			{
+				"name":"Battle of Charleston",
 				"year":"1780",
 				"location":"South Carolina",
 				"result":{
 					"victor":"British",
-					"loser":"Americans",
+					"loser":"Americans"
 				},
 				"notables":{
 					"fact1":"The worst American defeat of the Revolutionary War",
 					"fact2":"Charleston and the Americans' 5400-man garrison captured, British losses only 225"
 				}
 			},
-			"Battle of Cowpens":{
+				"name":"Battle of Cowpens",
 				"year":"1781",
 				"location":"South Carolina",
 				"result":{
@@ -109,7 +118,8 @@
 					"fact2":"Stopped British offensive momentum in the South"
 				}
 			},
-			"Battle of Yorktown":{
+			{
+				"name":"Battle of Yorktown",
 				"year":"1781",
 				"location":"New York",
 				"result":{
@@ -121,91 +131,103 @@
 					"fact2":"Last battle of the Revolutionary war"
 				}
 			}
-		},
+		],
 
-		“inventions” : {
-			"Lighting rod":{
+		"inventions" : [
+			{
+				"name":"Lighting rod",
 				"year":"1752",
 				"notables":{
-					"fact1":"protected homes from lighting strikes"
+					"fact1":"Protected homes from lighting strikes"
 				}
 			},
-			"Cotton Gin":{
+			{
+				"name":"Cotton Gin",
 				"year":"1794",
 				"notables":{
 					"fact1":"Offered Southern planters a justification to maintain and expand slavery"
 				}
 			}
-		},
+		],
 
-		“elections” : {
-			“1789”:{
-				“result”:”Washington defeated Federalist Adams”,
-				“notables”:{
-					“fact1”:”The winner was reluctant to become president due to raging debates concerning the new government”,
-					“fact2”:”The new president was careful to avoid any symbolic references to European monarchy”
+		"elections" : [
+			{
+				"name":"1789",
+				"result":"Washington defeated Federalist Adams",
+				"notables":{
+					"fact1":"The winner was reluctant to become president due to raging debates concerning the new government",
+					"fact2":"The new president was careful to avoid any symbolic references to European monarchy"
 				}
 			},
-			"1792":{
+			{
+				"name":"1792",
 				"result":"Washington defeated Adams again",
 				"notables":{
 					"fact1":"The winner was re-elected unanimously by the Electoral College",
 					"fact2":"Two political parties emerged during this election, the Federalists and the Democratic-Republicans"
 				}
 			},
-			"1796":{
+			{
+				"name":"1796",
 				"result":"Federalist Adams defeated Democratic-Republican Jefferson",
 				"notables":{
 					"fact1":"Washington refused a third term",
 					"fact2":"Only election cycle to elect a President and Vice President from opposing parties"
 				}
 			}
-		},
+		],
 
-		“court” : {
-			“Judiciary Act”:{
-					“year”:”1789”,
-					“ruling”:”Created Judiciary Branch”
+		"court" : [
+			{
+				"name":"Judiciary Act",
+				"year":"1789",
+				"ruling":"Created Judiciary Branch"
 			}
 
-		}
+		],
 
-		“other” : {
-			“Boston Massacre”:{
-				“year”:”1770”,
-				“significance”: “A milestone in turning colonial sentiment against British authority”
+		"other" : [
+			{
+				"name":"Boston Massacre",
+				"year":"1770",
+				"significance": "A milestone in turning colonial sentiment against British authority"
 			},
-			"Boston Tea Party":{
+			{
+				"name":"Boston Tea Party",
 				"year":"1773",
 				"significance": "Culmination of a resistance movement against the Tea Act (no taxation without representation)"
 			},
-			"Publication of Thomas Paine's 'Common Sense'":{
+			{
+				"name":"Publication of Thomas Paine's Common Sense",
 				"year": "1776",
-				"significance":"Provided strong arguments for America’s independance, read by many"
+				"significance":"Popular pamphlet that provided strong arguments for America's independance"
 			},
-			"United States Declaration of Independance":{
+				"name":"United States Declaration of Independance",
 				"year":"1776",
-				"significance":"Officially justified the people's right to revolt against the British"
+				"significance":"Announced the people's unalienable rights to life, liberty, and the pursuit of happiness were being violated, justifying a revolution"
 			}
-			"Treaty of Paris":{
+			{
+				"name":"Treaty of Paris",
 				"year":"1783-1784",
-				"significance":"Ended the Revolutionary War and recognized American independence"
+				"significance":"Ended the Revolutionary War and recognized American sovereignty"
 			},
-			"Northwest Ordinance":{
+			{
+				"name":"Northwest Ordinance",
 				"year":"1787",
 				"significance":"Established formal procedures for transforming territories into states, and includes a Bill of Rights"
 			},
-			"Bill of Rights":{
+				"name":"Bill of Rights",
 				"year":"1789",
 				"significance":"List of fundamental rights of U.S. citizens and serves to protect them from government infringement"
 			}
-		}
+		]
 	
 	},
 
-	“era2”:{
-		“battles”:{
-			"Battle of Lake Erie":{
+	"era2":{
+		"battles":[
+			{
+				"name":"Battle of Lake Erie",
 				"year":"1813",
 				"location":"Canadian Border, Ohio",
 				"result":{
@@ -217,7 +239,8 @@
 					"fact2":"The first unqualified defeat of a British naval squadron in history"
 				}
 			},
-			"Battle of Platsburgh":{
+			{
+				"name":"Battle of Platsburgh",
 				"year":"1814",
 				"location":"New York",
 				"result": {
@@ -226,283 +249,274 @@
 				},
 				"notables":{
 					"fact1":"Ended British invasions of the northern United States",
-					"fact2":"The British General Prévost brought the state of Vermont into the war"
-				}
-			}
-		},
-
-		“inventions” : {
-			"McCormick's Mechanical Reaper":{
-				"year":"1831",
-				"notables":{
-					"fact1":"Allowed the farmer to harvest five times as quickly than by hand using a scythe"
+					"fact2":"British General Prevost, the Defender of Canada, got rekt"
 				}
 			},
-			"Telegraph/Morse Code":{
+			{
+				"name":"Battle of New Orleans",
+				"year":"1815",
+				"location":"Louisiana",
+				"result":{
+					"victor":"Americans",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"Yes, this happened after the end of the war. Information travelled slowly.",
+					"fact2":"Made future president General Andrew Jackson quite popular"
+				}
+			}
+		],
+
+		"inventions" : [
+			{
+				"name":"McCormick's Mechanical Reaper",
+				"year":"1831",
+				"notables":{
+					"fact1":"Allowed farmers to harvest five times as quickly compared to using a scythe"
+				}
+			},
+			{
+				"name":"Telegraph/Morse Code",
 				"year":"1844",
 				"notables":{
 				"fact1":"Made instant communication between distant places in the country possible"
 					}
 			},
-			"Vulcanization":{
+			{
+				"name":"Vulcanization",
 				"year":"1844",
 				"notables":{
-					"fact1":"Chemical process to make rubber strong and supple to create car and bicycle tires"
+					"fact1":"Chemical process to make rubber strong and supple to create tires"
 				}
 			},
-			"Minie Bullet":{
+			{
+				"name":"Minie Bullet",
 				"year":"1849",
 				"notables":{
 					"fact1":"Muzzle-loading rifles could be easily loaded and were now used in combat situations"
 				}
 			}
-		},
+		],
 		
 
-		“elections” : {
-			"1800":{
+		"elections" : [
+			{
+				"name":"1800",
 				"result":"Democratic-Republican Jefferson defeated Democratic-Republican Burr, and Federalists Adams and Pinckney",
 				"notables":{
 					"fact1":"The winner was elected by vote of House of Representatives",
 					"fact2":"The top two candidates both recieved the same number of electoral votes"
 				}
 			},
-			"1804":{
+			{
+				"name":"1804",
 				"result":"Democratic-Republican Jefferson defeated Federalist Pinckney",
 				"notables":{
 					"fact1":"Highest victory margin in a presidential election in which there were multiple major party candidates",
 					"fact2":"Under the 12th amendment, electors were required to vote for both president and vice president"
 				}
 			},
-			"1808":{
+			{
+				"name":"1808",
 				"result":"Democratic-Republican Madison defeated Federalist Pinckney",
 				"notables":{
 					"fact1":"First of only two times the incumbent Vice President would continue to serve under a new President",
 					"fact2":"The winner had served as Secretary of State under Jefferson"
 				}
 			},
-			"1812":{
-				"result":"Democratic-Republican Madison defeated Federalist Clinton and Democratic-Republican Clinton",
+			{
+				"name":"1812",
+				"result":"Democratic-Republican Madison defeated Democratic-Republican Clinton",
 				"notables":{
 					"fact1":"New York replaced Virginia with most electoral votes (would hold #1 spot until 1972)",
-					"fact2":"The closest election up to that point for the popular vote (50.4%)"
+					"fact2":"The closest election up to that point for the popular vote (50.4%)",
+					"fact3":"Testament to Democratic-Republican political domination, both candidates were of the same party"
 				}
 			},
-			"1816":{
+			{
+				"name":"1816",
 				"result":"Democratic-Republican Monroe defeated Federalist King",
 				"notables":{
 					"fact1":"Democratic-Republicans received the credit for the end of the War of 1812",
 					"fact2":"Indiana became a state during this election cycle"
 				}
 			},
-			"1820":{
+			{
+				"name":"1820",
 				"result":"Democratic-Republican Monroe defeated Independant J.Q. Adams",
 				"notables":{
-					"fact1":"The only U.S. presidential election in which a candidate ran effectively unopposed, (excluding Washington’s two terms)",
+					"fact1":"The only U.S. presidential election in which a candidate ran effectively unopposed, (excluding Washington's two terms)",
 					"fact2":"Continuation of single party politics, known as the Era of Good Feelings"
 				}
 			},
-			"1824":{
+			{
+				"name":"1824",
 				"result":"Democratic-Republican J.Q. Adams defeated Democratic Republicans Jackson, Crawford, and Clay",
 				"notables":{
 					"fact1":"The winner was son of the United States' second president",
 					"fact2":"No candidate received a majority of the electoral vote, so the House of Representatives decided"
 				}
 			},
-			"1828":{
+			{
+				"name":"1828",
 				"result":"Democratic Jackson defeated National Republican J.Q. Adams",
 				"notables":{
 					"fact1":"Incumbent Vice President John C. Calhoun sided with the winning candidate",
 					"fact2":"The winner recieved 68.2% of Electoral votes, but only 56% of popular vote"
 				}
 			},
-			"1832":{
+			{
+				"name":"1832",
 				"result":"Democratic Jackson defeated National Republican Clay, Independant Floyd, and Anti-Masonic Wirt",
 				"notables":{
 					"fact1":"No longer single-party election",
 					"fact2":"First Democratic National Convention held in Baltimore"
 				}
 			},
-			"1836":{
+			{
+				"name":"1836",
 				"result":"Democratic Van Buren defeated Whigs Harrison, White, Webster, and Independant Mangum",
 				"notables":{
 					"fact1":"Only time in which a Vice Presidential election was thrown into the Senate",
 					"fact2":"Only race in which a major political party (the Whigs) intentionally ran several presidential candidates"
 				}
 			},
-			"1840":{
+			{
+				"name":"1840",
 				"result":"Whig Harrison defeated Democratic Van Buren",
 				"notables":{
-					"fact1":"Rallying under the slogan “Tippecanoe and Tyler, too,” the winner easily defeated the old President",
+					"fact1":"Rallying under the slogan 'Tippecanoe and Tyler, too,' the winner easily defeated the old President",
 					"fact2":"All presidential and vice-presidential candidates had been or would become President someday"
 				}
 			},
-			"1844":{
-				"result":"Democratic Polk defeated Whig Clay",
+			{
+				"name":"1844",
+				"result":"Democrat Polk defeated Whig Clay",
 				"notables":{
 					"fact1":"The winner ran on a platform that embraced American territorial expansionism (Manifest Destiny)",
-					"fact2":"It was the last presidential election to be held on different days in different states"
+					"fact2":"It was the last presidential election to be held on different days in different states",
+					"fact3":"Polk would annex much of Mexico"
 				}
 			},
-			"1848":{
+			{
+				"name":"1848",
 				"result":"Whig Taylor defeated Democratic Cass",
 				"notables":{
 					"fact1":"The winner was not clearly committed to Whig principles, but he was popular for leading the war effort",
 					"fact2":"This winning candidate was the last Whig president"
 				}
 			}
-		},
+		],
 
-		“court” : {
-			“Marbury v. Madison”:{
-				“year”:”1803”,
-				“ruling”:”Madison”
+		"court" : [
+			{
+				"name":"Marbury v. Madison",
+				"year":"1803",
+				"ruling":"Madison"
 			},
-			“McCulloch v. Maryland”:{
-				“year”:”1819”,
-				“ruling”:”McCulloch”
+			{
+				"name":"McCulloch v. Maryland":
+				"year":"1819",
+				"ruling":"McCulloch"
 			},
-			“Gibbons v. Ogden”:{
-				“year”:”1824”,
-				“ruling”:”Gibbons”
+			{
+				"name":"Gibbons v. Ogden",
+				"year":"1824",
+				"ruling":"Gibbons"
 			}
-		},
+		],
 
-		“other” : {
-			"Louisiana Purchase":{
+		"other" : [
+			{
+				"name":"Louisiana Purchase",
 				"year":"1803",
 				"significance":"Doubled the country's size and opened up the possibilities for westward expansion"
 			},
-			"Missouri Compromise":{
+			{	
+				"name":"Missouri Compromise",
 				"year":"1820",
 				"significance":"Delayed and maintained the balance of the slavery debate for a short time, but did not end it"
 			},
-			"Erie Canal":{
+			{
+				"name":"Erie Canal",
 				"year":"1825",
 				"significance":"Gave the western states direct access to the Atlantic Ocean without using the Mississippi River"
 			}
 			
-		}
+		]
 
 	},
 	
-	“era3” : {
+	"era3" : {
 
-		“battles” : {
-			"First Battle of Bull Run":{
-				"year":"1861",
-				"location":"Virginia",
-				"result":{
-					"victor":"Confederates",
-					"loser":"Union"
-				},
-				"notables":{
-					"fact1":"Local residents picnicked near the battlegrounds, expecting an easy victory for the Union",
-					"fact2":"This battle was expected to be the first and last of the civil war"
-				}
-			},
-			"Battle of Shiloh":{
-				"year":"1862",
-				"location":"Tennessee",
-				"result":{
-					"victor":"Union",
-					"loser":"Confederates"
-				},
-				"notables":{
-					"fact1":"Total casualties equaled over 20,000",
-					"fact2":"Union General Johnston was killed in this battle"
-				}
-			},
-			"Battle of Antietam":{
-				"year":"1862",
-				"location":"Maryland",
-				"result":{
-					"victor":"Union",
-					"loser":"Confederates"
-				},
-				"notables":{
-					"fact1":"Single bloodiest day of the Civil War, with 23,000 casualties",
-					"fact2":"Union General McClellan failed to pursue the Confederate troops and was therefore replaced by General Burnside"
-				}
-			}
-		},
+		"battles" : [
 
-		“inventions” :{
-			"Cowboy Hat":{
-				"year":"1865",
-				"significance":"This article's fabric was made without weaving, and can protect the wearer from the elements"
-			},
-			"(Hand-cranked) Machine gun":{
-				"year":"1861",
-				"significance":"The inventor had hoped that his powerful new weapon would discourage large scale battles and show the folly of war"
-			},
-			"(Steam-powered) Motorcycle":{
-				"year":"1867",
-				"significance":""
-			}
-				"y"
-		},
+		],
 
-		“elections” : {
+		"inventions" : [
 
-		},
+		],
 
-		“court” : {
+		"elections" : [
 
-		},
+		],
 
-		“other” : {
+		"court" [
 
-		}
+		],
+
+		"other" : [
+
+		]
 
 	},
 
-	“era4” : {
+	"era4" : {
 
-		“battles” : {
+		"battles" : [
 
-		},
+		],
 
-		“inventions” : {
+		"inventions" : [
 
-		},
+		],
 
-		“elections” : {
+		"elections" : [
 
-		},
+		],
 
-		“court” : {
+		"court" [
 
-		},
+		],
 
-		“other” : {
+		"other" : [
 
-		}
-
-	},
-
-	“era5” : {
-
-		“battles” : {
-
-		},
-
-		“inventions” : {
-
-		},
-
-		“elections” : {
-
-		},
-
-		“court” {
-
-		},
-
-		“other” : {
-
-		}
+		]
 
 	},
+
+	"era5" : {
+
+		"battles" : [
+
+		],
+
+		"inventions" : [
+
+		],
+
+		"elections" : [
+
+		],
+
+		"court" [
+
+		],
+
+		"other" : [
+
+		]
+
+	}
 
 }
