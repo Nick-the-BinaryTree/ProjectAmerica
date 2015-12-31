@@ -41,6 +41,7 @@ var selection; //[era id string, battles boolean, inventions boolean, elections 
 var gameEvents;
 
 //creates client
+/*
 var client = new Client("project-america.herokuapp.com", 80, function(error) { 
     console.log("Error " + error);
 
@@ -62,6 +63,7 @@ var client = new Client("project-america.herokuapp.com", 80, function(error) {
     // Update the scores
 
 });
+*/
 
 //idk how usernames are gonna work
 var username="yay";
@@ -73,10 +75,11 @@ $(document).ready(function(){
 });
 
 function gameSetup(){
-    client.connect(username, function() { 
+   /* client.connect(username, function() { 
     console.log("Connected");
 
     });
+    */
 
     $(".eraOption").hide();
 
@@ -170,6 +173,8 @@ function getEvents(){ //Working! (At least w/ server)
             }
     
     return newCopy;
+        }
+    });
 }
 
 
@@ -276,19 +281,21 @@ function dragManager(){
         drop: function(event, ui) {
             if(isCorrect("#"+ui.draggable.attr("id"))){
                 q1=true;
-                $("#"+ui.draggable.attr("id")).draggable( "destroy" );
                 $(this).addClass( "answerBox1Dropped" )
                 ui.draggable.position({
                     my: "center",
                     at: "center",
                     of: $(this)
                     });
+
+                //$("#"+ui.draggable.attr("id")).draggable( "destroy" );
                 if(q2){ //If other question was also answered correctly, go to next set
                     questionSetup();
                 }
 
             }
             else{
+                console.log("lol")
                 $("#"+ui.draggable.attr("id")).draggable({ revert: "valid" });
                 numWrong++;
             }
@@ -302,13 +309,13 @@ function dragManager(){
         drop: function(event, ui) {
             if(isCorrect("#"+ui.draggable.attr("id"))){
                 q2=true;
-                $("#"+ui.draggable.attr("id")).draggable( "destroy" );
                 $(this).addClass( "answerBox2Dropped" )
                 ui.draggable.position({
                     my: "center",
                     at: "center",
                     of: $(this)
                     });
+                //$("#"+ui.draggable.attr("id")).draggable( "destroy" );
                 if(q1){
                     questionSetup();
                 }
