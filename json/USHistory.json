@@ -515,7 +515,17 @@
 
 		],
 
-		"court" [
+		"court" : [
+			{
+				"name":"Dred Scott v. Sandford",
+				"year":"1857",
+				"ruling":"Sandford"
+			},
+			{
+				"name":"Plessy v. Ferguson",
+				"year":"1896",
+				"ruling":"Ferguson"
+			}
 
 		],
 
