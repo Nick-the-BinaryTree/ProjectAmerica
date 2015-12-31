@@ -389,11 +389,58 @@
 	“era3” : {
 
 		“battles” : {
-
+			"First Battle of Bull Run":{
+				"year":"1861",
+				"location":"Virginia",
+				"result":{
+					"victor":"Confederates",
+					"loser":"Union"
+				},
+				"notables":{
+					"fact1":"Local residents picnicked near the battlegrounds, expecting an easy victory for the Union",
+					"fact2":"This battle was expected to be the first and last of the civil war"
+				}
+			},
+			"Battle of Shiloh":{
+				"year":"1862",
+				"location":"Tennessee",
+				"result":{
+					"victor":"Union",
+					"loser":"Confederates"
+				},
+				"notables":{
+					"fact1":"Total casualties equaled over 20,000",
+					"fact2":"Union General Johnston was killed in this battle"
+				}
+			},
+			"Battle of Antietam":{
+				"year":"1862",
+				"location":"Maryland",
+				"result":{
+					"victor":"Union",
+					"loser":"Confederates"
+				},
+				"notables":{
+					"fact1":"Single bloodiest day of the Civil War, with 23,000 casualties",
+					"fact2":"Union General McClellan failed to pursue the Confederate troops and was therefore replaced by General Burnside"
+				}
+			}
 		},
 
 		“inventions” :{
-
+			"Cowboy Hat":{
+				"year":"1865",
+				"significance":"This article's fabric was made without weaving, and can protect the wearer from the elements"
+			},
+			"(Hand-cranked) Machine gun":{
+				"year":"1861",
+				"significance":"The inventor had hoped that his powerful new weapon would discourage large scale battles and show the folly of war"
+			},
+			"(Steam-powered) Motorcycle":{
+				"year":"1867",
+				"significance":""
+			}
+				"y"
 		},
 
 		“elections” : {
