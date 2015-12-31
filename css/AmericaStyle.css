@@ -13,7 +13,7 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -154,7 +154,7 @@ body{
     border-radius: 1em;
 }
 
-#title{
+.title{
     font-size: 8em;
     color: #181818;
     width: 100%;
@@ -223,6 +223,13 @@ input[type=radio]{
     margin-right: auto;
     text-align: center;
     transition: .5s;
+}
+.titleContainer{
+    background: rgba(255, 255, 255, .7);
+    width: 60%;
+    text-align: center;
+    margin: auto;
+
 }
 
 .goButton:hover{

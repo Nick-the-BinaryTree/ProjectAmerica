@@ -1,3 +1,4 @@
+
 //Sizing
 var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/4;
@@ -7,28 +8,39 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var deduction = 0.1; //percent deduction for wrong answers
 var speedBonus = 0.05; //percent bonus for each second left
 var stdScore = 100; //score for question without bonuses or deductions
+
 //keeps track of score
 var currentScore=0;
 
+//keeps track of the number of wrong answers for each question
+var numWrong=0;
+
 //Timer
 var timeElapsed=0;
+//true during gameplay, for timer use
+var inGame;
+
 
 //Set to false at the start of question, true when correct: control gameplay
 var q1=false;
 var q2=false;
 
+//controls question number
+var qSet = 1;
 //Temporary question control. count1 is odd, count2 is even
 var count1=-1;
 var count2=0;
 
+//Question Limit
+var qLimit;
+
 //Game settings
-var selection; //[era id string, battles boolean, inventions boolean, elections boolean, court boolean, other boolean, length id string]
+var selection; //[era id string, battles boolean, inventions boolean, elections boolean, court boolean, other boolean, length string]
 
 
 $(document).ready(function(){
     selection = gameSetup(); //era id, events booleans, length id
     //Komal's setup methods done in gameSetup to avoid timer starting before game start, etc
-
 });
 
 function gameSetup(){
@@ -46,26 +58,107 @@ function gameSetup(){
             var court = $('#court')[0].checked;
             var other = $('#other')[0].checked;
             var length = $('input[name="length"]:checked', '#lengthForm').val();
+            setQuestionLimit(length);
             var choice = [era, battles, inventions, elections, court, other, length];
-            alert(choice);
+            
             $(".pregame").hide();
-            $(document.body).css('background-image','url(img/CrossingDelaware.jpg)');
             $(".game").show();
-            komalSetup();
+            
+            eraSetup(era);
+            gameStart();
+            
             return choice;
         });
     });
 
 }
 
-function komalSetup(){
+function setQuestionLimit(lengthSelect){
+    var limit = lengthSelect;
+    
+    if(limit==="quick"){
+        qLimit = 10;
+    }
+    else if(limit==="medium"){
+        qLimit = 20;
+    }
+    else if(limit==="long"){
+        qLimit = 30;
+    }
+    else{
+        qLimit = -1; //Code to use every event
+    }
+}
+
+function eraSetup(era){
+    //TODO: Request only relevant JSON from server
+    
+    var ranImage = Math.floor(Math.random()*3)+1; //Random selection from 3 possible backgrounds
+    
+    if(era === "era1"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era1/CrossingDelaware.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era1/DeclarationOfIndependence.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era1/SurrenderOfGeneralBurgoyne.jpg)');
+        }
+    }
+    else if(era === "era2"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era2/AndrewJackson.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era2/EmigrantsCrossingThePlains.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era2/HenryClay.jpg)');
+        }
+    }
+    else if(era === "era3"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era3/Gettysburg.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era3/McKinley.png)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era3/SouthManchuriaRailway.jpg)');
+        }
+    }
+    else if(era === "era4"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era4/Coca-Cola.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era4/Coolidge.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era4/FlagRaising.jpg)');
+        }
+    }
+    else if(era === "era5"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era5/Nixon-Johnson.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era5/Reagan.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era5/Beatles.jpg)');
+        }
+    }
+}
+
+function gameStart(){
+    inGame =true;
     startTimer();
     questionSetup();
     dragManager();
 }
 
-//keeps track of score
-var currentScore=0;
 
 function dragManager(){
     $(".answerBox1").droppable({
@@ -81,12 +174,13 @@ function dragManager(){
                     of: $(this)
                     });
                 if(q2){ //If other question was also answered correctly, go to next set
-                    questionSetUp();
+                    questionSetup();
                 }
 
             }
             else{
                 setBlock("#"+ui.draggable.attr("id"));
+                numWrong++;
             }
 
       }
@@ -105,85 +199,89 @@ function dragManager(){
                     of: $(this)
                     });
                 if(q1){
-                    questionSetUp();
+                    questionSetup();
                 }
 
             }
             else{
                 setBlock("#"+ui.draggable.attr("id"));
+                numWrong++;
             }
 
         }
     });
-
-      /*if($("#box1").hasClass("answerBox1Dropped") && $("#box2").hasClass("answerBox2Dropped"){
-        console.log("pls work");
-      }
-      */
-      console.log($("#box1").hasClass("answerBox1Dropped"));
 }
 
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
 function getQuestion(){
+    qSet++;
+    //everything after this is temporary
     count1+=2;
     count2+=2;
-    return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2];
+    return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2]; //Remember to keep the qSet increments but not this
 
 }
 
 function questionSetup(){
 
-    var qa = getQuestion();
-    $('#questionBox td').eq(0).html(qa[0]);
+    $(".answerBox1").removeClass( "answerBox1Dropped" );
+    $(".answerBox2").removeClass( "answerBox2Dropped" );
 
-    $('#questionBox td').eq(2).html(qa[5]);
-
-    $( "#a1" ).html(qa[1]);
-    $( "#a2" ).html(qa[2]);
-    $( "#a3" ).html(qa[3]);
-    $( "#a4" ).html(qa[4]);
-    $( "#b1" ).html(qa[6]);
-    $( "#b2" ).html(qa[7]);
-    $( "#b3" ).html(qa[8]);
-    $( "#b4" ).html(qa[9]);
-
-    setBlock("#a1");
-    setBlock("#a2");
-    setBlock("#a3");
-    setBlock("#a4");
-    setBlock("#b1");
-    setBlock("#b2");
-    setBlock("#b3");
-    setBlock("#b4");
-    //$(".option").each(animateDiv);
-    console.log("MarginX " + marginX);
-    console.log("MarginY " + marginY);
-    $( ".option" ).draggable({
-        containment: "window",
-        scroll: false,
-    });
-    q1=false;
-    q2=false;
-
-
-}
-//currently set up to be called once at start of game. can be adjusted to pause
-//during loading if we can't load quickly enough
-function startTimer(){
-    var counter=0;
-    $( "p.timeText" ).html("Time: "+counter);
-    var timer= setInterval(function() {
-    counter++;
-    if(counter < 0) {
-        nextQuestion(); //KOMAL, THIS DOESN'T EXIST. Best wishes, Nick
-        clearInterval(timer);
-    } 
-    else {
-        $( "p.timeText" ).html("Time: "+counter);
+    var addScore=0;
+    if(qSet>1){
+       addScore = calculateScore(numWrong);
     }
-}, 1000);
 
+    updateScore(addScore);
+    numWrong=0;
+    if(qSet <= qLimit){
+        var qa = getQuestion();
+        $('#questionBox td').eq(0).html(qa[0]);
+
+        $('#questionBox td').eq(2).html(qa[5]);
+
+        $( "#a1" ).html(qa[1]);
+        $( "#a2" ).html(qa[2]);
+        $( "#a3" ).html(qa[3]);
+        $( "#a4" ).html(qa[4]);
+        $( "#b1" ).html(qa[6]);
+        $( "#b2" ).html(qa[7]);
+        $( "#b3" ).html(qa[8]);
+        $( "#b4" ).html(qa[9]);
+
+        setBlock("#a1");
+        setBlock("#a2");
+        setBlock("#a3");
+        setBlock("#a4");
+        setBlock("#b1");
+        setBlock("#b2");
+        setBlock("#b3");
+        setBlock("#b4");
+        //$(".option").each(animateDiv);
+        console.log("MarginX " + marginX);
+        console.log("MarginY " + marginY);
+        $( ".option" ).draggable({
+            containment: "window",
+            scroll: false,
+        });
+        q1=false;
+        q2=false;
+    }
+    else{
+        toScore();
+    }
+}
+
+//called once at start of game
+function startTimer(){
+    $( "p.timeText" ).html("Time: "+timeElapsed);
+    var timer= setInterval(function() {
+    timeElapsed++;
+    if(inGame){
+        $( "p.timeText" ).html("Time: "+timeElapsed);
+    }
+    }, 1000);
 }
 
 
@@ -191,6 +289,33 @@ function startTimer(){
 function isCorrect(ans){
     //temporary implementation 
     return $(ans).hasClass("correct");
+}
+
+function toScore(){
+    $("#yourScore").text("Your Score: " + currentScore);
+    $(".game").hide();
+    $(".scoreBoard").show();
+    inGame=false;
+    $(".returnOption").click(function(){
+        resetGame();
+        backToMenu();
+    });
+}
+
+function backToMenu(){
+    $(".scoreBoard").hide();
+    $(".pregame").show();
+    selection = gameSetup(); //The cycle never ends! What is life?
+}
+
+function resetGame(){
+    currentScore = 0;
+    qSet = 0;
+    count1=-1;
+    count2=0;
+    timeElapsed = 0;
+    
+    $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
 }
 
 function setBlock(tile) {
@@ -210,8 +335,22 @@ function genX() {
 }
 
 function genY() {
-    var y = Math.floor(Math.random() * (window.innerHeight-marginY*2))+marginY;
+    var y = Math.floor(Math.random() * (window.innerHeight-marginY*2.5))+marginY;
 return y;
+}
+
+function calculateScore(numWrong){
+     var score = stdScore - (stdScore * deduction * numWrong);
+     //time will also be factored in somehow 
+     return score;
+ 
+ }
+
+function updateScore(newScore){
+  
+    
+   currentScore+=newScore;
+   $( "p.scoreText" ).html("Score: "+currentScore);
 }
 
 
