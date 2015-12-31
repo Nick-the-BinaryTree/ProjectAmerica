@@ -27,8 +27,8 @@ var q2=false;
 //controls question number
 var qSet = 1;
 //Temporary question control. count1 is odd, count2 is even
-var count1=-1;
-var count2=0;
+//var count1=-1;
+//var count2=0;
 
 //Question Limit
 var qLimit;
@@ -36,10 +36,13 @@ var qLimit;
 //Game settings
 var selection; //[era id string, battles boolean, inventions boolean, elections boolean, court boolean, other boolean, length string]
 
+//JSON with all data being used in the game (Created from master set with selection settings)
+var gameEvents;
+
 
 $(document).ready(function(){
-    selection = gameSetup(); //era id, events booleans, length id
-    //Komal's setup methods done in gameSetup to avoid timer starting before game start, etc
+    gameSetup();
+    
 });
 
 function gameSetup(){
@@ -64,20 +67,61 @@ function gameSetup(){
                 var court = $('#court')[0].checked;
                 var other = $('#other')[0].checked;
                 var length = $('input[name="length"]:checked', '#lengthForm').val();
+                
                 setQuestionLimit(length);
-                var choice = [era, battles, inventions, elections, court, other, length];
+                
+                selection = [era, battles, inventions, elections, court, other, length];
             
                 $(".pregame").hide();
                 $(".game").show();
             
-                eraSetup(era);
+                eraBackground(era);
+                
+                gameEvents = getEvents();
+                
                 gameStart();
-            
-                return choice;
             });
         });
     });
 
+}
+
+function getEvents(){
+    //Create data set for game from master set
+    var master;
+    
+    $.getJSON("json/USHistory.json", function(json){
+        console.log(json);
+        master = JSON.parse(json);
+        console.log(master);
+        
+    });
+    
+    //Era data set
+    var era;
+    
+    //Dot notation shortcut possible here?
+    if(selection[0]==="era1"){
+        //Set newEvents = to JSON Object only containing that era
+        era = master.era1;
+    }
+    else if(selection[0]==="era2"){
+        era = master.era2;
+    }
+    else if(selection[0]==="era3"){
+        era = master.era3;
+    }
+    else if(selection[0]==="era4"){
+        era = master.era4;
+    }
+    else if(selection[0]==="era5"){
+        era = master.era5;
+    }
+    
+    //Remove subsets not needed?
+    var newCopy = era;
+    
+    return newCopy;
 }
 
 function setQuestionLimit(lengthSelect){
@@ -97,8 +141,7 @@ function setQuestionLimit(lengthSelect){
     }
 }
 
-function eraSetup(era){
-    //TODO: Request only relevant JSON from server
+function eraBackground(era){
     
     var ranImage = Math.floor(Math.random()*3)+1; //Random selection from 3 possible backgrounds
     
@@ -223,13 +266,30 @@ function dragManager(){
 
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
-function getQuestion(){
+/*function getQuestion(){
     qSet++;
     //everything after this is temporary
     count1+=2;
     count2+=2;
     return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2]; //Remember to keep the qSet increments but not this
 
+}*/
+
+function getEvent(){
+    //Get event from new JSON object of only selected event types
+    var event;
+    return event;
+}
+
+function getFalseAnswers(correct){
+    //Return array of randomly selected wrong answers from other events
+    //Run 200 random num generation searches for answers in same category (battles, court, etc) ex: check event number 4 to see if already used. Randomly generate next event number to check
+    //If none found (repeats or none available), run 100 searches in other available categories
+    //If none found, hide extra answer bubble
+    //Remember to make an array of already used answers and compare to avoid repeats
+    //Make sure none match parameter correct too
+    var falseAnswers[];
+    return falseAnswers;
 }
 
 function questionSetup(){
@@ -244,8 +304,20 @@ function questionSetup(){
 
     updateScore(addScore);
     numWrong=0;
+    
     if(qSet <= qLimit){
-        var qa = getQuestion();
+        
+        var event = getEvent();
+        
+        //Put name of event at top
+        //Setup question boxes and correct answer bubbles
+        
+        var wrongAnswers = getFalseAnswers(event);
+        
+        //Check if there is a second question set for event
+        
+        
+        /*var qa = getQuestion();
         $('#questionBox td').eq(0).html(qa[0]);
 
         $('#questionBox td').eq(2).html(qa[5]);
@@ -275,7 +347,7 @@ function questionSetup(){
             scroll: false,
         });
         q1=false;
-        q2=false;
+        q2=false;*/
     }
     else{
         toScore();
