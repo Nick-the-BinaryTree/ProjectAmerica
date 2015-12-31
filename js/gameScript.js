@@ -6,7 +6,6 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 //controls scoring 
 var deduction = 0.1; //percent deduction for wrong answers
-var speedBonus = 0.05; //percent bonus for each second left
 var stdScore = 100; //score for question without bonuses or deductions
 
 //keeps track of score
@@ -44,30 +43,38 @@ $(document).ready(function(){
 });
 
 function gameSetup(){
-    $(".eraOption").click(function(){
+    $(".eraOption").hide();
+
+    $(".create").click(function(){
+
+        $(".mainContainer").hide();
+        $(".eraOption").show();
+
+        $(".eraOption").click(function(){
         
-        var era = this.id;
+            var era = this.id;
+            
+            $(".eraOption").hide();
+            $(".settings").show();
         
-        $(".eraOption").hide();
-        $(".settings").show();
-        
-        $(".goButton").click(function(){
-            var battles = $('#battles')[0].checked;
-            var inventions = $('#inventions')[0].checked;
-            var elections = $('#elections')[0].checked;
-            var court = $('#court')[0].checked;
-            var other = $('#other')[0].checked;
-            var length = $('input[name="length"]:checked', '#lengthForm').val();
-            setQuestionLimit(length);
-            var choice = [era, battles, inventions, elections, court, other, length];
+            $(".goButton").click(function(){
+                var battles = $('#battles')[0].checked;
+                var inventions = $('#inventions')[0].checked;
+                var elections = $('#elections')[0].checked;
+                var court = $('#court')[0].checked;
+                var other = $('#other')[0].checked;
+                var length = $('input[name="length"]:checked', '#lengthForm').val();
+                setQuestionLimit(length);
+                var choice = [era, battles, inventions, elections, court, other, length];
             
-            $(".pregame").hide();
-            $(".game").show();
+                $(".pregame").hide();
+                $(".game").show();
             
-            eraSetup(era);
-            gameStart();
+                eraSetup(era);
+                gameStart();
             
-            return choice;
+                return choice;
+            });
         });
     });
 
@@ -167,6 +174,7 @@ function dragManager(){
         drop: function(event, ui) {
             if(isCorrect("#"+ui.draggable.attr("id"))){
                 q1=true;
+                $("#"+ui.draggable.attr("id")).draggable( "destroy" );
                 $(this).addClass( "answerBox1Dropped" )
                 ui.draggable.position({
                     my: "center",
@@ -192,6 +200,7 @@ function dragManager(){
         drop: function(event, ui) {
             if(isCorrect("#"+ui.draggable.attr("id"))){
                 q2=true;
+                $("#"+ui.draggable.attr("id")).draggable( "destroy" );
                 $(this).addClass( "answerBox2Dropped" )
                 ui.draggable.position({
                     my: "center",
