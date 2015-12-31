@@ -206,12 +206,47 @@
 	“era2”:{
 		
 		“battles”:{
-
+			"Battle of Lake Erie":{
+				"year":"1813",
+				"location":"Canadian Border, Ohio",
+				"result":{
+					"victor":"Americans",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"Gave the Americans control of Lake Erie for the rest of the war",
+					"fact2":"the first unqualified defeat of a British naval squadron in history"
+				}
+			},
+			"Battle of Platsburgh":{
+				"year":"1814",
+				"location":"New York",
+				"result": {
+					"victor":"Americans",
+					"loser":"British"
+				},
+				"notables":{
+					"fact1":"Ended British invasions of the northern United States",
+					"fact2":""
+				}
+			}
 		},
 
 		“inventions” : {
-
+			"McCormick's Mechanical Reaper":{
+				"year":"1831",
+				"notables":{
+					"fact1":"Allowed the farmer to harvest five times as quickly than by hand using a scythe"
+				}
+			},
+			"Telegraph/Morse Code":{
+			"year":"1844",
+			"notables":{
+				"fact1":"Made instant communication between distant places in the country possible"
+				}
+			},
 		},
+		
 
 		“elections” : {
 
