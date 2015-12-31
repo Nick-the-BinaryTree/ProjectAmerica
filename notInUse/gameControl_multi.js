@@ -19,6 +19,7 @@ var onQuestionBatch = function(questions) {
 }
 
 var onSection = function(section) {
+
 }
 
 var onDone = function() {
@@ -27,8 +28,8 @@ var onDone = function() {
 var onScores = function() {
 }
 
-
-var client = new Client("localhost", 8081, onError, onQuestionBatch, onSection, onDone, onScores);
+//var client = new Client("localhost", 8081, onError, onQuestionBatch, onSection, onDone, onScores);
+var client = new Client("project-america.herokuapp.com", 80, onError, onQuestionBatch, onSection, onDone, onScores);
 
 //Listen for the connect button
 

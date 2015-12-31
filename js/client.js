@@ -58,7 +58,7 @@ Client.prototype.get = function(uri, callback) {
 
 Client.prototype.connect = function(name, onConnect) {
     var client = this;
-    this.get("/api/connect?name=" + name, function(response) {
+    this.get("/api/connect?name=" + encodeURIComponent(name), function(response) {
 	if (response.type == "connected") {
 	    client._id = response.data.id;
 	    
@@ -136,7 +136,7 @@ Client.prototype.getGames = function(onGames) {
 //Will start and join a game
 Client.prototype.startGame = function(gameName, isPublic, numQuestions, sections, types, onGameStarted) {
     var uri = "/api/startGame?id=" + this._id;
-    uri += "&name=" + gameName;
+    uri += "&name=" + encodeURIComponent(gameName);
     uri += "&public=" + isPublic;
     uri += "&numQuestions=" + numQuestions;
     var sectionsString = "";
