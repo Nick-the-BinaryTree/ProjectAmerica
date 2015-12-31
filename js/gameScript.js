@@ -4,6 +4,7 @@ var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/4;
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
+
 //controls scoring 
 var deduction = 0.1; //percent deduction for wrong answers
 var stdScore = 100; //score for question without bonuses or deductions
@@ -39,6 +40,32 @@ var selection; //[era id string, battles boolean, inventions boolean, elections 
 //JSON with all data being used in the game (Created from master set with selection settings)
 var gameEvents;
 
+//creates client
+var client = new Client("project-america.herokuapp.com", 80, function(error) { 
+    console.log("Error " + error);
+
+}, function(question) { // onQuestionBatch received
+    console.log("Received question batch " + question);
+    // Show the question
+    
+    // ... see playgame() for how to submit a response
+}, function(section) { // onSection
+    console.log("Received section " + section);
+    // Change to that section (background, etc.)
+
+}, function() { // onDone
+    // Change to scoreboard, we're done
+    console.log("Done!");
+
+}, function(scores) { // onScore
+    console.log("Received scores " + scores);
+    // Update the scores
+
+});
+
+//idk how usernames are gonna work
+var username="yay";
+
 
 $(document).ready(function(){
     gameSetup();
@@ -46,6 +73,11 @@ $(document).ready(function(){
 });
 
 function gameSetup(){
+    client.connect(username, function() { 
+    console.log("Connected");
+
+    });
+
     $(".eraOption").hide();
 
     $(".create").click(function(){
@@ -77,14 +109,15 @@ function gameSetup(){
             
                 eraBackground(era);
                 
-               gameEvents = getEvents();
-                
+                gameEvents = getEvents();
+
                 gameStart();
             });
         });
     });
 
 }
+
 
 function getEvents(){ //NOT DONE
     //Create data set for game from master set
@@ -123,6 +156,7 @@ function getEvents(){ //NOT DONE
     
     return newCopy;
 }
+
 
 
 function setQuestionLimit(lengthSelect){
@@ -282,9 +316,11 @@ function dragManager(){
     count1+=2;
     count2+=2;
     return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2]; //Remember to keep the qSet increments but not this
+    
 
 }
 */
+
 function getEvent(){
     //Get event from new JSON object of only selected event types
     var event;
