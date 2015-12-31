@@ -450,8 +450,9 @@
 	"era3" : {
 
 		"battles" : [
-			"First Battle of Bull Run":{
-				"year":"1861",
+			{
+			        "name":"First Battle of Bull Run",
+			        "year":"1861",
 				"location":"Virginia",
 				"result":{
 					"victor":"Confederates",
@@ -462,7 +463,8 @@
 					"fact2":"This battle was expected to be the first and last of the civil war"
 				}
 			},
-			"Battle of Shiloh":{
+			{
+			        "name":"Battle of Shiloh",
 				"year":"1862",
 				"location":"Tennessee",
 				"result":{
@@ -474,7 +476,8 @@
 					"fact2":"Union General Johnston was killed in this battle"
 				}
 			},
-			"Battle of Antietam":{
+			{
+			        "name":"Battle of Antietam",
 				"year":"1862",
 				"location":"Maryland",
 				"result":{
@@ -490,15 +493,18 @@
 		],
 
 		"inventions" : [
-			"Cowboy Hat":{
+			{
+			        "name":"Cowboy Hat",
 				"year":"1865",
 				"significance":"This article's fabric was made without weaving, and can protect the wearer from the elements"
 			},
-			"(Hand-cranked) Machine gun":{
+			{
+			        "name":"(Hand-cranked) Machine gun"
 				"year":"1861",
 				"significance":"The inventor had hoped that his powerful new weapon would discourage large scale battles and show the folly of war"
 			},
-			"(Steam-powered) Motorcycle":{
+			{
+				"name:""(Steam-powered) Motorcycle",
 				"year":"1867",
 				"significance":""
 			}
