@@ -168,6 +168,59 @@ function gameStart(){
 
 
 function dragManager(){
+
+    //creates two arrays to hold previous positions. for each answer: 
+    //sets its position then adds the numeric value of it's position to the position arrays
+    //this is in drag manager b/c I was trying to prevent overlap in the wrong answer returns too
+    //that is currently broken. will deal with it later.
+
+    var XPos=[0];
+    var YPos=[0];
+        setBlock("#a1",XPos,YPos);
+
+        XPos.push($("#a1").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#a1").css("top").replace(/[^-\d\.]/g, ''));
+
+        setBlock("#a2",XPos,YPos);
+        XPos.push($("#a2").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#a2").css("top").replace(/[^-\d\.]/g, ''));
+
+        setBlock("#a3",XPos,YPos);
+        XPos.push($("#a3").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#a3").css("top").replace(/[^-\d\.]/g, ''));
+
+        setBlock("#a4",XPos,YPos);
+        XPos.push($("#a4").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#a4").css("top").replace(/[^-\d\.]/g, ''));
+
+        setBlock("#b1",XPos,YPos);
+        XPos.push($("#b1").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#b1").css("top").replace(/[^-\d\.]/g, ''));
+
+        setBlock("#b2",XPos,YPos);
+        XPos.push($("#b2").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#b2").css("top").replace(/[^-\d\.]/g, ''));
+
+        setBlock("#b3",XPos,YPos);
+        XPos.push($("#b3").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#b3").css("top").replace(/[^-\d\.]/g, ''));
+
+        setBlock("#b4",XPos,YPos);
+        XPos.push($("#b4").css("left").replace(/[^-\d\.]/g, ''));
+        YPos.push($("#b4").css("top").replace(/[^-\d\.]/g, ''));
+
+        console.log(XPos.toString());
+        console.log(YPos.toString());
+        //$(".option").each(animateDiv);
+        console.log("MarginX " + marginX);
+        console.log("MarginY " + marginY);
+        $( ".option" ).draggable({
+            containment: "window",
+            scroll: false,
+        });
+        q1=false;
+        q2=false;
+
     $(".answerBox1").droppable({
         accept: ".optionA",
         activeClass:"answerBox1Active",
@@ -187,7 +240,7 @@ function dragManager(){
 
             }
             else{
-                setBlock("#"+ui.draggable.attr("id"));
+                setBlock("#"+ui.draggable.attr("id"),[0],[0]);
                 numWrong++;
             }
 
@@ -213,7 +266,7 @@ function dragManager(){
 
             }
             else{
-                setBlock("#"+ui.draggable.attr("id"));
+                setBlock("#"+ui.draggable.attr("id"),[0],[0]);
                 numWrong++;
             }
 
@@ -259,23 +312,7 @@ function questionSetup(){
         $( "#b3" ).html(qa[8]);
         $( "#b4" ).html(qa[9]);
 
-        setBlock("#a1");
-        setBlock("#a2");
-        setBlock("#a3");
-        setBlock("#a4");
-        setBlock("#b1");
-        setBlock("#b2");
-        setBlock("#b3");
-        setBlock("#b4");
-        //$(".option").each(animateDiv);
-        console.log("MarginX " + marginX);
-        console.log("MarginY " + marginY);
-        $( ".option" ).draggable({
-            containment: "window",
-            scroll: false,
-        });
-        q1=false;
-        q2=false;
+        dragManager(); //now does positioning as well
     }
     else{
         toScore();
@@ -327,9 +364,13 @@ function resetGame(){
     $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
 }
 
-function setBlock(tile) {
+function setBlock(tile, XArr, YArr) {
     var x = genX();
     var y = genY();
+    while(checkOverlap(x,XArr,y,YArr)){
+        x=genX();
+        y=genY();
+    }
     
     $(tile).css({
         "left": x,
@@ -362,7 +403,33 @@ function updateScore(newScore){
    $( "p.scoreText" ).html("Score: "+currentScore);
 }
 
+//checks overlap given point and arrays of previous x and y positions
+function checkOverlap(xCoor,xArr,yCoor,yArr){
+    for(var i=0;i<xArr.length;i++){
+        if(willOverlap(xCoor,xArr[i], yCoor,yArr[i])){
+            return true;
+        }
+    }
+    
+    return false;
 
+}
+
+
+//calculates distance between two top left corners, compares that with diagonal
+function willOverlap(x1,x2,y1,y2){
+    var d = Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
+    return (d<getAnswerSize());
+}
+
+//calculates diagonal of answer bubble. also multiplies by 1.5. because reasons. this number may end up having to change.
+function getAnswerSize(){
+      var w=$("#a1").width();
+      var h=$("#a1").height();
+      var dist = Math.sqrt((h*h) + (w*w));
+      return dist*1.25;
+
+}
 /*http://codepen.io/anon/pen/myyzXV
 
 function animateDiv(){
