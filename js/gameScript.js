@@ -52,10 +52,13 @@ function gameSetup(){
             var length = $('input[name="length"]:checked', '#lengthForm').val();
             setQuestionLimit(length);
             var choice = [era, battles, inventions, elections, court, other, length];
+            
             $(".pregame").hide();
-            $(document.body).css('background-image','url(img/CrossingDelaware.jpg)');
             $(".game").show();
+            
+            eraSetup(era);
             gameStart();
+            
             return choice;
         });
     });
@@ -64,7 +67,6 @@ function gameSetup(){
 
 function setQuestionLimit(lengthSelect){
     var limit = lengthSelect;
-    alert (limit);
     
     if(limit==="quick"){
         qLimit = 10;
@@ -77,6 +79,68 @@ function setQuestionLimit(lengthSelect){
     }
     else{
         qLimit = -1; //Code to use every event
+    }
+}
+
+function eraSetup(era){
+    //TODO: Request only relevant JSON from server
+    
+    var ranImage = Math.floor(Math.random()*3)+1; //Random selection from 3 possible backgrounds
+    
+    if(era === "era1"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era1/CrossingDelaware.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era1/DeclarationOfIndependence.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era1/SurrenderOfGeneralBurgoyne.jpg)');
+        }
+    }
+    else if(era === "era2"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era2/AndrewJackson.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era2/EmigrantsCrossingThePlains.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era2/HenryClay.jpg)');
+        }
+    }
+    else if(era === "era3"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era3/Gettysburg.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era3/McKinley.png)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era3/SouthManchuriaRailway.jpg)');
+        }
+    }
+    else if(era === "era4"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era4/Coca-Cola.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era4/Coolidge.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era4/FlagRaising.jpg)');
+        }
+    }
+    else if(era === "era5"){
+        if(ranImage === 1){
+            $(document.body).css('background-image','url(img/era5/Nixon-Johnson.jpg)');
+        }
+        else if(ranImage === 2){
+            $(document.body).css('background-image','url(img/era5/Reagan.jpg)');
+        }
+        else{
+            $(document.body).css('background-image','url(img/era5/Beatles.jpg)');
+        }
     }
 }
 
