@@ -224,6 +224,10 @@ function getQuestion(){
 }
 
 function questionSetup(){
+
+    $(".answerBox1").removeClass( "answerBox1Dropped" );
+    $(".answerBox2").removeClass( "answerBox2Dropped" );
+
     var addScore=0;
     if(qSet>1){
        addScore = calculateScore(numWrong);
@@ -344,8 +348,9 @@ function calculateScore(numWrong){
 
 function updateScore(newScore){
   
-    $( "p.scoreText" ).html("Score: "+newScore);
+    
    currentScore+=newScore;
+   $( "p.scoreText" ).html("Score: "+currentScore);
 }
 
 
