@@ -8,8 +8,12 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var deduction = 0.1; //percent deduction for wrong answers
 var speedBonus = 0.05; //percent bonus for each second left
 var stdScore = 100; //score for question without bonuses or deductions
+
 //keeps track of score
 var currentScore=0;
+
+//keeps track of the number of wrong answers for each question
+var numWrong=0;
 
 //Timer
 var timeElapsed=0;
@@ -37,7 +41,6 @@ var selection; //[era id string, battles boolean, inventions boolean, elections 
 $(document).ready(function(){
     selection = gameSetup(); //era id, events booleans, length id
     //Komal's setup methods done in gameSetup to avoid timer starting before game start, etc
-
 });
 
 function gameSetup(){
@@ -72,7 +75,7 @@ function setQuestionLimit(lengthSelect){
     alert (limit);
     
     if(limit==="quick"){
-        qLimit = 1;
+        qLimit = 10;
     }
     else if(limit==="medium"){
         qLimit = 20;
@@ -92,8 +95,6 @@ function gameStart(){
     dragManager();
 }
 
-//keeps track of score
-var currentScore=0;
 
 function dragManager(){
     $(".answerBox1").droppable({
@@ -115,6 +116,7 @@ function dragManager(){
             }
             else{
                 setBlock("#"+ui.draggable.attr("id"));
+                numWrong++;
             }
 
       }
@@ -139,6 +141,7 @@ function dragManager(){
             }
             else{
                 setBlock("#"+ui.draggable.attr("id"));
+                numWrong++;
             }
 
         }
@@ -157,6 +160,13 @@ function getQuestion(){
 }
 
 function questionSetup(){
+    var addScore=0;
+    if(qSet>1){
+       addScore = calculateScore(numWrong);
+    }
+
+    updateScore(addScore);
+    numWrong=0;
     if(qSet <= qLimit){
         var qa = getQuestion();
         $('#questionBox td').eq(0).html(qa[0]);
@@ -257,8 +267,21 @@ function genX() {
 }
 
 function genY() {
-    var y = Math.floor(Math.random() * (window.innerHeight-marginY*2))+marginY;
+    var y = Math.floor(Math.random() * (window.innerHeight-marginY*2.5))+marginY;
 return y;
+}
+
+function calculateScore(numWrong){
+     var score = stdScore - (stdScore * deduction * numWrong);
+     //time will also be factored in somehow 
+     return score;
+ 
+ }
+
+function updateScore(newScore){
+  
+    $( "p.scoreText" ).html("Score: "+newScore);
+   currentScore+=newScore;
 }
 
 
