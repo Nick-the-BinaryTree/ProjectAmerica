@@ -33,7 +33,7 @@
 					"loser":"British"
 				},
 				"notables":{
-					"fact1":"British casualities over a thousand, Americans only 400",
+					"fact1":"British casualities over 1000, Americans only 400",
 					"fact2":"Americans ordered not to fire until they could see the whites of their eyes"
 				}
 			},
@@ -204,7 +204,6 @@
 	},
 
 	“era2”:{
-		
 		“battles”:{
 			"Battle of Lake Erie":{
 				"year":"1813",
@@ -215,7 +214,7 @@
 				},
 				"notables":{
 					"fact1":"Gave the Americans control of Lake Erie for the rest of the war",
-					"fact2":"the first unqualified defeat of a British naval squadron in history"
+					"fact2":"The first unqualified defeat of a British naval squadron in history"
 				}
 			},
 			"Battle of Platsburgh":{
@@ -227,7 +226,7 @@
 				},
 				"notables":{
 					"fact1":"Ended British invasions of the northern United States",
-					"fact2":""
+					"fact2":"The British General Prévost brought the state of Vermont into the war"
 				}
 			}
 		},
@@ -240,24 +239,149 @@
 				}
 			},
 			"Telegraph/Morse Code":{
-			"year":"1844",
-			"notables":{
+				"year":"1844",
+				"notables":{
 				"fact1":"Made instant communication between distant places in the country possible"
+					}
+			},
+			"Vulcanization":{
+				"year":"1844",
+				"notables":{
+					"fact1":"Chemical process to make rubber strong and supple to create car and bicycle tires"
 				}
 			},
+			"Minie Bullet":{
+				"year":"1849",
+				"notables":{
+					"fact1":"Muzzle-loading rifles could be easily loaded and were now used in combat situations"
+				}
+			}
 		},
 		
 
 		“elections” : {
-
+			"1800":{
+				"result":"Democratic-Republican Jefferson defeated Democratic-Republican Burr, and Federalists Adams and Pinckney",
+				"notables":{
+					"fact1":"The winner was elected by vote of House of Representatives",
+					"fact2":"The top two candidates both recieved the same number of electoral votes"
+				}
+			},
+			"1804":{
+				"result":"Democratic-Republican Jefferson defeated Federalist Pinckney",
+				"notables":{
+					"fact1":"Highest victory margin in a presidential election in which there were multiple major party candidates",
+					"fact2":"Under the 12th amendment, electors were required to vote for both president and vice president"
+				}
+			},
+			"1808":{
+				"result":"Democratic-Republican Madison defeated Federalist Pinckney",
+				"notables":{
+					"fact1":"First of only two times the incumbent Vice President would continue to serve under a new President",
+					"fact2":"The winner had served as Secretary of State under Jefferson"
+				}
+			},
+			"1812":{
+				"result":"Democratic-Republican Madison defeated Federalist Clinton and Democratic-Republican Clinton",
+				"notables":{
+					"fact1":"New York replaced Virginia with most electoral votes (would hold #1 spot until 1972)",
+					"fact2":"The closest election up to that point for the popular vote (50.4%)"
+				}
+			},
+			"1816":{
+				"result":"Democratic-Republican Monroe defeated Federalist King",
+				"notables":{
+					"fact1":"Democratic-Republicans received the credit for the end of the War of 1812",
+					"fact2":"Indiana became a state during this election cycle"
+				}
+			},
+			"1820":{
+				"result":"Democratic-Republican Monroe defeated Independant J.Q. Adams",
+				"notables":{
+					"fact1":"The only U.S. presidential election in which a candidate ran effectively unopposed, (excluding Washington’s two terms)",
+					"fact2":"Continuation of single party politics, known as the Era of Good Feelings"
+				}
+			},
+			"1824":{
+				"result":"Democratic-Republican J.Q. Adams defeated Democratic Republicans Jackson, Crawford, and Clay",
+				"notables":{
+					"fact1":"The winner was son of the United States' second president",
+					"fact2":"No candidate received a majority of the electoral vote, so the House of Representatives decided"
+				}
+			},
+			"1828":{
+				"result":"Democratic Jackson defeated National Republican J.Q. Adams",
+				"notables":{
+					"fact1":"Incumbent Vice President John C. Calhoun sided with the winning candidate",
+					"fact2":"The winner recieved 68.2% of Electoral votes, but only 56% of popular vote"
+				}
+			},
+			"1832":{
+				"result":"Democratic Jackson defeated National Republican Clay, Independant Floyd, and Anti-Masonic Wirt",
+				"notables":{
+					"fact1":"No longer single-party election",
+					"fact2":"First Democratic National Convention held in Baltimore"
+				}
+			},
+			"1836":{
+				"result":"Democratic Van Buren defeated Whigs Harrison, White, Webster, and Independant Mangum",
+				"notables":{
+					"fact1":"Only time in which a Vice Presidential election was thrown into the Senate",
+					"fact2":"Only race in which a major political party (the Whigs) intentionally ran several presidential candidates"
+				}
+			},
+			"1840":{
+				"result":"Whig Harrison defeated Democratic Van Buren",
+				"notables":{
+					"fact1":"Rallying under the slogan “Tippecanoe and Tyler, too,” the winner easily defeated the old President",
+					"fact2":"All presidential and vice-presidential candidates had been or would become President someday"
+				}
+			},
+			"1844":{
+				"result":"Democratic Polk defeated Whig Clay",
+				"notables":{
+					"fact1":"The winner ran on a platform that embraced American territorial expansionism (Manifest Destiny)",
+					"fact2":"It was the last presidential election to be held on different days in different states"
+				}
+			},
+			"1848":{
+				"result":"Whig Taylor defeated Democratic Cass",
+				"notables":{
+					"fact1":"The winner was not clearly committed to Whig principles, but he was popular for leading the war effort",
+					"fact2":"This winning candidate was the last Whig president"
+				}
+			}
 		},
 
 		“court” : {
-
+			“Marbury v. Madison”:{
+				“year”:”1803”,
+				“ruling”:”Madison”
+			},
+			“McCulloch v. Maryland”:{
+				“year”:”1819”,
+				“ruling”:”McCulloch”
+			},
+			“Gibbons v. Ogden”:{
+				“year”:”1824”,
+				“ruling”:”Gibbons”
+			}
 		},
 
 		“other” : {
-
+			"Louisiana Purchase":{
+				"year":"1803",
+				"significance":"Doubled the country's size and opened up the possibilities for westward expansion"
+			},
+			"Missouri Compromise":{
+				"year":"1820",
+				"significance":"Delayed and maintained the balance of the slavery debate for a short time, but did not end it"
+			},
+			"Erie Canal":{
+				"year":"1825",
+				"significance":"Gave the western states direct access to the Atlantic Ocean without using the Mississippi River"
+			}
+			
 		}
 
 	},
