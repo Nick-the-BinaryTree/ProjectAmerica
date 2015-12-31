@@ -1,3 +1,4 @@
+
 //Sizing
 var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/4;
@@ -7,18 +8,26 @@ var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var deduction = 0.1; //percent deduction for wrong answers
 var speedBonus = 0.05; //percent bonus for each second left
 var stdScore = 100; //score for question without bonuses or deductions
+
 //keeps track of score
 var currentScore=0;
 
+//keeps track of the number of wrong answers for each question
+var numWrong=0;
+
 //Timer
 var timeElapsed=0;
+//true during gameplay, for timer use
+var inGame;
+
 
 //Set to false at the start of question, true when correct: control gameplay
 var q1=false;
 var q2=false;
 
+//controls question number
+var qSet = 1;
 //Temporary question control. count1 is odd, count2 is even
-var qSet = 0;
 var count1=-1;
 var count2=0;
 
@@ -32,7 +41,6 @@ var selection; //[era id string, battles boolean, inventions boolean, elections 
 $(document).ready(function(){
     selection = gameSetup(); //era id, events booleans, length id
     //Komal's setup methods done in gameSetup to avoid timer starting before game start, etc
-
 });
 
 function gameSetup(){
@@ -145,13 +153,12 @@ function eraSetup(era){
 }
 
 function gameStart(){
+    inGame =true;
     startTimer();
     questionSetup();
     dragManager();
 }
 
-//keeps track of score
-var currentScore=0;
 
 function dragManager(){
     $(".answerBox1").droppable({
@@ -173,6 +180,7 @@ function dragManager(){
             }
             else{
                 setBlock("#"+ui.draggable.attr("id"));
+                numWrong++;
             }
 
       }
@@ -197,22 +205,18 @@ function dragManager(){
             }
             else{
                 setBlock("#"+ui.draggable.attr("id"));
+                numWrong++;
             }
 
         }
     });
-
-      /*if($("#box1").hasClass("answerBox1Dropped") && $("#box2").hasClass("answerBox2Dropped"){
-        console.log("pls work");
-      }
-      */
-      console.log($("#box1").hasClass("answerBox1Dropped"));
 }
 
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
 function getQuestion(){
     qSet++;
+    //everything after this is temporary
     count1+=2;
     count2+=2;
     return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2]; //Remember to keep the qSet increments but not this
@@ -220,6 +224,13 @@ function getQuestion(){
 }
 
 function questionSetup(){
+    var addScore=0;
+    if(qSet>1){
+       addScore = calculateScore(numWrong);
+    }
+
+    updateScore(addScore);
+    numWrong=0;
     if(qSet <= qLimit){
         var qa = getQuestion();
         $('#questionBox td').eq(0).html(qa[0]);
@@ -258,22 +269,15 @@ function questionSetup(){
     }
 }
 
-//currently set up to be called once at start of game. can be adjusted to pause
-//during loading if we can't load quickly enough
+//called once at start of game
 function startTimer(){
-    var counter=0;
-    $( "p.timeText" ).html("Time: "+counter);
+    $( "p.timeText" ).html("Time: "+timeElapsed);
     var timer= setInterval(function() {
-    counter++;
-    if(counter < 0) {
-        nextQuestion(); //KOMAL, THIS DOESN'T EXIST. Best wishes, Nick
-        clearInterval(timer);
-    } 
-    else {
-        $( "p.timeText" ).html("Time: "+counter);
+    timeElapsed++;
+    if(inGame){
+        $( "p.timeText" ).html("Time: "+timeElapsed);
     }
-}, 1000);
-
+    }, 1000);
 }
 
 
@@ -287,7 +291,7 @@ function toScore(){
     $("#yourScore").text("Your Score: " + currentScore);
     $(".game").hide();
     $(".scoreBoard").show();
-    
+    inGame=false;
     $(".returnOption").click(function(){
         resetGame();
         backToMenu();
@@ -305,7 +309,6 @@ function resetGame(){
     qSet = 0;
     count1=-1;
     count2=0;
-    //Stop timer from counting further, please. Komal, do you want to make it global?
     timeElapsed = 0;
     
     $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
@@ -328,8 +331,21 @@ function genX() {
 }
 
 function genY() {
-    var y = Math.floor(Math.random() * (window.innerHeight-marginY*2))+marginY;
+    var y = Math.floor(Math.random() * (window.innerHeight-marginY*2.5))+marginY;
 return y;
+}
+
+function calculateScore(numWrong){
+     var score = stdScore - (stdScore * deduction * numWrong);
+     //time will also be factored in somehow 
+     return score;
+ 
+ }
+
+function updateScore(newScore){
+  
+    $( "p.scoreText" ).html("Score: "+newScore);
+   currentScore+=newScore;
 }
 
 
