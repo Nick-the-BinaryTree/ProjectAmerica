@@ -27,9 +27,9 @@ var q2=false;
 //controls question number
 var qSet = 1;
 //Temporary question control. count1 is odd, count2 is even
-//var count1=-1;
-//var count2=0;
-
+/*var count1=-1;
+var count2=0;
+*/
 //Question Limit
 var qLimit;
 
@@ -77,7 +77,7 @@ function gameSetup(){
             
                 eraBackground(era);
                 
-                gameEvents = getEvents();
+               gameEvents = getEvents();
                 
                 gameStart();
             });
@@ -123,6 +123,7 @@ function getEvents(){ //NOT DONE
     
     return newCopy;
 }
+
 
 function setQuestionLimit(lengthSelect){
     var limit = lengthSelect;
@@ -206,61 +207,14 @@ function gameStart(){
     inGame =true;
     startTimer();
     questionSetup();
-    dragManager();
 }
 
 
 function dragManager(){
-
-    //creates two arrays to hold previous positions. for each answer: 
-    //sets its position then adds the numeric value of it's position to the position arrays
-    //this is in drag manager b/c I was trying to prevent overlap in the wrong answer returns too
-    //that is currently broken. will deal with it later.
-
-    var XPos=[0];
-    var YPos=[0];
-        setBlock("#a1",XPos,YPos);
-
-        XPos.push($("#a1").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#a1").css("top").replace(/[^-\d\.]/g, ''));
-
-        setBlock("#a2",XPos,YPos);
-        XPos.push($("#a2").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#a2").css("top").replace(/[^-\d\.]/g, ''));
-
-        setBlock("#a3",XPos,YPos);
-        XPos.push($("#a3").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#a3").css("top").replace(/[^-\d\.]/g, ''));
-
-        setBlock("#a4",XPos,YPos);
-        XPos.push($("#a4").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#a4").css("top").replace(/[^-\d\.]/g, ''));
-
-        setBlock("#b1",XPos,YPos);
-        XPos.push($("#b1").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#b1").css("top").replace(/[^-\d\.]/g, ''));
-
-        setBlock("#b2",XPos,YPos);
-        XPos.push($("#b2").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#b2").css("top").replace(/[^-\d\.]/g, ''));
-
-        setBlock("#b3",XPos,YPos);
-        XPos.push($("#b3").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#b3").css("top").replace(/[^-\d\.]/g, ''));
-
-        setBlock("#b4",XPos,YPos);
-        XPos.push($("#b4").css("left").replace(/[^-\d\.]/g, ''));
-        YPos.push($("#b4").css("top").replace(/[^-\d\.]/g, ''));
-
-        console.log(XPos.toString());
-        console.log(YPos.toString());
-        //$(".option").each(animateDiv);
-        console.log("MarginX " + marginX);
-        console.log("MarginY " + marginY);
     
         $( ".option" ).draggable({
             containment: "window",
-            scroll: false,
+            scroll: false
         });
     
         q1=false;
@@ -269,6 +223,7 @@ function dragManager(){
     $(".answerBox1").droppable({
         accept: ".optionA",
         activeClass:"answerBox1Active",
+        tolerance: "touch",
         drop: function(event, ui) {
             if(isCorrect("#"+ui.draggable.attr("id"))){
                 q1=true;
@@ -285,7 +240,7 @@ function dragManager(){
 
             }
             else{
-                setBlock("#"+ui.draggable.attr("id"),[0],[0]);
+                $("#"+ui.draggable.attr("id")).draggable({ revert: "valid" });
                 numWrong++;
             }
 
@@ -311,7 +266,7 @@ function dragManager(){
 
             }
             else{
-                setBlock("#"+ui.draggable.attr("id"),[0],[0]);
+                $("#"+ui.draggable.attr("id")).draggable({ revert: "valid" });
                 numWrong++;
             }
 
@@ -328,8 +283,8 @@ function dragManager(){
     count2+=2;
     return ["q"+count1,"c"+count1,"w"+count1,"w"+count1,"w"+count1,"q"+count2,"c"+count2,"w"+count2,"w"+count2,"w"+count2]; //Remember to keep the qSet increments but not this
 
-}*/
-
+}
+*/
 function getEvent(){
     //Get event from new JSON object of only selected event types
     var event;
@@ -343,7 +298,7 @@ function getFalseAnswers(correct){
     //If none found, hide extra answer bubble
     //Remember to make an array of already used answers and compare to avoid repeats
     //Make sure none match parameter correct too
-    var falseAnswers[];
+    var falseAnswers=[];
     return falseAnswers;
 }
 
@@ -370,11 +325,9 @@ function questionSetup(){
         var wrongAnswers = getFalseAnswers(event);
         
         //Check if there is a second question set for event
+        /*
         
-        
-        
-        
-        /*var qa = getQuestion();
+        var qa = getQuestion();
         $('#questionBox td').eq(0).html(qa[0]);
 
         $('#questionBox td').eq(2).html(qa[5]);
@@ -387,10 +340,7 @@ function questionSetup(){
         $( "#b2" ).html(qa[7]);
         $( "#b3" ).html(qa[8]);
         $( "#b4" ).html(qa[9]);
-        
         */
-        
-        
 
         setBlock("#a1");
         setBlock("#a2");
@@ -399,17 +349,12 @@ function questionSetup(){
         setBlock("#b1");
         setBlock("#b2");
         setBlock("#b3");
-        setBlock("#b4");
+        setBlock("#b4")
         //$(".option").each(animateDiv);
         console.log("MarginX " + marginX);
         console.log("MarginY " + marginY);
-        $( ".option" ).draggable({
-            containment: "window",
-            scroll: false,
-        });
-        q1=false;
-        q2=false;
-        dragManager(); //now does positioning as well
+
+        dragManager(); 
     }
     else{
         toScore();
@@ -448,6 +393,9 @@ function toScore(){
 function backToMenu(){
     $(".scoreBoard").hide();
     $(".pregame").show();
+    $(".eraOption").hide();
+    $(".settings").hide();
+    $(".mainContainer").show();
     selection = gameSetup(); //The cycle never ends! What is life?
 }
 
@@ -461,10 +409,12 @@ function resetGame(){
     $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
 }
 
-function setBlock(tile, XArr, YArr) {
+function setBlock(tile) {
     var x = genX();
     var y = genY();
-    while(checkOverlap(x,XArr,y,YArr)){
+    var XArr = getXPositions();
+    var YArr = getYPositions();
+    while(checkOverlap(x,y)){
         x=genX();
         y=genY();
     }
@@ -475,6 +425,7 @@ function setBlock(tile, XArr, YArr) {
      });
  
 }
+
 
 function genX() {
     var x = Math.floor(Math.random() * (window.innerWidth-marginX))+2;
@@ -501,7 +452,9 @@ function updateScore(newScore){
 }
 
 //checks overlap given point and arrays of previous x and y positions
-function checkOverlap(xCoor,xArr,yCoor,yArr){
+function checkOverlap(xCoor, yCoor){
+    xArr = getXPositions();
+    yArr = getYPositions();
     for(var i=0;i<xArr.length;i++){
         if(willOverlap(xCoor,xArr[i], yCoor,yArr[i])){
             return true;
@@ -513,18 +466,50 @@ function checkOverlap(xCoor,xArr,yCoor,yArr){
 }
 
 
+
 //calculates distance between two top left corners, compares that with diagonal
 function willOverlap(x1,x2,y1,y2){
     var d = Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
     return (d<getAnswerSize());
 }
 
-//calculates diagonal of answer bubble. also multiplies by 1.5. because reasons. this number may end up having to change.
+//calculates diagonal of answer bubble. also multiplies by 1.25. because reasons. this number may end up having to change.
 function getAnswerSize(){
       var w=$("#a1").width();
       var h=$("#a1").height();
       var dist = Math.sqrt((h*h) + (w*w));
       return dist*1.25;
+
+}
+
+
+//returns array with numeric values of x positions of all answer bubbles 
+function getXPositions(){
+    var XPos =[];
+    XPos.push($("#a1").css("left").replace(/[^-\d\.]/g, ''));
+    XPos.push($("#a2").css("left").replace(/[^-\d\.]/g, ''));
+    XPos.push($("#a3").css("left").replace(/[^-\d\.]/g, ''));
+    XPos.push($("#a4").css("left").replace(/[^-\d\.]/g, ''));
+    XPos.push($("#b1").css("left").replace(/[^-\d\.]/g, ''));
+    XPos.push($("#b2").css("left").replace(/[^-\d\.]/g, ''));
+    XPos.push($("#b3").css("left").replace(/[^-\d\.]/g, ''));
+    XPos.push($("#b4").css("left").replace(/[^-\d\.]/g, ''));
+    return XPos;
+
+}
+
+//same but y
+function getYPositions(){
+    var YPos =[];
+    YPos.push($("#a1").css("top").replace(/[^-\d\.]/g, ''));
+    YPos.push($("#a2").css("top").replace(/[^-\d\.]/g, ''));
+    YPos.push($("#a3").css("top").replace(/[^-\d\.]/g, ''));
+    YPos.push($("#a4").css("top").replace(/[^-\d\.]/g, ''));
+    YPos.push($("#b1").css("top").replace(/[^-\d\.]/g, ''));
+    YPos.push($("#b2").css("top").replace(/[^-\d\.]/g, ''));
+    YPos.push($("#b3").css("top").replace(/[^-\d\.]/g, ''));
+    YPos.push($("#b4").css("top").replace(/[^-\d\.]/g, ''));
+    return YPos;
 
 }
 /*http://codepen.io/anon/pen/myyzXV
@@ -567,4 +552,3 @@ function calcSpeed(prev, next) {
 
 }
 */
-
