@@ -86,7 +86,7 @@ function gameSetup(){
 
 }
 
-function getEvents(){
+function getEvents(){ //NOT DONE
     //Create data set for game from master set
     var master;
     
@@ -372,6 +372,8 @@ function questionSetup(){
         //Check if there is a second question set for event
         
         
+        
+        
         /*var qa = getQuestion();
         $('#questionBox td').eq(0).html(qa[0]);
 
@@ -385,8 +387,11 @@ function questionSetup(){
         $( "#b2" ).html(qa[7]);
         $( "#b3" ).html(qa[8]);
         $( "#b4" ).html(qa[9]);
+        
+        */
+        
+        
 
-<<<<<<< HEAD
         setBlock("#a1");
         setBlock("#a2");
         setBlock("#a3");
@@ -403,10 +408,8 @@ function questionSetup(){
             scroll: false,
         });
         q1=false;
-        q2=false;*/
-=======
+        q2=false;
         dragManager(); //now does positioning as well
->>>>>>> 3ba4701d1b9265ccb22ed60bd4b95bbe3c5b0125
     }
     else{
         toScore();
