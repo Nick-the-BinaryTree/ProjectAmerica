@@ -76,6 +76,7 @@ var username="yay";
 
 
 $(document).ready(function(){
+    //reminder from Komal to Komal to fix drag destroy at some point
     gameSetup();
     
 });
@@ -224,18 +225,18 @@ function alreadyAsked(event){
 
 function getQuestions(ranCategory){
 
-    //change this based on what Nick said
+    //follow up questions not yet implemented
     if(categories[ranCategory]==="battles"){
-        return ["Year and Location:", "Result:"];
+        return ["Year:", "Location:"];
 
     }
     else if(categories[ranCategory]==="inventions"){
-        return ["Year:", "Invented by:"];
+        return ["Year:", "Significance:"];
         
         
     }
     else if(categories[ranCategory]==="elections"){
-        return ["Year:", "Result:"];
+        return ["Result:", "Notable Fact:"];
         
         
     }
@@ -265,17 +266,20 @@ function questionSetup(){
     
     if(qSet <= qLimit){
         
-        var event = getEvent();
+        //var event = getEvent();
         
         //Put name of event at top
         //Setup question boxes and correct answer bubbles
         
-        var wrongAnswers = getFalseAnswers(event);
+        //var wrongAnswers = getFalseAnswers(event);
 
         var randoms = getRanEvent(); //randoms[0] is category number, randoms[1] is event number
+        var cat= categories[randoms[0]];
+        var  event= randoms[1];
         var questions = getQuestions(randoms[0]);
         $('#questionBox td').eq(0).html(questions[0]);
         $('#questionBox td').eq(2).html(questions[1]);
+        $("p.eventText").html(gameEvents[cat][event].name);
 
 
 

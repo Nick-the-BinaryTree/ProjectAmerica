@@ -149,7 +149,7 @@
 
 		"elections" : [
 			{
-				"name":"1788-89",
+				"name":"Election of 1788-89",
 				"result":"Washington runs unopposed",
 				"notables":[
 					"The winner was reluctant to become president due to raging debates concerning the new government",
@@ -158,7 +158,7 @@
 				]
 			},
 			{
-				"name":"1792",
+				"name":"Election of 1792",
 				"result":"Washington runs unopposed again",
 				"notables":[
 					"The winner was re-elected unanimously by the Electoral College",
@@ -166,7 +166,7 @@
 				]
 			},
 			{
-				"name":"1796",
+				"name":"Election of 1796",
 				"result":"Federalist Adams defeated Democratic-Republican Jefferson",
 				"notables":[
 					"Washington refused a third term, setting a two term precedent for future presidents",
@@ -358,7 +358,7 @@
 
 		"elections" : [
 			{
-				"name":"1800",
+				"name":"Election of 1800",
 				"result":"Democratic-Republican Jefferson defeated Democratic-Republican Burr, and Federalists Adams and Pinckney",
 				"notables":[
 					"The winner was elected by vote of House of Representatives",
@@ -366,7 +366,7 @@
 				]
 			},
 			{
-				"name":"1804",
+				"name":"Election of 1804",
 				"result":"Democratic-Republican Jefferson defeated Federalist Pinckney",
 				"notables":[
 					"Highest victory margin in a presidential election in which there were multiple major party candidates",
@@ -374,7 +374,7 @@
 				]
 			},
 			{
-				"name":"1808",
+				"name":"Election of 1808",
 				"result":"Democratic-Republican Madison defeated Federalist Pinckney",
 				"notables":[
 					"First of only two times the incumbent Vice President would continue to serve under a new President",
@@ -382,7 +382,7 @@
 				]
 			},
 			{
-				"name":"1812",
+				"name":"Election of 1812",
 				"result":"Democratic-Republican Madison defeated Democratic-Republican Clinton",
 				"notables":[
 					"New York replaced Virginia with most electoral votes (would hold #1 spot until 1972)",
@@ -391,7 +391,7 @@
 				]
 			},
 			{
-				"name":"1816",
+				"name":"Election of 1816",
 				"result":"Democratic-Republican Monroe defeated Federalist King",
 				"notables":[
 					"Democratic-Republicans received the credit for the end of the War of 1812",
@@ -399,7 +399,7 @@
 				]
 			},
 			{
-				"name":"1820",
+				"name":"Election of 1820",
 				"result":"Democratic-Republican Monroe defeated Independant J.Q. Adams",
 				"notables":[
 					"The only U.S. presidential election in which a candidate ran effectively unopposed, (excluding Washington's two terms)",
@@ -407,7 +407,7 @@
 				]
 			},
 			{
-				"name":"1824",
+				"name":"Election of 1824",
 				"result":"Democratic-Republican J.Q. Adams defeated Democratic Republicans Jackson, Crawford, and Clay",
 				"notables":[
 					"The winner was son of the United States' second president",
@@ -415,7 +415,7 @@
 				]
 			},
 			{
-				"name":"1828",
+				"name":"Election of 1828",
 				"result":"Democratic Jackson defeated National Republican J.Q. Adams",
 				"notables":[
 					"Incumbent Vice President John C. Calhoun sided with the winning candidate",
@@ -423,7 +423,7 @@
 				]
 			},
 			{
-				"name":"1832",
+				"name":"Election of 1832",
 				"result":"Democratic Jackson defeated National Republican Clay, Independant Floyd, and Anti-Masonic Wirt",
 				"notables":[
 					"No longer single-party election",
@@ -431,7 +431,7 @@
 				]
 			},
 			{
-				"name":"1836",
+				"name":"Election of 1836",
 				"result":"Democratic Van Buren defeated Whigs Harrison, White, Webster, and Independent Mangum",
 				"notables":[
 					"Only time in which a Vice Presidential election was thrown into the Senate",
@@ -439,7 +439,7 @@
 				]
 			},
 			{
-				"name":"1840",
+				"name":"Election of 1840",
 				"result":"Whig Harrison defeated Democratic Van Buren",
 				"notables":[
 					"Rallying under the slogan 'Tippecanoe and Tyler, too,' the winner easily defeated the old President",
@@ -447,7 +447,7 @@
 				]
 			},
 			{
-				"name":"1844",
+				"name":"Election of 1844",
 				"result":"Democrat Polk defeated Whig Clay",
 				"notables":[
 					"The winner ran on a platform that embraced American territorial expansionism (Manifest Destiny)",
@@ -456,7 +456,7 @@
 				]
 			},
 			{
-				"name":"1848",
+				"name":"Election of 1848",
 				"result":"Whig Taylor defeated Democratic Cass",
 				"notables":[
 					"The winner was not clearly committed to Whig principles, but he was popular for leading the war effort",
@@ -570,7 +570,7 @@
 
 		"elections" : [
 			{
-				"name":"1852",
+				"name":"Election of 1852",
 				"result":"Democratic Pierce defeated Whig Scott",
 				"notables":[
 					"California becomes a state during this election cycle",
@@ -578,7 +578,7 @@
 				]
 			},
 			{
-				"name":"1856",
+				"name":"Election of 1856",
 				"result":"Democratic Buchanan defeated Republican Fremont and American Fillmore",
 				"notables":[
 					"The Whig Party had disintegrated over the issue of slavery, and new organizations such as the Republican Party and the American Party competed to replace them",
@@ -586,7 +586,7 @@
 				]
 			},
 			{
-				"name":"1860",
+				"name":"Election of 1860",
 				"result":"Republican Lincoln defeated Constitutional Union Bell and Democratics Breckinridge and Douglass",
 				"notables":[
 					"Questions of states' rights and slavery fractured the formerly dominant Democratic Party into Southern and Northern factions",
@@ -594,7 +594,7 @@
 				]
 			},
 			{
-				"name":"1864",
+				"name":"Election of 1864",
 				"result":"Republican Lincoln defeated Democratic McClellan",
 				"notables":[
 					"The 1864 election occurred during the Civil War, so none of the states loyal to the Confederate States of America participated",
@@ -602,7 +602,7 @@
 				]
 			},
 			{
-				"name":"1868",
+				"name":"Election of 1868",
 				"result":"Republican Grant defeated Democratic Seymour",
 				"notables":[
 					"Texas, Mississippi, and Virginia (former Confederate states) were not yet restored to the Union and therefore could not vote in the election",
@@ -610,7 +610,7 @@
 				]
 			},
 			{
-				"name":"1872",
+				"name":"Election of 1872",
 				"result":"Republican Grant defeated Democratics Hendricks and Greeley",
 				"notables":[
 					"Greeley died after the popular vote but before the Electoral College cast its votes (as a result, electors previously committed to Greeley voted for four different candidates for President)",
@@ -618,7 +618,7 @@
 				]
 			},
 			{
-				"name":"1876",
+				"name":"Election of 1876",
 				"result":"Republican Hayes defeated Democratic Tilden",
 				"notables":[
 					"While Tilden narrowly won the popular vote, Hayes won the electoral vote by only 1 vote after much dispute",
@@ -626,7 +626,7 @@
 				]
 			},
 			{
-				"name":"1880",
+				"name":"Election of 1880",
 				"result":"Republican Garfield defeated Democratic Hancock",
 				"notables":[
 					"It is to date the smallest popular vote victory in American history",
@@ -634,7 +634,7 @@
 				]
 			},
 			{
-				"name":"1884",
+				"name":"Election of 1884",
 				"result":"Democratic Cleveland defeated Republican Blaine",
 				"notables":[
 					"First Democrat elected President of the United States since before the American Civil War",
@@ -642,7 +642,7 @@
 				]
 			},
 			{
-				"name":"1888",
+				"name":"Election of 1888",
 				"result":"Republican Harrison defeated Democratic Cleveland",
 				"notables":[
 					"One of only 4 elections (1824, 1876, 1888, 2000) where the popular vote winner was defeated",
@@ -650,7 +650,7 @@
 				]
 			},
 			{
-				"name":"1892",
+				"name":"Election of 1892",
 				"result":"Democratic Cleveland defeated Republican Harrison and People's Weaver",
 				"notables":[
 					"Cleveland became the only person in US history to be elected to a second, non-consecutive presidential term",
@@ -658,7 +658,7 @@
 				]
 			},
 			{
-				"name":"1896",
+				"name":"Election of 1896",
 				"result":"Republican McKinley defeated Democrat-Populist Bryan",
 				"notables":[
 					"Bryan was the first ever to criss-cross the nation and meet voters in person",
