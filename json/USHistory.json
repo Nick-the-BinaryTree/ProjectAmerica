@@ -138,12 +138,12 @@
 			{
 				"name":"Lighting rod",
 				"year":"1752",
-				"significance":"Protected homes from lighting strikes"
+				"significance":"Frankin's invention protected homes from lighting strikes"
 			},
 			{
 				"name":"Cotton Gin",
 				"year":"1794",
-				"significance":"Offered Southern planters a justification to maintain and expand slavery"
+				"significance":"Whitney's invention offered Southern planters a justification to maintain and expand slavery"
 			}
 		],
 
@@ -346,7 +346,7 @@
 			{
 				"name":"Vulcanization",
 				"year":"1844",
-				"significance":"Chemical process to make rubber strong and supple to create tires"
+				"significance":"Goodyear's chemical process to make rubber strong and supple to create tires"
 			},
 			{
 				"name":"Minie Bullet",
@@ -553,17 +553,17 @@
 			{
 			    "name":"Cowboy Hat",
 				"year":"1865",
-				"significance":"This article's fabric was made without weaving, and can protect the wearer from the elements"
+				"significance":"Stetson made this article's fabric without weaving, and can protect the wearer from the elements"
 			},
 			{
 			    "name":"(Hand-cranked) Machine gun",
 				"year":"1861",
-				"significance":"The inventor had hoped that his powerful new weapon would discourage large scale battles and show the folly of war"
+				"significance":"Gatling had hoped that his powerful new weapon would discourage large scale battles and show the folly of war"
 			},
 			{
 				"name":"(Steam-powered) Motorcycle",
 				"year":"1867",
-				"significance":"Vroom vroom!"
+				"significance":"Roper fixed a coal-fired boiler between the wheels, but he died demonstrating one of his machines"
 			}
 
 		],
