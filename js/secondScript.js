@@ -114,7 +114,6 @@ function dragManager(){
 
             }
             else{
-                console.log("lol")
                 $("#"+ui.draggable.attr("id")).draggable({ revert: "valid" });
                 numWrong++;
             }
@@ -228,6 +227,7 @@ function setBlock(tile) {
         "top": y       
      });
  
+    $(tile).show(); //In case any were hidden because they contained nothing
 }
 
 

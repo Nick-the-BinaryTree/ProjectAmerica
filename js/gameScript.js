@@ -197,13 +197,21 @@ function getRanEvent(){
     var ranCategory = Math.floor(Math.random() * categories.length);
     var category = categories[ranCategory];
     var ranEvent = Math.floor(Math.random() * gameEvents[category].length);
-
-    while(alreadyAsked(gameEvents[category][ranEvent].name)){
+    var timeout = 0;
+    var timeoutMax = 2000;
+    
+    while(timeout < 2000 && alreadyAsked(gameEvents[category][ranEvent].name)){
         ranCategory = Math.floor(Math.random() * categories.length);
         category = categories[ranCategory];
         ranEvent = Math.floor(Math.random() * gameEvents[category].length);
+        
+        timeout++;
     }
 
+    if(timeout > timeoutMax){ //Couldn't get event that wasn't already used - end game
+        toScore();
+    }
+    
     askedQuestions.push(gameEvents[category][ranEvent].name);
 
     return [ranCategory,ranEvent];
@@ -263,20 +271,26 @@ function genFalseAnswers(questionType, correct){
         
         usedAnswers.push(correct.year);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
             
-            var potential = getRanYear();
+            var potential;
+            
+            if(timeout < timeoutFallback){
+                potential = getRanYear();
+            }
+            else{
+                potential = getFallbackFact();
+            }
             
             if(notUsed(potential, usedAnswers)){
                 usedAnswers.push(potential);
             }
             
             timeout++;
-            
-            if(timeout>timeoutMax){ //If nothing was found in a large number of searches, hide the bubble
-                usedAnswers.push(-1);  //Bubble hiding code
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){ //If nothing was found in a large number of searches, hide the bubble
+            usedAnswers.push(-1);  //Bubble hiding code
         }
         
         var falseAnswers = usedAnswers.splice(1,usedAnswers.length); //Removes first element (correct answer)
@@ -286,20 +300,26 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 2){ //Location (Only called for battles)
         usedAnswers.push(correct.location);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
-            var potential = getRanLocation();
-                
+            var potential;
+            
+            if(timeout < timeoutFallback){
+                potential = getRanLocation();
+            }
+            else{
+                potential = getFallbackFact();
+            }
+            
             if(notUsed(potential, usedAnswers)){
                 usedAnswers.push(potential);
             }
-                
+            
             timeout++;
-                
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){ //If nothing was found in a large number of searches, hide the bubble
+            usedAnswers.push(-1);  //Bubble hiding code
         }
         
         var falseAnswers = usedAnswers.splice(1, usedAnswers.length);
@@ -309,7 +329,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 3){ //Battle notable fact
         usedAnswers = usedAnswers.concact(correct.notables);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -326,10 +346,10 @@ function genFalseAnswers(questionType, correct){
                 
             timeout++;
                 
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){
+            usedAnswers.push(-1); 
         }
         
         var falseAnswers = usedAnswers.splice(correct.notables.length-1, usedAnswers.length); //Remove correct notable facts from array
@@ -339,7 +359,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 4){ //Invention significance
         usedAnswers.push(correct.significance);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                         
             var potential;
             
@@ -355,11 +375,11 @@ function genFalseAnswers(questionType, correct){
             }
                 
             timeout++;
-                
-            if(timeout>timeoutMax){
+            
+        }
+        
+        if(timeout>timeoutMax){
                 usedAnswers.push(-1); 
-                break;
-            }
         }
         
         var falseAnswers = usedAnswers.splice(1, usedAnswers.length);
@@ -369,7 +389,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 5){ //Election notable
         usedAnswers = usedAnswers.concact(correct.notables);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -386,10 +406,10 @@ function genFalseAnswers(questionType, correct){
                 
             timeout++;
                 
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){
+            usedAnswers.push(-1); 
         }
         
         var falseAnswers = usedAnswers.splice(correct.notables.length-1, usedAnswers.length);
@@ -399,7 +419,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 6){ //Court ruling
         usedAnswers.push(correct.ruling);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -416,10 +436,10 @@ function genFalseAnswers(questionType, correct){
                 
             timeout++;
                 
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){
+            usedAnswers.push(-1); 
         }
         
         var falseAnswers = usedAnswers.splice(1, usedAnswers.length);
@@ -429,7 +449,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 7){ //Other significance
         usedAnswers.push(correct.significance);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -446,10 +466,10 @@ function genFalseAnswers(questionType, correct){
                 
             timeout++;
                 
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){
+            usedAnswers.push(-1); 
         }
         
         var falseAnswers = usedAnswers.splice(1, usedAnswers.length);
@@ -460,7 +480,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 8){ //Battle victor
         usedAnswers.push(correct.result.victor);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -477,10 +497,10 @@ function genFalseAnswers(questionType, correct){
                 
             timeout++;
                 
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){
+            usedAnswers.push(-1); 
         }
         
         var falseAnswers = usedAnswers.splice(1, usedAnswers.length);
@@ -491,7 +511,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 9){ //Battle loser
         usedAnswers.push(correct.result.loser);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -508,10 +528,10 @@ function genFalseAnswers(questionType, correct){
                 
             timeout++;
                 
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){
+            usedAnswers.push(-1); 
         }
         
         var falseAnswers = usedAnswers.splice(1, usedAnswers.length);
@@ -522,7 +542,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 10){ //Election result
         usedAnswers.push(correct.result);
             
-        while(usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -539,10 +559,10 @@ function genFalseAnswers(questionType, correct){
                 
             timeout++;
                 
-            if(timeout>timeoutMax){
-                usedAnswers.push(-1); 
-                break;
-            }
+        }
+        
+        if(timeout>timeoutMax){
+            usedAnswers.push(-1); 
         }
         
         var falseAnswers = usedAnswers.splice(1, usedAnswers.length);
@@ -643,7 +663,7 @@ function questionSetup(){
             $( "#b1" ).html(gameEvents[cat][ranEvent].significance);
              
             falseAnswers1=genFalseAnswers(7, theEvent);
-            addFalseAnswers("#a", falseAnswers1);
+            addFalseAnswers("#b", falseAnswers1);
 
         }
 
@@ -700,10 +720,21 @@ function notUsed(potential, usedAnswers){
 
 function addFalseAnswers(AorB, falseAnswers){ //Usage AorB = "#a" or "#b"
     var idStartNum = 2;
+    var max = 3; //Number of false answers needed
     var x;
+    var hideRemaining = false;
 
-    for(idStartNum, x = 0; x < falseAnswers.length; idStartNum++, x++){
-        $(AorB+idStartNum).text(falseAnswers[x]);
+    for(idStartNum, x = 0; x < max; idStartNum++, x++){
+        if(hideRemaining){ //Nothing left in array, hide rest of bubbles
+            $(AorB+idStartNum).hide();
+        }
+        else if(falseAnswers[x] === -1){ //Code for nothing found
+            $(AorB+idStartNum).hide();
+            hideRemaining = true;
+        }
+        else{
+            $(AorB+idStartNum).text(falseAnswers[x]);   
+        }
     }
 }
 
