@@ -268,7 +268,7 @@
 			{
 				"name":"Battle of the Alamo",
 				"year":"1836",
-				"location":"Texas"
+				"location":"Texas",
 				"result":{
 					"victor":"Mexicans",
 					"loser":"Texians"
@@ -300,7 +300,7 @@
 					"loser":"Mexicans"
 				},
 				"notables":[
-					"American General Taylor, defying conventional military wisdom, divided his army to attack the city from two sides at once"
+					"American General Taylor, defying conventional military wisdom, divided his army to attack the city from two sides at once",
 					"Mexican General Ampudia surrendered the city in exchange for an eight-week armistice and allowing his troops to go free"
 				]
 			},
@@ -316,7 +316,7 @@
 					"This close victory carried American General Taylor to the presidency the following year",
 					"The final major battle in northeastern Mexico"
 				]
-            }
+            },
 			{
 				"name":"Battle of Chapultepec",
 				"year":"1847",
