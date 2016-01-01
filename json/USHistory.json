@@ -545,6 +545,32 @@
 					"Single bloodiest day of the Civil War, with 23,000 casualties",
 					"Union General McClellan failed to pursue the Confederate troops and was therefore replaced by General Burnside"
 				]
+			},
+			{
+				"name":"Battle of Manilla Bay",
+				"year":"1898",
+				"location":"Phillipines",
+				"result":{
+					"victor":"Americans",
+					"loser":"Spanish"
+				},
+				"notables":[
+					"First battle of the Spanish-American war",
+					"Spanish losses estimated at more than 370 troops, American casualities fewer than 10"
+					]
+			},
+			{
+				"name":"Battle of ",
+				"year":"1898",
+				"location":"Phillipines",
+				"result":{
+					"victor":"Americans",
+					"loser":"Spanish"
+				},
+				"notables":[
+					"Complete destruction of the Spanish fleet",
+					"End of large-scale naval operations in the Spanish-American war"
+					]
 			}
 
 		],
