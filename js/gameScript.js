@@ -659,6 +659,7 @@ function questionSetup(){
             if(cat==="battles"){ 
             
                 $( "#a1" ).html(gameEvents[cat][ranEvent].year);
+
                 falseAnswers1=genFalseAnswers(1, theEvent);
                 addFalseAnswers("#a", falseAnswers1);
                 $( "#b1" ).html(gameEvents[cat][ranEvent].location);
@@ -772,7 +773,7 @@ function addFalseAnswers(AorB, falseAnswers){ //Usage AorB = "#a" or "#b"
     var x;
     var hideRemaining = false;
 
-    for(idStartNum, x = 0; x < max; idStartNum++, x++){
+    for(idStartNum, x = 0; x <max; idStartNum++, x++){
         if(hideRemaining){ //Nothing left in array, hide rest of bubbles
             $(AorB+idStartNum).hide();
         }
