@@ -131,6 +131,7 @@ function gameSetup(){
 
 function getEvents(){ //Working! (At least w/ server)
     //Create data set for game from master set
+
     $.ajax({
         url:"json/USHistory.json",
         dataType:"text",
@@ -271,9 +272,9 @@ function questionSetup(){
         var wrongAnswers = getFalseAnswers(event);
 
         var randoms = getRanEvent(); //randoms[0] is category number, randoms[1] is event number
-        var questions = getQuestions();
-        $('#questionBox td').eq(0).html(qa[0]);
-        $('#questionBox td').eq(2).html(qa[2]);
+        var questions = getQuestions(randoms[0]);
+        $('#questionBox td').eq(0).html(questions[0]);
+        $('#questionBox td').eq(2).html(questions[1]);
 
 
 
