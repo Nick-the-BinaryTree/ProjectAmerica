@@ -545,6 +545,32 @@
 					"Single bloodiest day of the Civil War, with 23,000 casualties",
 					"Union General McClellan failed to pursue the Confederate troops and was therefore replaced by General Burnside"
 				]
+			},
+			{
+				"name":"Battle of Manilla Bay",
+				"year":"1898",
+				"location":"Phillipines",
+				"result":{
+					"victor":"Americans",
+					"loser":"Spanish"
+				},
+				"notables":[
+					"First battle of the Spanish-American war",
+					"Spanish losses estimated at more than 370 troops, American casualities fewer than 10"
+					]
+			},
+			{
+				"name":"Battle of ",
+				"year":"1898",
+				"location":"Phillipines",
+				"result":{
+					"victor":"Americans",
+					"loser":"Spanish"
+				},
+				"notables":[
+					"Complete destruction of the Spanish fleet",
+					"End of large-scale naval operations in the Spanish-American war"
+					]
 			}
 
 		],
@@ -705,10 +731,10 @@
 					"loser":"Germany"
 					
 				},
-				"notables":{
+				"notables":[
 					"First American Battle fought in World War 1",
 					"The objective was partly to reduce a salient made by the front lines of the German Army, but mostly to prove the ability of the inexperienced American troops."
-				}
+				]
 			},
 			{
 				"name":"Attack on Pearl Harbor",
@@ -718,10 +744,10 @@
 					"victor":"Japan",
 					"loser":"USA",
 				},
-				"notables":{
+				"notables":[
 					"All of the Americans killed or wounded during the attack were non-combatants, given the fact there was no state of war when the attack occurred",
 					"The US entered World War 2 and declared war on Japan, Germany, and Italy"
-				}
+				]
 			},
 			{
 				"name":"Atomic Bombings of Hiroshima and Nagasaki",
@@ -731,10 +757,10 @@
 					"victor":"USA",
 					"loser":"Japan"
 				},
-				"notables":{
+				"notables":[
 					"129,000–246,000+ killed, mostly civilians",
 					"Japan surrendered 6 days after the bombings"
-				}
+				]
 			}
 
 		],
