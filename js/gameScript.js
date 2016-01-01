@@ -135,6 +135,7 @@ function getEvents(){ //Working! (At least w/ server)
     $.ajax({
         url:"json/USHistory.json",
         dataType:"text",
+        async: false,
         success:function(data){
             
             var master = JSON.parse(data);
