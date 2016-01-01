@@ -83,7 +83,6 @@ var username="yay";
 
 
 $(document).ready(function(){
-    //reminder from Komal to Komal to fix drag destroy at some point
     gameSetup();
     
 });
@@ -759,8 +758,8 @@ function questionSetup(){
 }
 
 function notUsed(potential, usedAnswers){
-    for (var used of usedAnswers){      
-        if(potential === used){
+    for (var i=0;i<usedAnswers.length;i++){ 
+        if(potential === usedAnswers[i]){
             return false;
         }
     }
