@@ -327,7 +327,7 @@ function genFalseAnswers(questionType, correct){
         return falseAnswers;
     }
     else if(questionType === 3){ //Battle notable fact
-        usedAnswers = usedAnswers.concact(correct.notables);
+        usedAnswers = correct.notables;
             
         while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
@@ -387,7 +387,7 @@ function genFalseAnswers(questionType, correct){
         return falseAnswers;
     }
     else if(questionType === 5){ //Election notable
-        usedAnswers = usedAnswers.concact(correct.notables);
+        usedAnswers = correct.notables;
             
         while(timeout < timeoutMax && usedAnswers.length < numAnswers){
                 
