@@ -254,7 +254,7 @@ function getQuestions(ranCategory){
 
 function genFalseAnswers(questionType, correct){
     var usedAnswers=[];
-    var numFalse = 3;
+    var numAnswers = 4;
     var timeout = 0;
     var timeoutFallback = 1000;
     var timeoutMax = 1500;
@@ -263,7 +263,7 @@ function genFalseAnswers(questionType, correct){
         
         usedAnswers.push(correct.year);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
             
             var potential = getRanYear();
             
@@ -286,7 +286,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 2){ //Location (Only called for battles)
         usedAnswers.push(correct.location);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential = getRanLocation();
                 
@@ -309,7 +309,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 3){ //Battle notable fact
         usedAnswers.concact(correct.notables);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -339,7 +339,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 4){ //Invention significance
         usedAnswers.push(correct.significance);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                         
             var potential;
             
@@ -369,7 +369,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 5){ //Election notable
         usedAnswers.concact(correct.notables);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -399,7 +399,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 6){ //Court ruling
         usedAnswers.push(correct.ruling);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -429,7 +429,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 7){ //Other significance
         usedAnswers.push(correct.significance);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -460,7 +460,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 8){ //Battle victor
         usedAnswers.push(correct.result.victor);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -491,7 +491,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 9){ //Battle loser
         usedAnswers.push(correct.result.loser);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential;
             
@@ -522,7 +522,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 9){ //Election result
         usedAnswers.push(correct.result);
             
-        while(usedAnswers.length < numFalse){
+        while(usedAnswers.length < numAnswers){
                 
             var potential;
             
