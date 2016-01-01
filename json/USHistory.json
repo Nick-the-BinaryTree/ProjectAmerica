@@ -264,6 +264,71 @@
 					{"Yes, this happened after the end of the war. Information travelled slowly."},
 					{"Made future president General Andrew Jackson quite popular"}
 				]
+			},
+			{
+				"name":"Battle of the Alamo",
+				"year":"1836",
+				"location":"Texas"
+				"result":{
+					"victor":"Mexicans",
+					"loser":"Texians"
+				},
+				"notables":[
+					{"Santa Anna's cruelty during the battle inspired many Texians to join the Texian Army"},
+					{"The site of this battle is now the most popular tourist spot in Texas"}
+				]
+			},
+			{
+				"name":"Battle of Palo Alto",
+				"year":"1846",
+				"location":"Texas",
+				"result":{
+					"victor":"Americans",
+					"loser":"Mexicans"
+				},
+				"notables":[
+					{"The first official battle of the Mexican-American War"},
+					{"While the casualty statistics say 100 Mexicans were killed, some sources suggests close to 500 were killed"}
+				]
+			},
+			{
+				"name":"Battle of Monterry",
+				"year":"1846",
+				"location":"Mexico",
+				"result":{
+					"victor":"Americans",
+					"loser":"Mexicans"
+				},
+				"notables":[
+					{"American General Taylor, defying conventional military wisdom, divided his army to attack the city from two sides at once"}
+					{"Mexican General Ampudia surrendered the city in exchange for an eight-week armistice and allowing his troops to go free"}
+					]
+			},
+			{
+				"name":"Battle of Beuna Vista",
+				"year":"1847",
+				"location":"Mexico",
+				"result":{
+					"victor":"Americans",
+					"loser":"Mexicans"
+				},
+				"notables":[
+					{"This close victory carried American General Taylor to the presidency the following year"},
+					{"The final major battle in northeastern Mexico"}
+					]
+				}
+			{
+				"name":"Battle of Chapultepec",
+				"year":"1847",
+				"location":"Mexico",
+				"result":{
+					"victor":"Americans",
+					"loser":"Mexicans"
+				},
+				"notables":[
+					{"A source of great pride for Mexicans today, as young cadets fought bravely to defend the fortress"},
+					{"The last battle of the Mexican-American War"}
+					]
 			}
 		],
 
