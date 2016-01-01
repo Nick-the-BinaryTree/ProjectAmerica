@@ -40,6 +40,12 @@ var selection; //[era id string, battles boolean, inventions boolean, elections 
 //JSON with all data being used in the game (Created from master set with selection settings)
 var gameEvents;
 
+//current game's categories
+var categories=[];
+
+//questions that have been asked
+var askedQuestions =[];
+
 //creates client
 /*
 var client = new Client("project-america.herokuapp.com", 80, function(error) { 
@@ -106,13 +112,14 @@ function gameSetup(){
                 setQuestionLimit(length);
                 
                 selection = [era, battles, inventions, elections, court, other, length];
+                getEvents();
+                console.log(gameEvents);
             
                 $(".pregame").hide();
                 $(".game").show();
             
                 eraBackground(era);
-                
-                gameEvents = getEvents();
+
 
                 gameStart();
             });
@@ -151,33 +158,162 @@ function getEvents(){ //Working! (At least w/ server)
             }
             
             var blankCopy = '{"battles" : [],"inventions" : [],"elections" : [],"court": [], "other" : [] }';
-        
-            console.log(blankCopy);
+
+            //console.log(blankCopy);
+
+
               
             var newCopy=JSON.parse(blankCopy);
             
             if(selection[1]===true){
                 newCopy["battles"] = era.battles;
+                categories.push("battles");
             }
             if(selection[2]===true){
                 newCopy["inventions"] = era.inventions;
+                categories.push("inventions");
             }
             if(selection[3]===true){
                 newCopy["elections"] = era.elections;
+                categories.push("elections");
             }
             if(selection[4]===true){
                 newCopy["court"] = era.court;
+                categories.push("court");
             }
             if(selection[5]===true){
                 newCopy["other"] = era.other;
+                categories.push("other");
             }
+            console.log(newCopy);
     
-    return newCopy;
+        gameEvents = newCopy;
         }
     });
 }
 
+//returns [category random number, event random number]
+function getRanEvent(){
+    var ranCategory = Math.floor(Math.random() * categories.length);
+    var category = categories[ranCategory];
+    var ranEvent = Math.floor(Math.random() * gameEvents[category].length);
 
+    while(alreadyAsked(gameEvents[category][ranEvent].name)){
+        ranCategory = Math.floor(Math.random() * categories.length);
+        category = categories[ranCategory];
+        ranEvent = Math.floor(Math.random() * gameEvents[category].length);
+    }
+
+    askedQuestions.push(gameEvents[category][ranEvent].name);
+
+    return [ranCategory,ranEvent];
+
+}
+
+function alreadyAsked(event){
+
+    for(var i=0; i<alreadyAsked.length;i++){
+        if(alreadyAsked[i]===event){
+            return true;
+        }
+    }
+    return false;
+}
+
+function getQuestions(ranCategory){
+
+    //change this based on what Nick said
+    if(categories[ranCategory]==="battles"){
+        return ["Year and Location:", "Result:"];
+
+    }
+    else if(categories[ranCategory]==="inventions"){
+        return ["Year:", "Invented by:"];
+        
+        
+    }
+    else if(categories[ranCategory]==="elections"){
+        return ["Year:", "Result:"];
+        
+        
+    }
+    else if(categories[ranCategory]==="court"){
+        return ["Year:","Ruling:"];
+        
+        
+    }
+    else if(categories[ranCategory]==="other"){
+        return ["Year:","Significance:"]
+       
+    }
+
+}
+function questionSetup(){
+
+    $(".answerBox1").removeClass( "answerBox1Dropped" );
+    $(".answerBox2").removeClass( "answerBox2Dropped" );
+
+    var addScore=0;
+    if(qSet>1){
+       addScore = calculateScore(numWrong);
+    }
+
+    updateScore(addScore);
+    numWrong=0;
+    
+    if(qSet <= qLimit){
+        
+        var event = getEvent();
+        
+        //Put name of event at top
+        //Setup question boxes and correct answer bubbles
+        
+        var wrongAnswers = getFalseAnswers(event);
+
+        var randoms = getRanEvent(); //randoms[0] is category number, randoms[1] is event number
+        var questions = getQuestions();
+        $('#questionBox td').eq(0).html(qa[0]);
+        $('#questionBox td').eq(2).html(qa[2]);
+
+
+
+        
+        //Check if there is a second question set for event
+        /*
+        
+        var qa = getQuestion();
+        $('#questionBox td').eq(0).html(qa[0]);
+
+        $('#questionBox td').eq(2).html(qa[5]);
+
+        $( "#a1" ).html(qa[1]);
+        $( "#a2" ).html(qa[2]);
+        $( "#a3" ).html(qa[3]);
+        $( "#a4" ).html(qa[4]);
+        $( "#b1" ).html(qa[6]);
+        $( "#b2" ).html(qa[7]);
+        $( "#b3" ).html(qa[8]);
+        $( "#b4" ).html(qa[9]);
+        */
+
+        setBlock("#a1");
+        setBlock("#a2");
+        setBlock("#a3");
+        setBlock("#a4");
+        setBlock("#b1");
+        setBlock("#b2");
+        setBlock("#b3");
+        setBlock("#b4")
+        //$(".option").each(animateDiv);
+        console.log("MarginX " + marginX);
+        console.log("MarginY " + marginY);
+
+        dragManager(); 
+    }
+    else{
+        toScore();
+    }
+}
 
 function setQuestionLimit(lengthSelect){
     var limit = lengthSelect;
@@ -360,64 +496,7 @@ function getFalseAnswers(correct){
     return falseAnswers;
 }
 
-function questionSetup(){
 
-    $(".answerBox1").removeClass( "answerBox1Dropped" );
-    $(".answerBox2").removeClass( "answerBox2Dropped" );
-
-    var addScore=0;
-    if(qSet>1){
-       addScore = calculateScore(numWrong);
-    }
-
-    updateScore(addScore);
-    numWrong=0;
-    
-    if(qSet <= qLimit){
-        
-        var event = getEvent();
-        
-        //Put name of event at top
-        //Setup question boxes and correct answer bubbles
-        
-        var wrongAnswers = getFalseAnswers(event);
-        
-        //Check if there is a second question set for event
-        /*
-        
-        var qa = getQuestion();
-        $('#questionBox td').eq(0).html(qa[0]);
-
-        $('#questionBox td').eq(2).html(qa[5]);
-
-        $( "#a1" ).html(qa[1]);
-        $( "#a2" ).html(qa[2]);
-        $( "#a3" ).html(qa[3]);
-        $( "#a4" ).html(qa[4]);
-        $( "#b1" ).html(qa[6]);
-        $( "#b2" ).html(qa[7]);
-        $( "#b3" ).html(qa[8]);
-        $( "#b4" ).html(qa[9]);
-        */
-
-        setBlock("#a1");
-        setBlock("#a2");
-        setBlock("#a3");
-        setBlock("#a4");
-        setBlock("#b1");
-        setBlock("#b2");
-        setBlock("#b3");
-        setBlock("#b4")
-        //$(".option").each(animateDiv);
-        console.log("MarginX " + marginX);
-        console.log("MarginY " + marginY);
-
-        dragManager(); 
-    }
-    else{
-        toScore();
-    }
-}
 
 //called once at start of game
 function startTimer(){
