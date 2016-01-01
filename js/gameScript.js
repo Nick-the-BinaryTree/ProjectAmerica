@@ -88,12 +88,10 @@ function gameSetup(){
     });
     */
 
-    $(".eraOption").hide();
-
     $(".create").click(function(){
 
-        $(".mainContainer").hide();
-        $(".eraOption").show();
+        $(".startContainer").hide();
+        $(".eraChoice").show();
 
         $(".eraOption").click(function(){
         
@@ -567,7 +565,7 @@ function questionSetup(){
 }
 
 function notUsed(potential, usedAnswers){
-    for each(var used in usedAnswers){      
+    for (var used of usedAnswers){      
         if(potential === used){
             return false;
         }
