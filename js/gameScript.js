@@ -307,7 +307,7 @@ function genFalseAnswers(questionType, correct){
         return falseAnswers;
     }
     else if(questionType === 3){ //Battle notable fact
-        usedAnswers.concact(correct.notables);
+        usedAnswers = usedAnswers.concact(correct.notables);
             
         while(usedAnswers.length < numAnswers){
                 
@@ -367,7 +367,7 @@ function genFalseAnswers(questionType, correct){
         return falseAnswers;
     }
     else if(questionType === 5){ //Election notable
-        usedAnswers.concact(correct.notables);
+        usedAnswers = usedAnswers.concact(correct.notables);
             
         while(usedAnswers.length < numAnswers){
                 
@@ -519,7 +519,7 @@ function genFalseAnswers(questionType, correct){
         return falseAnswers;
     }
     
-    else if(questionType === 9){ //Election result
+    else if(questionType === 10){ //Election result
         usedAnswers.push(correct.result);
             
         while(usedAnswers.length < numAnswers){
@@ -679,8 +679,8 @@ function questionSetup(){
         setBlock("#b3");
         setBlock("#b4")
         //$(".option").each(animateDiv);
-        console.log("MarginX " + marginX);
-        console.log("MarginY " + marginY);
+        //console.log("MarginX " + marginX);
+        //console.log("MarginY " + marginY);
 
         dragManager(); 
     }
@@ -739,7 +739,7 @@ function getRanLocation(){
 
 function getRanBatNotable(){
     var index = Math.floor(Math.random()*gameEvents.battles.length);
-    var index2 = Math.floor(Math.random()*gameEvents.battles.notables.length);
+    var index2 = Math.floor(Math.random()*gameEvents.battles[index].notables.length);
     return gameEvents.battles[index].notables[index2];
 }
 
@@ -750,7 +750,7 @@ function getRanInvSig(){
 
 function getRanElecNotable(){
     var index = Math.floor(Math.random()*gameEvents.elections.length);
-    var index2 = Math.floor(Math.random()*gameEvents.elections.notables.length);
+    var index2 = Math.floor(Math.random()*gameEvents.elections[index].notables.length);
     return gameEvents.elections[index].notables[index2];
 }
 
@@ -780,22 +780,22 @@ function getRanElecResult(){
     return gameEvents.elections[index].result;
 }
 
-function fallBackFacts(){
+function getFallbackFact(){
     var category = Math.floor(Math.random()*5)+1; //Randomly pick from categories
     
     if(category === 1){ //Battle
         return getRanBatNotable();
     }
-    else if(type === 2){ //Invention
+    else if(category === 2){ //Invention
         return getRanInvSig();
     }
-    else if(type === 3){ //Election
+    else if(category === 3){ //Election
         return getRanElecNotable();
     }
-    else if(type === 4){ //Court Case
+    else if(category === 4){ //Court Case
         return getRanRuling();
     }
-    else if(type === 5){ //Other
+    else if(category === 5){ //Other
         return getRanOtherSig();
     }
 }
