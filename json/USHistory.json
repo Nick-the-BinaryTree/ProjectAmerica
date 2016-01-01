@@ -1,4 +1,4 @@
-﻿{
+{
 	"era1": {
 		"battles":[
 			{
@@ -10,8 +10,8 @@
 					"loser":"Colonists, but it was a good run"
 				},
 				"notables":[
-					{"Start of revolutionary war"},
-					{"Paul Revere's midnight ride to Concord warned the people in advance"}
+					"Start of revolutionary war",
+					"Paul Revere's midnight ride to Concord warned the people in advance"
 				]
 			},
 			{
@@ -23,8 +23,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"This location contained much needed military equipment (including cannons)"},
-					{"First rebel victory of the Revolutionary War"}
+					"This location contained much needed military equipment (including cannons)",
+					"First rebel victory of the Revolutionary War"
 				]
 			},
 			{
@@ -36,8 +36,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"British casualities over 1000, Americans only 400"},
-					{"American General Putnam ordered: Don't fire until you see the whites of their eyes"}
+					"British casualities over 1000, Americans only 400",
+					"American General Putnam ordered: Don't fire until you see the whites of their eyes"
 				]
 			},
 			{
@@ -49,9 +49,9 @@
 					"loser":"Americans"
 				},
 				"notables":[
-					{"Severe defeat for Americans (outnumbered 2-1)"},
-					{"Americans evacuate Manhattan"},
-					{"General Washington threw his hat on the ground in anger"}
+					"Severe defeat for Americans (outnumbered 2-1)",
+					"Americans evacuate Manhattan",
+					"General Washington threw his hat on the ground in anger"
 				]
 			},
 			{
@@ -63,8 +63,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"On Christmas, surprise raid on British Hessians (German mercenaries)"},
-					{"1000 taken prisoner, only 6 American soldiers wounded"}
+					"On Christmas, surprise raid on British Hessians (German mercenaries)",
+					"1000 taken prisoner, only 6 American soldiers wounded"
 				]
 			},
 			{
@@ -76,8 +76,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"First major American victory of the Revolutionary War"},
-					{"600 British casualties while American losses are only 150"}
+					"First major American victory of the Revolutionary War",
+					"600 British casualties while American losses are only 150"
 				]
 			},
 			{
@@ -89,8 +89,8 @@
 					"loser":"Americans and French"
 				},
 				"notables":[
-					{"Bad weather and delays of the land troops resulted in failure"},
-					{"This showed that alliance with France would not speedily end the war"}
+					"Bad weather and delays of the land troops resulted in failure",
+					"This showed that alliance with France would not speedily end the war"
 				]
 			},
 			{
@@ -102,8 +102,8 @@
 					"loser":"Americans"
 				},
 				"notables":[
-					{"The worst American defeat of the Revolutionary War"},
-					{"Charleston and the Americans' 5400-man garrison captured, British losses only 225"}
+					"The worst American defeat of the Revolutionary War",
+					"Charleston and the Americans' 5400-man garrison captured, British losses only 225"
 				]
 			},
 			{
@@ -115,8 +115,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"The battle lasted a little over one hour and was an overwhelming American victory"},
-					{"Stopped British offensive momentum in the South"}
+					"The battle lasted a little over one hour and was an overwhelming American victory",
+					"Stopped British offensive momentum in the South"
 				]
 			},
 			{
@@ -128,8 +128,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"Americans lay siege to Yorktown until British surrender"},
-					{"Last battle of the Revolutionary war"}
+					"Americans lay siege to Yorktown until British surrender",
+					"Last battle of the Revolutionary war"
 				]
 			}
 		],
@@ -152,25 +152,25 @@
 				"name":"1788-89",
 				"result":"Washington runs unopposed",
 				"notables":[
-					{"The winner was reluctant to become president due to raging debates concerning the new government"},
-					{"The new president was careful to avoid any symbolic references to European monarchy"},
-					{"Got 100% of the vote"}
+					"The winner was reluctant to become president due to raging debates concerning the new government",
+					"The new president was careful to avoid any symbolic references to European monarchy",
+					"Got 100% of the vote"
 				]
 			},
 			{
 				"name":"1792",
 				"result":"Washington runs unopposed again",
 				"notables":[
-					{"The winner was re-elected unanimously by the Electoral College"},
-					{"Two political parties emerged during this election, the Federalists and the Democratic-Republicans"}
+					"The winner was re-elected unanimously by the Electoral College",
+					"Two political parties emerged during this election, the Federalists and the Democratic-Republicans"
 				]
 			},
 			{
 				"name":"1796",
 				"result":"Federalist Adams defeated Democratic-Republican Jefferson",
 				"notables":[
-					{"Washington refused a third term, setting a two term precedent for future presidents"},
-					{"Only election cycle to elect a President and Vice President from opposing parties"}
+					"Washington refused a third term, setting a two term precedent for future presidents",
+					"Only election cycle to elect a President and Vice President from opposing parties"
 				]
 			}
 		],
@@ -235,8 +235,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"Gave the Americans control of Lake Erie for the rest of the war"},
-					{"The first unqualified defeat of a British naval squadron in history"}
+					"Gave the Americans control of Lake Erie for the rest of the war",
+					"The first unqualified defeat of a British naval squadron in history"
 				]
 			},
 			{
@@ -248,8 +248,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"Ended British invasions of the northern United States"},
-					{"British General Prevost, the Defender of Canada, got rekt"}
+					"Ended British invasions of the northern United States",
+					"British General Prevost, the Defender of Canada, got rekt"
 				]
 			},
 			{
@@ -261,8 +261,8 @@
 					"loser":"British"
 				},
 				"notables":[
-					{"Yes, this happened after the end of the war. Information travelled slowly."},
-					{"Made future president General Andrew Jackson quite popular"}
+					"Yes, this happened after the end of the war. Information travelled slowly.",
+					"Made future president General Andrew Jackson quite popular"
 				]
 			},
 			{
@@ -274,8 +274,8 @@
 					"loser":"Texians"
 				},
 				"notables":[
-					{"Santa Anna's cruelty during the battle inspired many Texians to join the Texian Army"},
-					{"The site of this battle is now the most popular tourist spot in Texas"}
+					"Santa Anna's cruelty during the battle inspired many Texians to join the Texian Army",
+					"The site of this battle is now the most popular tourist spot in Texas"
 				]
 			},
 			{
@@ -287,8 +287,8 @@
 					"loser":"Mexicans"
 				},
 				"notables":[
-					{"The first official battle of the Mexican-American War"},
-					{"While the casualty statistics say 100 Mexicans were killed, some sources suggests close to 500 were killed"}
+					"The first official battle of the Mexican-American War",
+					"While the casualty statistics say 100 Mexicans were killed, some sources suggests close to 500 were killed"
 				]
 			},
 			{
@@ -300,9 +300,9 @@
 					"loser":"Mexicans"
 				},
 				"notables":[
-					{"American General Taylor, defying conventional military wisdom, divided his army to attack the city from two sides at once"}
-					{"Mexican General Ampudia surrendered the city in exchange for an eight-week armistice and allowing his troops to go free"}
-					]
+					"American General Taylor, defying conventional military wisdom, divided his army to attack the city from two sides at once"
+					"Mexican General Ampudia surrendered the city in exchange for an eight-week armistice and allowing his troops to go free"
+				]
 			},
 			{
 				"name":"Battle of Beuna Vista",
@@ -313,10 +313,10 @@
 					"loser":"Mexicans"
 				},
 				"notables":[
-					{"This close victory carried American General Taylor to the presidency the following year"},
-					{"The final major battle in northeastern Mexico"}
-					]
-				}
+					"This close victory carried American General Taylor to the presidency the following year",
+					"The final major battle in northeastern Mexico"
+				]
+            }
 			{
 				"name":"Battle of Chapultepec",
 				"year":"1847",
@@ -326,9 +326,9 @@
 					"loser":"Mexicans"
 				},
 				"notables":[
-					{"A source of great pride for Mexicans today, as young cadets fought bravely to defend the fortress"},
-					{"The last battle of the Mexican-American War"}
-					]
+					"A source of great pride for Mexicans today, as young cadets fought bravely to defend the fortress",
+					"The last battle of the Mexican-American War"
+				]
 			}
 		],
 
@@ -361,106 +361,106 @@
 				"name":"1800",
 				"result":"Democratic-Republican Jefferson defeated Democratic-Republican Burr, and Federalists Adams and Pinckney",
 				"notables":[
-					{"The winner was elected by vote of House of Representatives"},
-					{"The top two candidates both recieved the same number of electoral votes"}
+					"The winner was elected by vote of House of Representatives",
+					"The top two candidates both recieved the same number of electoral votes"
 				]
 			},
 			{
 				"name":"1804",
 				"result":"Democratic-Republican Jefferson defeated Federalist Pinckney",
 				"notables":[
-					{"Highest victory margin in a presidential election in which there were multiple major party candidates"},
-					{"Under the 12th amendment, electors were required to vote for both president and vice president"}
+					"Highest victory margin in a presidential election in which there were multiple major party candidates",
+					"Under the 12th amendment, electors were required to vote for both president and vice president"
 				]
 			},
 			{
 				"name":"1808",
 				"result":"Democratic-Republican Madison defeated Federalist Pinckney",
 				"notables":[
-					{"First of only two times the incumbent Vice President would continue to serve under a new President"},
-					{"The winner had served as Secretary of State under Jefferson"}
+					"First of only two times the incumbent Vice President would continue to serve under a new President",
+					"The winner had served as Secretary of State under Jefferson"
 				]
 			},
 			{
 				"name":"1812",
 				"result":"Democratic-Republican Madison defeated Democratic-Republican Clinton",
 				"notables":[
-					{"New York replaced Virginia with most electoral votes (would hold #1 spot until 1972)"},
-					{"The closest election up to that point for the popular vote (50.4%)"},
-					{"Testament to Democratic-Republican political domination, both candidates were of the same party"}
+					"New York replaced Virginia with most electoral votes (would hold #1 spot until 1972)",
+					"The closest election up to that point for the popular vote (50.4%)",
+					"Testament to Democratic-Republican political domination, both candidates were of the same party"
 				]
 			},
 			{
 				"name":"1816",
 				"result":"Democratic-Republican Monroe defeated Federalist King",
 				"notables":[
-					{"Democratic-Republicans received the credit for the end of the War of 1812"},
-					{"Indiana became a state during this election cycle"}
+					"Democratic-Republicans received the credit for the end of the War of 1812",
+					"Indiana became a state during this election cycle"
 				]
 			},
 			{
 				"name":"1820",
 				"result":"Democratic-Republican Monroe defeated Independant J.Q. Adams",
 				"notables":[
-					{"The only U.S. presidential election in which a candidate ran effectively unopposed, (excluding Washington's two terms)"},
-					{"Continuation of single party politics, known as the Era of Good Feelings"}
+					"The only U.S. presidential election in which a candidate ran effectively unopposed, (excluding Washington's two terms)",
+					"Continuation of single party politics, known as the Era of Good Feelings"
 				]
 			},
 			{
 				"name":"1824",
 				"result":"Democratic-Republican J.Q. Adams defeated Democratic Republicans Jackson, Crawford, and Clay",
 				"notables":[
-					{"The winner was son of the United States' second president"},
-					{"No candidate received a majority of the electoral vote, so the House of Representatives decided"}
+					"The winner was son of the United States' second president",
+					"No candidate received a majority of the electoral vote, so the House of Representatives decided"
 				]
 			},
 			{
 				"name":"1828",
 				"result":"Democratic Jackson defeated National Republican J.Q. Adams",
 				"notables":[
-					{"Incumbent Vice President John C. Calhoun sided with the winning candidate"},
-					{"The winner recieved 68.2% of Electoral votes, but only 56% of popular vote"}
+					"Incumbent Vice President John C. Calhoun sided with the winning candidate",
+					"The winner recieved 68.2% of Electoral votes, but only 56% of popular vote"
 				]
 			},
 			{
 				"name":"1832",
 				"result":"Democratic Jackson defeated National Republican Clay, Independant Floyd, and Anti-Masonic Wirt",
 				"notables":[
-					{"No longer single-party election"},
-					{"First Democratic National Convention held in Baltimore"}
+					"No longer single-party election",
+					"First Democratic National Convention held in Baltimore"
 				]
 			},
 			{
 				"name":"1836",
-				"result":"Democratic Van Buren defeated Whigs Harrison, White, Webster, and Independant Mangum",
+				"result":"Democratic Van Buren defeated Whigs Harrison, White, Webster, and Independent Mangum",
 				"notables":[
-					{"Only time in which a Vice Presidential election was thrown into the Senate"},
-					{"Only race in which a major political party (the Whigs) intentionally ran several presidential candidates"}
+					"Only time in which a Vice Presidential election was thrown into the Senate",
+					"Only race in which a major political party (the Whigs) intentionally ran several presidential candidates"
 				]
 			},
 			{
 				"name":"1840",
 				"result":"Whig Harrison defeated Democratic Van Buren",
 				"notables":[
-					{"Rallying under the slogan 'Tippecanoe and Tyler, too,' the winner easily defeated the old President"},
-					{"Martin Van Buren had been blamed for the economic depression following Jackson's Bank War"}
+					"Rallying under the slogan 'Tippecanoe and Tyler, too,' the winner easily defeated the old President",
+					"Martin Van Buren had been blamed for the economic depression following Jackson's Bank War"
 				]
 			},
 			{
 				"name":"1844",
 				"result":"Democrat Polk defeated Whig Clay",
 				"notables":[
-					{"The winner ran on a platform that embraced American territorial expansionism (Manifest Destiny)"},
-					{"It was the last presidential election to be held on different days in different states"},
-					{"The winner would annex much of Mexico"}
+					"The winner ran on a platform that embraced American territorial expansionism (Manifest Destiny)",
+					"It was the last presidential election to be held on different days in different states",
+					"The winner would annex much of Mexico"
 				]
 			},
 			{
 				"name":"1848",
 				"result":"Whig Taylor defeated Democratic Cass",
 				"notables":[
-					{"The winner was not clearly committed to Whig principles, but he was popular for leading the war effort"},
-					{"This winning candidate was the last Whig president"}
+					"The winner was not clearly committed to Whig principles, but he was popular for leading the war effort",
+					"This winning candidate was the last Whig president"
 				]
 			}
 		],
@@ -516,8 +516,8 @@
 					"loser":"Union"
 				},
 				"notables":[
-					{"Local residents picnicked near the battlegrounds, expecting an easy victory for the Union"},
-					{"This battle was expected to be the first and last of the civil war"}
+					"Local residents picnicked near the battlegrounds, expecting an easy victory for the Union",
+					"This battle was expected to be the first and last of the civil war"
 				]
 			},
 			{
@@ -529,8 +529,8 @@
 					"loser":"Confederates"
 				},
 				"notables":[
-					{"Total casualties equaled over 20,000"},
-					{"Union General Johnston was killed in this battle"}
+					"Total casualties equaled over 20,000",
+					"Union General Johnston was killed in this battle"
 				]
 			},
 			{
@@ -542,8 +542,8 @@
 					"loser":"Confederates"
 				},
 				"notables":[
-					{"Single bloodiest day of the Civil War, with 23,000 casualties"},
-					{"Union General McClellan failed to pursue the Confederate troops and was therefore replaced by General Burnside"}
+					"Single bloodiest day of the Civil War, with 23,000 casualties",
+					"Union General McClellan failed to pursue the Confederate troops and was therefore replaced by General Burnside"
 				]
 			}
 
@@ -573,96 +573,96 @@
 				"name":"1852",
 				"result":"Democratic Pierce defeated Whig Scott",
 				"notables":[
-					{"California becomes a state during this election cycle"},
-					{"Whig party collapsed after the 1852 election"}
+					"California becomes a state during this election cycle",
+					"Whig party collapsed after the 1852 election"
 				]
 			},
 			{
 				"name":"1856",
 				"result":"Democratic Buchanan defeated Republican Fremont and American Fillmore",
 				"notables":[
-					{"The Whig Party had disintegrated over the issue of slavery, and new organizations such as the Republican Party and the American Party competed to replace them"},
-					{"Winner Buchanan received only about 45% of the popular vote"}
+					"The Whig Party had disintegrated over the issue of slavery, and new organizations such as the Republican Party and the American Party competed to replace them",
+					"Winner Buchanan received only about 45% of the popular vote"
 				]
 			},
 			{
 				"name":"1860",
 				"result":"Republican Lincoln defeated Constitutional Union Bell and Democratics Breckinridge and Douglass",
 				"notables":[
-					{"Questions of states' rights and slavery fractured the formerly dominant Democratic Party into Southern and Northern factions"},
-					{"Lincoln was elected with support from a single southern state"}
+					"Questions of states' rights and slavery fractured the formerly dominant Democratic Party into Southern and Northern factions",
+					"Lincoln was elected with support from a single southern state"
 				]
 			},
 			{
 				"name":"1864",
 				"result":"Republican Lincoln defeated Democratic McClellan",
 				"notables":[
-					{"The 1864 election occurred during the Civil War, so none of the states loyal to the Confederate States of America participated"},
-					{"Several states allowed their citizens serving as soldiers in the field to cast ballots (a first in United States history)"}
+					"The 1864 election occurred during the Civil War, so none of the states loyal to the Confederate States of America participated",
+					"Several states allowed their citizens serving as soldiers in the field to cast ballots (a first in United States history)"
 				]
 			},
 			{
 				"name":"1868",
 				"result":"Republican Grant defeated Democratic Seymour",
 				"notables":[
-					{"Texas, Mississippi, and Virginia (former Confederate states) were not yet restored to the Union and therefore could not vote in the election"},
-					{"The Republican campaign theme — Let us have peace — was popular in the post-war nation"}
+					"Texas, Mississippi, and Virginia (former Confederate states) were not yet restored to the Union and therefore could not vote in the election",
+					"The Republican campaign theme — Let us have peace — was popular in the post-war nation"
 				]
 			},
 			{
 				"name":"1872",
 				"result":"Republican Grant defeated Democratics Hendricks and Greeley",
 				"notables":[
-					{"Greeley died after the popular vote but before the Electoral College cast its votes (as a result, electors previously committed to Greeley voted for four different candidates for President)"},
-					{"Arkansas and Louisiana did not participate"}
+					"Greeley died after the popular vote but before the Electoral College cast its votes (as a result, electors previously committed to Greeley voted for four different candidates for President)",
+					"Arkansas and Louisiana did not participate"
 				]
 			},
 			{
 				"name":"1876",
 				"result":"Republican Hayes defeated Democratic Tilden",
 				"notables":[
-					{"While Tilden narrowly won the popular vote, Hayes won the electoral vote by only 1 vote after much dispute"},
-					{"Many historians believe that an informal deal was struck to resolve the dispute: the Republicans agreed to end Reconstruction in return for Hayes’ election"}
+					"While Tilden narrowly won the popular vote, Hayes won the electoral vote by only 1 vote after much dispute",
+					"Many historians believe that an informal deal was struck to resolve the dispute: the Republicans agreed to end Reconstruction in return for Hayes’ election"
 				]
 			},
 			{
 				"name":"1880",
 				"result":"Republican Garfield defeated Democratic Hancock",
 				"notables":[
-					{"It is to date the smallest popular vote victory in American history"},
-					{"Incumbent President Rutherford Hayes did not seek re-election, keeping a promise made during the 1876 campaign"}
+					"It is to date the smallest popular vote victory in American history",
+					"Incumbent President Rutherford Hayes did not seek re-election, keeping a promise made during the 1876 campaign"
 				]
 			},
 			{
 				"name":"1884",
 				"result":"Democratic Cleveland defeated Republican Blaine",
 				"notables":[
-					{"First Democrat elected President of the United States since before the American Civil War"},
-					{"This election featured excessive mudslinging and personal acrimony"}
+					"First Democrat elected President of the United States since before the American Civil War",
+					"This election featured excessive mudslinging and personal acrimony"
 				]
 			},
 			{
 				"name":"1888",
 				"result":"Republican Harrison defeated Democratic Cleveland",
 				"notables":[
-					{"One of only 4 elections (1824, 1876, 1888, 2000) where the popular vote winner was defeated"},
-					{"Harrison won by buying votes from groups of electors called “Blocks of Five"}
+					"One of only 4 elections (1824, 1876, 1888, 2000) where the popular vote winner was defeated",
+					"Harrison won by buying votes from groups of electors called “Blocks of Five"
 				]
 			},
 			{
 				"name":"1892",
 				"result":"Democratic Cleveland defeated Republican Harrison and People's Weaver",
 				"notables":[
-					{"Cleveland became the only person in US history to be elected to a second, non-consecutive presidential term"},
-					{"Cleveland also became the first Democrat to be nominated by his party three consecutive times"}
+					"Cleveland became the only person in US history to be elected to a second, non-consecutive presidential term",
+					"Cleveland also became the first Democrat to be nominated by his party three consecutive times"
 				]
 			},
 			{
 				"name":"1896",
 				"result":"Republican McKinley defeated Democrat-Populist Bryan",
 				"notables":[
-					{"Bryan was the first ever to criss-cross the nation and meet voters in person"},
-					{"McKinley’s political manager brought 500,000 voters by train to McKinley's home in Ohio, where he would give a speech to the men from his porch"}
+					"Bryan was the first ever to criss-cross the nation and meet voters in person",
+					"McKinley’s political manager brought 500,000 voters by train to McKinley's home in Ohio, where he would give a speech to the men from his porch"
 				]
 			}
 
