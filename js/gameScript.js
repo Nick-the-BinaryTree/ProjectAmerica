@@ -46,6 +46,13 @@ var categories=[];
 //questions that have been asked
 var askedQuestions =[];
 
+//controls follow-up question for battles
+var followup=false;
+
+//set to number corresponding to event after questions are set up. 
+//always set but only used for battles
+var prevEvent;
+
 //creates client
 /*
 var client = new Client("project-america.herokuapp.com", 80, function(error) { 
@@ -228,31 +235,37 @@ function alreadyAsked(event){
     return false;
 }
 
+//parameter: random number corresponding to category. if follow up, number doesn't matter
 function getQuestions(ranCategory){
+    if(followup){
+        var ranQuest="";
+        if(Math.random()<0.5)
+            ranQuest="Victor:";
+        else
+            ranQuest="Loser:";
+        return [ranQuest,"Notable Fact:"];
 
-    //follow up questions not yet implemented
-    if(categories[ranCategory]==="battles"){
-        return ["Year:", "Location:"];
+    }
+    else{
+        if(categories[ranCategory]==="battles"){
+            return ["Year:", "Location:"];
+        }
 
-    }
-    else if(categories[ranCategory]==="inventions"){
-        return ["Year:", "Significance:"];
-        
-        
-    }
-    else if(categories[ranCategory]==="elections"){
-        return ["Result:", "Notable Fact:"];
-        
-        
-    }
-    else if(categories[ranCategory]==="court"){
-        return ["Year:","Ruling:"];
-        
-        
-    }
-    else if(categories[ranCategory]==="other"){
-        return ["Year:","Significance:"]
-       
+        else if(categories[ranCategory]==="inventions"){
+            return ["Year:", "Significance:"];
+        }
+
+        else if(categories[ranCategory]==="elections"){
+            return ["Result:", "Notable Fact:"];
+        }
+
+        else if(categories[ranCategory]==="court"){
+            return ["Year:","Ruling:"];
+        }
+
+        else if(categories[ranCategory]==="other"){
+            return ["Year:","Significance:"];
+        }
     }
 
 }
@@ -590,9 +603,7 @@ function questionSetup(){
         
         //Put name of event at top
         //Setup question boxes and correct answer bubbles
-        
 
-//1 is year, 2 is location, 3 is battle notable, 4 is invention significance, 5 is election notable, 6 is court ruling, 7 is other significance
         var randoms = getRanEvent(); //randoms[0] is category number, randoms[1] is event number
         var cat= categories[randoms[0]];
         var ranEvent= randoms[1];
@@ -600,72 +611,103 @@ function questionSetup(){
         var falseAnswers1=[];
         var falseAnswers2=[];
 
+
         $('#questionBox td').eq(0).html(questions[0]);
         $('#questionBox td').eq(2).html(questions[1]);
-        $("p.eventText").html(gameEvents[cat][ranEvent].name);
+
+        if(followup){
+
+            if(questions[0]==="Loser:")
+                $( "#a1" ).html(gameEvents.battles[prevEvent].result.loser);
+            else
+                $( "#a1" ).html(gameEvents.battles[prevEvent].result.victor);
+
+            $( "#b1" ).html(gameEvents.battles[prevEvent].notables[0]); //TO BE RANDOMIZED
+
+            //TODO: add battle victor/loser to genFalseAnswers
+
+            falseAnswers2=genFalseAnswers(3,gameEvents.battles[prevEvent]);
+            addFalseAnswers("#b", falseAnswers2);
+            followup=false;
+
+
+        }
+        else{
+            var randoms = getRanEvent(); //randoms[0] is category number, randoms[1] is event number
+            var cat= categories[randoms[0]];
+            var ranEvent= randoms[1];
+            var questions = getQuestions(randoms[0]);
+           
+
+            $("p.eventText").html(gameEvents[cat][ranEvent].name);
         
-        var theEvent = gameEvents[cat][ranEvent];
+            var theEvent = gameEvents[cat][ranEvent];
         
-        if(cat==="battles"){ //TODO: Prepare for second set of questions
+            if(cat==="battles"){ 
             
-            $( "#a1" ).html(gameEvents[cat][ranEvent].year);
-            falseAnswers1=genFalseAnswers(1, theEvent);
-            addFalseAnswers("#a", falseAnswers1);
-            $( "#b1" ).html(gameEvents[cat][ranEvent].location);
+                $( "#a1" ).html(gameEvents[cat][ranEvent].year);
+                falseAnswers1=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswers1);
+                $( "#b1" ).html(gameEvents[cat][ranEvent].location);
             
-            falseAnswers2=genFalseAnswers(2, theEvent);
-            addFalseAnswers("#b", falseAnswers2);
+                falseAnswers2=genFalseAnswers(2, theEvent);
+                addFalseAnswers("#b", falseAnswers2);
+                followup=true;
 
-        }
-        else if(cat==="inventions"){
-            $( "#a1" ).html(gameEvents[cat][ranEvent].year);
+             }
+            else if(cat==="inventions"){
+                $( "#a1" ).html(gameEvents[cat][ranEvent].year);
             
-            falseAnswers1=genFalseAnswers(1, theEvent);
-            addFalseAnswers("#a", falseAnswers1);
+                falseAnswers1=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswers1);
             
-            $( "#b1" ).html(gameEvents[cat][ranEvent].significance);
+                $( "#b1" ).html(gameEvents[cat][ranEvent].significance);
             
-            falseAnswers2=genFalseAnswers(4, theEvent);
-            addFalseAnswers("#b", falseAnswers2);
+                falseAnswers2=genFalseAnswers(4, theEvent);
+                addFalseAnswers("#b", falseAnswers2);
 
-        }
-        else if(cat==="elections"){
-            $( "#a1" ).html(gameEvents[cat][ranEvent].result);
+            }
+            else if(cat==="elections"){
+                $( "#a1" ).html(gameEvents[cat][ranEvent].result);
             
-            falseAnswers1=genFalseAnswers(10, theEvent);
-            addFalseAnswers("#a", falseAnswers1);
+                falseAnswers1=genFalseAnswers(10, theEvent);
+                addFalseAnswers("#a", falseAnswers1);
             
-            $( "#b1" ).html(gameEvents[cat][ranEvent].notables[0]); //TO BE RANDOMIZED -I have similar code in the getRanElecNotable() function, Nick
+                $( "#b1" ).html(gameEvents[cat][ranEvent].notables[0]); //TO BE RANDOMIZED -I have similar code in the getRanElecNotable() function, Nick
             
-            falseAnswers2=genFalseAnswers(5, theEvent);
-            addFalseAnswers("#b", falseAnswers2);
+                falseAnswers2=genFalseAnswers(5, theEvent);
+                addFalseAnswers("#b", falseAnswers2);
 
-        }
-         else if(cat==="court"){
-            $( "#a1" ).html(gameEvents[cat][ranEvent].year);
+            }
+            else if(cat==="court"){
+                $( "#a1" ).html(gameEvents[cat][ranEvent].year);
             
-            falseAnswers1=genFalseAnswers(1, theEvent);
-            addFalseAnswers("#a", falseAnswers1);
+                falseAnswers1=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswers1);
             
-            $( "#b1" ).html(gameEvents[cat][ranEvent].ruling);
+                $( "#b1" ).html(gameEvents[cat][ranEvent].ruling);
              
-            falseAnswers1=genFalseAnswers(6, theEvent);
-            addFalseAnswers("#b", falseAnswers1);
+                falseAnswers1=genFalseAnswers(6, theEvent);
+                addFalseAnswers("#b", falseAnswers1);
+
+            }
+
+            else if(cat==="other"){
+                $( "#a1" ).html(gameEvents[cat][ranEvent].year);
+             
+                falseAnswers1=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswers1);
+             
+                $( "#b1" ).html(gameEvents[cat][ranEvent].significance);
+             
+                falseAnswers1=genFalseAnswers(7, theEvent);
+                addFalseAnswers("#b", falseAnswers1);
+
+            }
+            prevEvent= ranEvent;
 
         }
-
-         else if(cat==="other"){
-            $( "#a1" ).html(gameEvents[cat][ranEvent].year);
-             
-            falseAnswers1=genFalseAnswers(1, theEvent);
-            addFalseAnswers("#a", falseAnswers1);
-             
-            $( "#b1" ).html(gameEvents[cat][ranEvent].significance);
-             
-            falseAnswers1=genFalseAnswers(7, theEvent);
-            addFalseAnswers("#b", falseAnswers1);
-
-        }
+        
 
 
 
