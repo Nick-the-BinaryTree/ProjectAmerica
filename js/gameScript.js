@@ -600,7 +600,16 @@ function questionSetup(){
     
     if(qSet <= qLimit){
         
-        
+        setBlock("#a1");
+        setBlock("#a2");
+        setBlock("#a3");
+        setBlock("#a4");
+        setBlock("#b1");
+        setBlock("#b2");
+        setBlock("#b3");
+        setBlock("#b4")
+
+        dragManager();
         //Put name of event at top
         //Setup question boxes and correct answer bubbles
 
@@ -617,16 +626,20 @@ function questionSetup(){
 
         if(followup){
 
-            if(questions[0]==="Loser:")
-                $( "#a1" ).html(gameEvents.battles[prevEvent].result.loser);
-            else
+            if(questions[0]==="Loser:"){
+                 $( "#a1" ).html(gameEvents.battles[prevEvent].result.loser);
+                 falseAnswers1=genFalseAnswers(9,gameEvents.battles[prevEvent]);
+
+            }
+               
+            else{
                 $( "#a1" ).html(gameEvents.battles[prevEvent].result.victor);
+                falseAnswers1=genFalseAnswers(8,gameEvents.battles[prevEvent]);
+            }
 
-            $( "#b1" ).html(gameEvents.battles[prevEvent].notables[0]); //TO BE RANDOMIZED
+            addFalseAnswers("#a", falseAnswers1)
+            $( "#b1" ).html(gameEvents.battles[prevEvent].notables[Math.floor(Math.random()*gameEvents.battles[prevEvent].notables.length)]); 
 
-            //TODO: add battle victor/loser to genFalseAnswers
-
-            falseAnswers2=genFalseAnswers(3,gameEvents.battles[prevEvent]);
             addFalseAnswers("#b", falseAnswers2);
             followup=false;
 
@@ -672,9 +685,9 @@ function questionSetup(){
             
                 falseAnswers1=genFalseAnswers(10, theEvent);
                 addFalseAnswers("#a", falseAnswers1);
-            
-                $( "#b1" ).html(gameEvents[cat][ranEvent].notables[0]); //TO BE RANDOMIZED -I have similar code in the getRanElecNotable() function, Nick
-            
+                
+                $( "#b1" ).html(gameEvents[cat][ranEvent].notables[Math.floor(Math.random()*gameEvents[cat][ranEvent].notables.length)]); 
+
                 falseAnswers2=genFalseAnswers(5, theEvent);
                 addFalseAnswers("#b", falseAnswers2);
 
@@ -732,19 +745,12 @@ function questionSetup(){
         $( "#b4" ).html(qa[9]);
         */
 
-        setBlock("#a1");
-        setBlock("#a2");
-        setBlock("#a3");
-        setBlock("#a4");
-        setBlock("#b1");
-        setBlock("#b2");
-        setBlock("#b3");
-        setBlock("#b4")
+       
         //$(".option").each(animateDiv);
         //console.log("MarginX " + marginX);
         //console.log("MarginY " + marginY);
 
-        dragManager(); 
+        
     }
     else{
         toScore();
@@ -841,10 +847,10 @@ function getRanVictorOrLoser(){
     var index = Math.floor(Math.random()*gameEvents.battles.length);
     var victorOrLoser = Math.floor(Math.random()*2)+1;
     if(victorOrLoser===1){
-        return gameEvents.other[index].victor;
+        return gameEvents.battles[index].result.victor;
     }
     else{
-        return gameEvents.other[index].loser;
+        return gameEvents.battles[index].result.loser;
     }
 }
 
