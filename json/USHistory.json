@@ -32,7 +32,7 @@
 				"year":"1775",
 				"location":"Massachusetts",
 				"result":{
-					"victor":"British",
+					"victor":"British (Pyrrhic)",
 					"loser":"Americans"
 				},
 				"notables":[
@@ -45,7 +45,7 @@
 				"year":"1776",
 				"location":"New York",
 				"result":{
-					"victor":"British (Pyrrhic)",
+					"victor":"British",
 					"loser":"Americans"
 				},
 				"notables":[
