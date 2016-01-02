@@ -205,63 +205,6 @@
 		}
 		
 		],
-
-		"court" : [
-			{
-				"name":"Judiciary Act",
-				"year":"1789",
-				"ruling":"Created Judiciary Branch"
-			}
-
-		],
-
-		"other" : [
-			{
-				"name":"Boston Massacre",
-				"year":"1770",
-				"significance": "A milestone in turning colonial sentiment against British authority"
-			},
-			{
-				"name":"Boston Tea Party",
-				"year":"1773",
-				"significance": "Culmination of a resistance movement against the Tea Act (no taxation without representation)"
-			},
-			{
-				"name":"Publication of Thomas Paine's Common Sense",
-				"year": "1776",
-				"significance":"\"Small islands, not capable of protecting themselves, are the proper objects for kingdoms to take under their care; but there is something absurd, in supposing a continent to be perpetually governed by an island.\""
-			},
-			{
-				"name":"United States Declaration of Independance",
-				"year":"1776",
-				"significance":"Announced the people's unalienable rights to \"life, liberty, and the pursuit of happiness\" were being violated, justifying a revolution"
-			},
-			{
-				"name":"Treaty of Paris",
-				"year":"1783",
-				"significance":"Ended the Revolutionary War and recognized American sovereignty"
-			},
-			{
-				"name":"Northwest Ordinance",
-				"year":"1787",
-				"significance":"Established formal procedures for transforming territories into states, facilitating western expansion"
-			},
-            {
-            	"name":"Constitutional Convention",
-				"year":"1787",
-				"significance":"Created a three branch government with a bicarmel legislature stronger than the one previously set up by the Articles of Confederation. Federalist and Anti-federalist parties developed to support and oppose passing the new Constitution."
-			},
-			{	
-				"name":"Bill of Rights",
-				"year":"1789",
-				"significance":"First 10 amendments to the Constitutions, listing the fundamental rights of U.S. citizens"
-			},
-            {	
-				"name":"XYZ Affair",
-				"year":"1798",
-				"significance":"A moment of popularity in the Adams presidency, when American Ambassadors refused to pay bribes to the French Foreign Minister before starting negociations. Although, it was a common practice, Americans felt insulted, as if they were not being recognized as a nation."
-			}
-		]
 	},
 
 	"era2": {
