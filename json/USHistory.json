@@ -11,7 +11,7 @@
 				},
 				"notables":[
 					"Start of revolutionary war",
-					"Paul Revere's midnight ride to Concord warned the people in advance"
+					"Paul Revere's midnight ride to Concord warned the people in advance. There were also those other guys who no one remembers."
 				]
 			},
 			{
@@ -32,8 +32,8 @@
 				"year":"1775",
 				"location":"Massachusetts",
 				"result":{
-					"victor":"Americans",
-					"loser":"British"
+					"victor":"British",
+					"loser":"Americans"
 				},
 				"notables":[
 					"British casualities over 1000, Americans only 400",
@@ -45,7 +45,7 @@
 				"year":"1776",
 				"location":"New York",
 				"result":{
-					"victor":"British",
+					"victor":"British (Pyrrhic)",
 					"loser":"Americans"
 				},
 				"notables":[
@@ -207,7 +207,7 @@
 			},
 			{
 				"name":"Treaty of Paris",
-				"year":"1783-1784",
+				"year":"1783",
 				"significance":"Ended the Revolutionary War and recognized American sovereignty"
 			},
 			{
