@@ -589,6 +589,8 @@ function questionSetup(){
     $(".answerBox1").removeClass( "answerBox1Dropped" );
     $(".answerBox2").removeClass( "answerBox2Dropped" );
 
+    console.log(currentScore);
+
     var addScore=0;
     if(qSet>1){
        addScore = calculateScore(numWrong);
@@ -625,6 +627,9 @@ function questionSetup(){
 
         if(followup){
 
+
+                $("p.eventText").html(gameEvents["battles"][prevEvent].name + ": Set Two");
+
             if(questions[0]==="Loser:"){
                  $( "#a1" ).html(gameEvents.battles[prevEvent].result.loser);
                  falseAnswers1=genFalseAnswers(9,gameEvents.battles[prevEvent]);
@@ -656,6 +661,10 @@ function questionSetup(){
             var theEvent = gameEvents[cat][ranEvent];
         
             if(cat==="battles"){ 
+
+
+                $("p.eventText").html(gameEvents[cat][ranEvent].name);
+        
             
                 $( "#a1" ).html(gameEvents[cat][ranEvent].year);
 
@@ -718,6 +727,7 @@ function questionSetup(){
 
             }
             prevEvent= ranEvent;
+            qSet++;
 
         }
         
@@ -878,3 +888,5 @@ function getFallbackFact(){
         return getRanOtherSig();
     }
 }
+
+

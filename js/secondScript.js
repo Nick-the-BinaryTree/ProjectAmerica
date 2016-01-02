@@ -245,6 +245,7 @@ function calculateScore(numWrong){
      var score = stdScore - (stdScore * deduction * numWrong);
      //time will also be factored in somehow 
      return score;
+
  
  }
 
