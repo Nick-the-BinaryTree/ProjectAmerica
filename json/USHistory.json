@@ -202,9 +202,10 @@
 			"name": "Bill of Rights",
 			"year": "1789",
 			"significance": "First 10 amendments to the Constitutions, listing the fundamental rights of U.S. citizens"
-		}]
+		}
+		
+		],
 
-<<<<<<< HEAD
 		"court" : [
 			{
 				"name":"Judiciary Act",
@@ -261,9 +262,6 @@
 				"significance":"A moment of popularity in the Adams presidency, when American Ambassadors refused to pay bribes to the French Foreign Minister before starting negociations. Although, it was a common practice, Americans felt insulted, as if they were not being recognized as a nation."
 			}
 		]
-	
-=======
->>>>>>> 7c7590e3d8802375dbc89da4b2fd57713148a05a
 	},
 
 	"era2": {
@@ -629,7 +627,8 @@
 					"Questions of states' rights and slavery fractured the formerly dominant Democratic Party into Southern and Northern factions",
 					"Lincoln was elected with support from a single southern state"
 				]
-			}, {
+			},
+			{
 				"name": "Election of 1864",
 				"result": "Republican Lincoln defeated Democratic McClellan",
 				"notables": [
@@ -638,7 +637,8 @@
                     "The Copperheads were Peace Democrats, staying in the Union although most of the Democratic Party had gone South",
 					"Several states allowed their citizens serving as soldiers in the field to cast ballots (a first in United States history)"
 				]
-			}, {
+			},
+			{
 				"name": "Election of 1868",
 				"result": "Republican Grant defeated Democratic Seymour",
 				"notables": [
@@ -646,7 +646,6 @@
 					"The Republican campaign theme — Let us have peace — was popular in the post-war nation",
                     "Grant had been Commanding General of the US Army prior to the election"
 				]
-<<<<<<< HEAD
 			},
 			{
 				"name":"Election of 1872",
@@ -654,23 +653,16 @@
 				"notables":[
 					"Greeley died after the popular vote but before the Electoral College cast its votes (as a result, electors previously committed to Greeley voted for four different candidates for President) - the Liberal Republican Party died with  him",
                     "Horace Greeley had been publisher of the New York Tribune",
-=======
-			}, {
-				"name": "Election of 1872",
-				"result": "Republican Grant defeated Democratics Hendricks and Greeley",
-				"notables": [
-					"Greeley died after the popular vote but before the Electoral College cast its votes (as a result, electors previously committed to Greeley voted for four different candidates for President)",
->>>>>>> 7c7590e3d8802375dbc89da4b2fd57713148a05a
 					"Arkansas and Louisiana did not participate"
 				]
-			}, {
+			},
+			{
 				"name": "Election of 1876",
 				"result": "Republican Hayes defeated Democratic Tilden",
 				"notables": [
 					"While Tilden narrowly won the popular vote, Hayes won the electoral vote by only 1 vote after much dispute",
 					"Many historians believe that an informal deal was struck to resolve the dispute: the Republicans agreed to end Reconstruction in return for Hayes’ election"
 				]
-<<<<<<< HEAD
 			},
 			{
 				"name":"Election of 1880",
@@ -679,16 +671,9 @@
 					"It is to date the smallest popular vote victory in American history: 48.27% to 48.25%",
 					"Incumbent President Rutherford Hayes did not seek re-election, keeping a promise made during the 1876 campaign",
                     "Garfield would get assassinated"
-=======
-			}, {
-				"name": "Election of 1880",
-				"result": "Republican Garfield defeated Democratic Hancock",
-				"notables": [
-					"It is to date the smallest popular vote victory in American history",
-					"Incumbent President Rutherford Hayes did not seek re-election, keeping a promise made during the 1876 campaign"
->>>>>>> 7c7590e3d8802375dbc89da4b2fd57713148a05a
 				]
-			}, {
+			}, 
+			{
 				"name": "Election of 1884",
 				"result": "Democratic Cleveland defeated Republican Blaine",
 				"notables": [
@@ -704,18 +689,11 @@
 					"Harrison won by buying votes from groups of electors called “Blocks of Five",
                     "Harrison supported high tarrifs favored by businesses, and Cleveland supported low tariffs that would get better priced goods for consumers"
 				]
-<<<<<<< HEAD
 			},
 			{
 				"name":"Election of 1892",
 				"result":"Democratic Cleveland defeated Republican Harrison and Populist Weaver",
 				"notables":[
-=======
-			}, {
-				"name": "Election of 1892",
-				"result": "Democratic Cleveland defeated Republican Harrison and People's Weaver",
-				"notables": [
->>>>>>> 7c7590e3d8802375dbc89da4b2fd57713148a05a
 					"Cleveland became the only person in US history to be elected to a second, non-consecutive presidential term",
 					"New Populist Party championing the West, farmers, unions, and workers got 8.5% of the popular vote"
 				]
@@ -733,7 +711,6 @@
 
 		],
 
-<<<<<<< HEAD
 		"court" : [
 			{
 				"name":"Dred Scott v. Sandford",
@@ -744,32 +721,15 @@
 				"name":"Plessy v. Ferguson",
 				"year":"1896",
 				"ruling":"Defended the constitutionality of racial segregation (separate but equal)"
-=======
-		"court": [{
-				"name": "Dred Scott v. Sandford",
-				"year": "1857",
-				"ruling": "Blacks were not considered citizens and Congress had no right to ban slavery from U.S. territories"
-			}, {
-				"name": "Plessy v. Ferguson",
-				"year": "1896",
-				"ruling": "Defended the constitutionality of racial segregation (separate but equal)"
->>>>>>> 7c7590e3d8802375dbc89da4b2fd57713148a05a
 			}
 
 		],
 
-<<<<<<< HEAD
 		"other" : [
 			{
 				"name":"Emancipation Proclamation",
 				"year":"1862",
 				"significance":"As a result of this, Britain and France withheld recognition of the Confederacy. Freed slaves in the Confederacy, encouraging them to escape."
-=======
-		"other": [{
-				"name": "Emancipation Proclamation",
-				"year": "1862",
-				"significance": "As a result of this, Britain and France withheld recognition of the Confederacy. It also led to the Thirteenth Amendment which freed American slaves."
->>>>>>> 7c7590e3d8802375dbc89da4b2fd57713148a05a
 			}
 
 		]
