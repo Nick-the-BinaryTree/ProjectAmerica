@@ -11,7 +11,8 @@
 				},
 				"notables":[
 					"Start of revolutionary war",
-					"Paul Revere's midnight ride to Concord warned the people in advance. There were also those other guys who no one remembers."
+					"Paul Revere's midnight ride to Concord warned the people in advance. There were also those other guys who no one remembers.",
+                    "\"Shot heard round the world\" was fired"
 				]
 			},
 			{
@@ -24,6 +25,7 @@
 				},
 				"notables":[
 					"This location contained much needed military equipment (including cannons)",
+                    "Benedict Arnold and Ethan Allen led the American forces",
 					"First rebel victory of the Revolutionary War"
 				]
 			},
@@ -57,13 +59,14 @@
 			{
 				"name":"Battle of Trenton",
 				"year":"1776",
-				"locaton": "New Jersey",
+				"location": "New Jersey",
 				"result":{
 					"victor":"Americans",
 					"loser":"British"
 				},
 				"notables":[
 					"On Christmas, surprise raid on British Hessians (German mercenaries)",
+                    "There's a famous painting of Washington crossing the Delaware River",
 					"1000 taken prisoner, only 6 American soldiers wounded"
 				]
 			},
@@ -77,6 +80,7 @@
 				},
 				"notables":[
 					"First major American victory of the Revolutionary War",
+                    "General Benedict Arnold ambushed General Burgoyne's slow moving convoy, stopping much British reinforcement"
 					"600 British casualties while American losses are only 150"
 				]
 			},
@@ -138,12 +142,12 @@
 			{
 				"name":"Lighting rod",
 				"year":"1752",
-				"significance":"Frankin's invention protected homes from lighting strikes"
+				"significance":"Frankin's invention protected homes from lighting strikes and inspired inquiry into electricity"
 			},
 			{
 				"name":"Cotton Gin",
 				"year":"1794",
-				"significance":"Whitney's invention offered Southern planters a justification to maintain and expand slavery"
+				"significance":"Whitney's invention offered Southern planters an economic justification to maintain and expand slavery by greatly increasing productivity. Whitney got bogged down in legal battles over his patent."
 			}
 		],
 
@@ -161,8 +165,8 @@
 				"name":"Election of 1792",
 				"result":"Washington runs unopposed again",
 				"notables":[
-					"The winner was re-elected unanimously by the Electoral College",
-					"Two political parties emerged during this election, the Federalists and the Democratic-Republicans"
+					"The winner was re-elected unanimously",
+					"John Adams became vice president again"
 				]
 			},
 			{
@@ -170,7 +174,8 @@
 				"result":"Federalist Adams defeated Democratic-Republican Jefferson",
 				"notables":[
 					"Washington refused a third term, setting a two term precedent for future presidents",
-					"Only election cycle to elect a President and Vice President from opposing parties"
+					"Only election cycle to elect a President and Vice President from opposing parties",
+                    "Vice President Jefferson did not get along with the commander-and-chief"
 				]
 			}
 		],
@@ -198,12 +203,12 @@
 			{
 				"name":"Publication of Thomas Paine's Common Sense",
 				"year": "1776",
-				"significance":"Popular pamphlet that provided strong arguments for America's independance"
+				"significance":"\"Small islands, not capable of protecting themselves, are the proper objects for kingdoms to take under their care; but there is something absurd, in supposing a continent to be perpetually governed by an island.\""
 			},
 			{
 				"name":"United States Declaration of Independance",
 				"year":"1776",
-				"significance":"Announced the people's unalienable rights to life, liberty, and the pursuit of happiness were being violated, justifying a revolution"
+				"significance":"Announced the people's unalienable rights to \"life, liberty, and the pursuit of happiness\" were being violated, justifying a revolution"
 			},
 			{
 				"name":"Treaty of Paris",
@@ -213,12 +218,17 @@
 			{
 				"name":"Northwest Ordinance",
 				"year":"1787",
-				"significance":"Established formal procedures for transforming territories into states, and includes a Bill of Rights"
+				"significance":"Established formal procedures for transforming territories into states, facilitating western expansion"
+			},
+            {
+            	"name":"Constitutional Convention",
+				"year":"1787",
+				"significance":"Created a three branch government with a bicarmel legislature stronger than the one previously set up by the Articles of Confederation. Federalist and Anti-federalist parties developed to support and oppose passing the new Constitution."
 			},
 			{	
 				"name":"Bill of Rights",
 				"year":"1789",
-				"significance":"List of fundamental rights of U.S. citizens and serves to protect them from government infringement"
+				"significance":"First 10 amendments to the Constitutions, listing the fundamental rights of U.S. citizens"
 			}
 		]
 	
@@ -275,7 +285,8 @@
 				},
 				"notables":[
 					"Santa Anna's cruelty during the battle inspired many Texians to join the Texian Army",
-					"The site of this battle is now the most popular tourist spot in Texas"
+					"The site of this battle is now the most popular tourist spot in Texas",
+                    "Texas essentially won its independence for the next decade"
 				]
 			},
 			{
@@ -288,7 +299,7 @@
 				},
 				"notables":[
 					"The first official battle of the Mexican-American War",
-					"While the casualty statistics say 100 Mexicans were killed, some sources suggests close to 500 were killed"
+					"American General Zachary Taylor would later become president"
 				]
 			},
 			{
@@ -314,11 +325,11 @@
 				},
 				"notables":[
 					"This close victory carried American General Taylor to the presidency the following year",
-					"The final major battle in northeastern Mexico"
+					"Americans were vastly outnumbered, an estimated 4,600 vs 15,000"
 				]
             },
 			{
-				"name":"Battle of Chapultepec",
+				"name":"Battle for Mexico City",
 				"year":"1847",
 				"location":"Mexico",
 				"result":{
@@ -326,7 +337,7 @@
 					"loser":"Mexicans"
 				},
 				"notables":[
-					"A source of great pride for Mexicans today, as young cadets fought bravely to defend the fortress",
+					"Americans were outnumbered at the Mexican capital, 7,150 vs 16,000",
 					"The last battle of the Mexican-American War"
 				]
 			}
@@ -362,7 +373,9 @@
 				"result":"Democratic-Republican Jefferson defeated Democratic-Republican Burr, and Federalists Adams and Pinckney",
 				"notables":[
 					"The winner was elected by vote of House of Representatives",
-					"The top two candidates both recieved the same number of electoral votes"
+					"The top two candidates both recieved the same number of electoral votes",
+                    "Ushered in an Era of Jeffersonian Democracy",
+                    "Jefferson had been a primary author of the Declaration of Independence"
 				]
 			},
 			{
@@ -370,7 +383,8 @@
 				"result":"Democratic-Republican Jefferson defeated Federalist Pinckney",
 				"notables":[
 					"Highest victory margin in a presidential election in which there were multiple major party candidates",
-					"Under the 12th amendment, electors were required to vote for both president and vice president"
+					"Under the 12th amendment, electors were required to vote for both president and vice president",
+                    "The losing candidate had been involved in the XYZ Affair"
 				]
 			},
 			{
@@ -395,7 +409,8 @@
 				"result":"Democratic-Republican Monroe defeated Federalist King",
 				"notables":[
 					"Democratic-Republicans received the credit for the end of the War of 1812",
-					"Indiana became a state during this election cycle"
+					"Indiana became a state during this election cycle",
+                    "Federalists had been unpopular because of the Hartford Convention"
 				]
 			},
 			{
@@ -411,7 +426,7 @@
 				"result":"Democratic-Republican J.Q. Adams defeated Democratic Republicans Jackson, Crawford, and Clay",
 				"notables":[
 					"The winner was son of the United States' second president",
-					"No candidate received a majority of the electoral vote, so the House of Representatives decided"
+					"No candidate received a majority of the electoral vote, so the House of Representatives decided. Henry Clay agreed to support Adams, causing Jackson to accuse them of making a \"Corrupt Bargain.\""                  
 				]
 			},
 			{
@@ -419,15 +434,17 @@
 				"result":"Democratic Jackson defeated National Republican J.Q. Adams",
 				"notables":[
 					"Incumbent Vice President John C. Calhoun sided with the winning candidate",
-					"The winner recieved 68.2% of Electoral votes, but only 56% of popular vote"
+					"The winner recieved 68.2% of Electoral votes, but only 56% of popular vote",
+                    "Ushered in Era of Jacksonian Democracy"
 				]
 			},
 			{
 				"name":"Election of 1832",
 				"result":"Democratic Jackson defeated National Republican Clay, Independant Floyd, and Anti-Masonic Wirt",
 				"notables":[
-					"No longer single-party election",
-					"First Democratic National Convention held in Baltimore"
+					"Henry Clay had been Secretary of State under John Quincy Adams and a prominent senator",
+					"First Democratic National Convention held in Baltimore",
+                    "The Anti-Masonic Party was highly opposed to Free Masons"
 				]
 			},
 			{
@@ -435,7 +452,9 @@
 				"result":"Democratic Van Buren defeated Whigs Harrison, White, Webster, and Independent Mangum",
 				"notables":[
 					"Only time in which a Vice Presidential election was thrown into the Senate",
-					"Only race in which a major political party (the Whigs) intentionally ran several presidential candidates"
+					"Only race in which a major political party (the Whigs) intentionally ran several presidential candidates",
+                    "Van Buren was called \"The Little Magician\"",
+                    "Van Buren spoke Dutch"
 				]
 			},
 			{
@@ -451,7 +470,7 @@
 				"result":"Democrat Polk defeated Whig Clay",
 				"notables":[
 					"The winner ran on a platform that embraced American territorial expansionism (Manifest Destiny)",
-					"It was the last presidential election to be held on different days in different states",
+					"Polk was a darkhorse candidate",
 					"The winner would annex much of Mexico"
 				]
 			},
@@ -459,7 +478,7 @@
 				"name":"Election of 1848",
 				"result":"Whig Taylor defeated Democratic Cass",
 				"notables":[
-					"The winner was not clearly committed to Whig principles, but he was popular for leading the war effort",
+					"The winner was not clearly committed to Whig principles, but he was popular for leading the Mexican War effort",
 					"This winning candidate was the last Whig president"
 				]
 			}
@@ -469,17 +488,17 @@
 			{
 				"name":"Marbury v. Madison",
 				"year":"1803",
-				"ruling":"Established the right of the Supreme Court to overturn acts of Congress"
+				"ruling":"Established the right of the Supreme Court to overturn acts of Congress it deemed unconstitutional"
 			},
 			{
 				"name":"McCulloch v. Maryland",
 				"year":"1819",
-				"ruling":"Upheld the right of Congress to create a Bank of the United States"
+				"ruling":"Stopping Maryland from taxing in-state establishments of Bank of the United States, establishing federal immunities"
 			},
 			{
 				"name":"Gibbons v. Ogden",
 				"year":"1824",
-				"ruling":"The power to regulate commerce is general, and belongs exclusively to Congress"
+				"ruling":"Gave the federal government the right to regulate interstate commerce"
 			}
 		],
 
@@ -487,12 +506,17 @@
 			{
 				"name":"Louisiana Purchase",
 				"year":"1803",
-				"significance":"Doubled the country's size and opened up the possibilities for westward expansion"
+				"significance":"Doubled the country's size and opened up the possibilities for westward expansion. By making the purchase from Napoleon, Jefferson pushed the powers of president."
+			},
+            {
+				"name":"Hartford Convention",
+				"year":"1814-15",
+				"significance":"New England Federalists discussed peace with Britain in order to continue trade, and there were even radical calls for secession."
 			},
 			{	
 				"name":"Missouri Compromise",
 				"year":"1820",
-				"significance":"Delayed and maintained the balance of the slavery debate for a short time, but did not end it"
+				"significance":"Henry Clay pushed this compromise through Congress to ban slavery north of the 36.5 degree parallel running through the US and allow it in the south. Missouri was the exception - allowed to practice slavery despite being in the northern section."
 			},
 			{
 				"name":"Erie Canal",
