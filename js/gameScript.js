@@ -618,8 +618,8 @@ function questionSetup(){
         var cat= categories[randoms[0]];
         var ranEvent= randoms[1];
         var questions = getQuestions(randoms[0]);
-        var falseAnswers1=[];
-        var falseAnswers2=[];
+        var falseAnswersA=[];
+        var falseAnswersB=[];
 
 
         $('#questionBox td').eq(0).html(questions[0]);
@@ -632,100 +632,100 @@ function questionSetup(){
 
             if(questions[0]==="Loser:"){
                  $( "#a1" ).html(gameEvents.battles[prevEvent].result.loser);
-                 falseAnswers1=genFalseAnswers(9,gameEvents.battles[prevEvent]);
+                 falseAnswersA=genFalseAnswers(9,gameEvents.battles[prevEvent]);
 
             }
                
             else{
                 $( "#a1" ).html(gameEvents.battles[prevEvent].result.victor);
-                falseAnswers1=genFalseAnswers(8,gameEvents.battles[prevEvent]);
+                falseAnswersA=genFalseAnswers(8,gameEvents.battles[prevEvent]);
             }
 
-            addFalseAnswers("#a", falseAnswers1)
+            addFalseAnswers("#a", falseAnswersA)
             $( "#b1" ).html(gameEvents.battles[prevEvent].notables[Math.floor(Math.random()*gameEvents.battles[prevEvent].notables.length)]); 
 
-            addFalseAnswers("#b", falseAnswers2);
+            falseAnswersB = genFalseAnswers(3,gameEvents.battles[prevEvent]);
+            addFalseAnswers("#b", falseAnswersB);
             followup=false;
 
 
         }
         else{
-            var randoms = getRanEvent(); //randoms[0] is category number, randoms[1] is event number
-            var cat= categories[randoms[0]];
-            var ranEvent= randoms[1];
-            var questions = getQuestions(randoms[0]);
-           
+
 
             $("p.eventText").html(gameEvents[cat][ranEvent].name);
         
             var theEvent = gameEvents[cat][ranEvent];
-        
+
             if(cat==="battles"){ 
 
 
-                $("p.eventText").html(gameEvents[cat][ranEvent].name);
+                $("p.eventText").html(gameEvents[cat][ranEvent].name); //Set event name at top
         
             
                 $( "#a1" ).html(gameEvents[cat][ranEvent].year);
 
-                falseAnswers1=genFalseAnswers(1, theEvent);
-                addFalseAnswers("#a", falseAnswers1);
+                falseAnswersA=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswersA);
+                
                 $( "#b1" ).html(gameEvents[cat][ranEvent].location);
             
-                falseAnswers2=genFalseAnswers(2, theEvent);
-                addFalseAnswers("#b", falseAnswers2);
+                falseAnswersB=genFalseAnswers(2, theEvent);
+                addFalseAnswers("#b", falseAnswersB);
                 followup=true;
 
              }
             else if(cat==="inventions"){
                 $( "#a1" ).html(gameEvents[cat][ranEvent].year);
             
-                falseAnswers1=genFalseAnswers(1, theEvent);
-                addFalseAnswers("#a", falseAnswers1);
+                falseAnswersA=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswersA);
             
                 $( "#b1" ).html(gameEvents[cat][ranEvent].significance);
             
-                falseAnswers2=genFalseAnswers(4, theEvent);
-                addFalseAnswers("#b", falseAnswers2);
+                falseAnswersB=genFalseAnswers(4, theEvent);
+                addFalseAnswers("#b", falseAnswersB);
 
             }
             else if(cat==="elections"){
                 $( "#a1" ).html(gameEvents[cat][ranEvent].result);
             
-                falseAnswers1=genFalseAnswers(10, theEvent);
-                addFalseAnswers("#a", falseAnswers1);
+                falseAnswersA=genFalseAnswers(10, theEvent);
+                addFalseAnswers("#a", falseAnswersA);
                 
                 $( "#b1" ).html(gameEvents[cat][ranEvent].notables[Math.floor(Math.random()*gameEvents[cat][ranEvent].notables.length)]); 
 
-                falseAnswers2=genFalseAnswers(5, theEvent);
-                addFalseAnswers("#b", falseAnswers2);
+                falseAnswersB=genFalseAnswers(5, theEvent);
+                addFalseAnswers("#b", falseAnswersB);
 
             }
             else if(cat==="court"){
                 $( "#a1" ).html(gameEvents[cat][ranEvent].year);
             
-                falseAnswers1=genFalseAnswers(1, theEvent);
-                addFalseAnswers("#a", falseAnswers1);
+                falseAnswersA=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswersA);
             
                 $( "#b1" ).html(gameEvents[cat][ranEvent].ruling);
              
-                falseAnswers1=genFalseAnswers(6, theEvent);
-                addFalseAnswers("#b", falseAnswers1);
+                falseAnswersB=genFalseAnswers(6, theEvent);
+                addFalseAnswers("#b", falseAnswersB);
 
             }
 
             else if(cat==="other"){
                 $( "#a1" ).html(gameEvents[cat][ranEvent].year);
              
-                falseAnswers1=genFalseAnswers(1, theEvent);
-                addFalseAnswers("#a", falseAnswers1);
+                falseAnswersA=genFalseAnswers(1, theEvent);
+                addFalseAnswers("#a", falseAnswersA);
              
                 $( "#b1" ).html(gameEvents[cat][ranEvent].significance);
              
-                falseAnswers1=genFalseAnswers(7, theEvent);
-                addFalseAnswers("#b", falseAnswers1);
+                falseAnswersB=genFalseAnswers(7, theEvent);
+                addFalseAnswers("#b", falseAnswersB);
 
             }
+
+            
             prevEvent= ranEvent;
             qSet++;
 
