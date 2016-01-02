@@ -204,7 +204,7 @@
 			"significance": "First 10 amendments to the Constitutions, listing the fundamental rights of U.S. citizens"
 		}
 		
-		],
+		]
 	},
 
 	"era2": {
@@ -909,8 +909,8 @@
 			},
 			{
 				"name":"Attack on the Sui-ho Dam",
-				"year":"1952"
-				"location":"North Korea"
+				"year":"1952",
+				"location":"North Korea",
 				"result":{
 					"victor":"United Nations",
 					"loser":"Soviet Union and North Koreans"
@@ -923,7 +923,7 @@
 			{
 				"name":"Bay of Pigs Invasion",
 				"year":"1961",
-				"location":"Vietnam"
+				"location":"Vietnam",
 				"result":{
 					"victor":"Cuba",
 					"loser":"Americans"
@@ -936,7 +936,7 @@
 			{
 				"name":"Battle of Ap Bac",
 				"year":"1961",
-				"location":"Vietnam"
+				"location":"Vietnam",
 				"result":{
 					"victor":"Viet Cong",
 					"loser":"Americans, South Vietnamese"
@@ -958,7 +958,7 @@
 					"Battle of Ia Drang was the first major battle between regular U.S. and People’s Army of Vietnam (PAVN) troops",
 					"Set the blueprint for tactics for both sides during the conflict"
 					]
-			}
+			},
 			{
 				"name":"Battle of Khe Sanh",
 				"year":"1968",
@@ -997,7 +997,7 @@
 				"name":"Saturn V",
 				"year":"1967",
 				"significance":"This rocket remains literally the heaviest thing that has ever flown"
-			}
+			},
 			{
 				"name":"6-axis Stanford Arm",
 				"year":"1969",
@@ -1111,7 +1111,7 @@
 
 		],
 
-		"court": [
+		"court":[
 			{
 				"name":"Brown v. Board of Education",
 				"year":"1954",
@@ -1141,7 +1141,7 @@
 				"name":"Miranda v. Arizona",
 				"year":"1966",
 				"ruling":"You have the right to remain silent"
-			},
+			}
 			
 		],
 
