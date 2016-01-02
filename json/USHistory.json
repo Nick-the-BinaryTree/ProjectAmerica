@@ -965,6 +965,44 @@
 		],
 
 		"elections": [
+			{
+				"name":"Election of 1952",
+				"result":"Republican Eisenhower defeated Democratic Stevenson"
+				"notables":[
+					"Ended 20 consecutive years of Democratic control of the White House"
+				]
+			},
+			{
+				"name":"Election of 1956",
+				"result":"Republican Eisenhower defeated Democratic Stevenson",
+				"notables":[
+					"The 1956 election was a rematch of 1952",
+					"This was the last presidential election prior to the statehood of Alaska and Hawai"
+				]
+			},
+			{
+				"name":"Election of 1960",
+				"result":"Democratic Kennedy defeated Republican Nixon and Democratic Byrd",
+				"notables":[
+					"This election also remains a source of debate among some historians as to whether vote theft in selected states aided Kennedy's victory",
+					"his was the first presidential election in which Alaska and Hawaii participated, having been granted statehood, respectively, on January 3 and August 21 of the previous year"
+				]
+			},
+			{
+				"name":"Election of 1964",
+				"result":"Democratic Johnson defeated Republican Goldwater",
+				"notables":[
+					"Johnson successfully painted his opponent, Republican Senator Barry Goldwater of Arizona, as a right-wing legislator who wanted to abolish the social welfare programs created in the 1930s",
+					"Goldwater was a pioneer in the modern conservative movement"
+				]
+			},
+			{
+				"name":"Election of 1968",
+				"result":
+				"notables":[
+					
+				]
+			}
 
 		],
 
@@ -976,7 +1014,7 @@
 			},
 			{
 				"name":"Napp v. Ohio",
-				"year":1961",
+				"year":"1961",
 				"ruling":"Evidence that is illegally obtained by the state may not be used against a defendant in court"
 			},
 			{
