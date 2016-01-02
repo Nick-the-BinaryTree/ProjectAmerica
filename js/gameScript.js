@@ -100,7 +100,7 @@ function gameSetup(){
 
     });
     */
-
+    
     $(".create").click(function(){
 
         $(".startContainer").hide();
@@ -126,12 +126,13 @@ function gameSetup(){
                 selection = [era, battles, inventions, elections, court, other, length];
                 getEvents();
                 console.log(gameEvents);
+        
             
                 $(".pregame").hide();
                 $(".game").show();
             
                 eraBackground(era);
-
+            
 
                 gameStart();
             });
@@ -266,7 +267,7 @@ function getQuestions(ranCategory){
         }
 
         else if(categories[ranCategory]==="court"){
-            return ["Year:","Ruling:"];
+            return ["Year:","Result:"];
         }
 
         else if(categories[ranCategory]==="other"){
@@ -281,7 +282,7 @@ function getQuestions(ranCategory){
 
 function genFalseAnswers(questionType, correct){
     var usedAnswers=[];
-    var numAnswers = 4;
+    var numAnswers = 4; 
     var timeout = 0;
     var timeoutFallback = 1000;
     var timeoutMax = 1500;
@@ -348,7 +349,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 3){ //Battle notable fact
         usedAnswers = correct.notables;
             
-        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length -1< numAnswers){
                 
             var potential;
             
@@ -371,14 +372,15 @@ function genFalseAnswers(questionType, correct){
             usedAnswers.push(-1); 
         }
         
-        var falseAnswers = usedAnswers.splice(correct.notables.length-1, usedAnswers.length); //Remove correct notable facts from array
-        
+        var falseAnswers = usedAnswers.splice(correct.notables.length-3, usedAnswers.length); //Remove correct notable facts from array
+        console.log(falseAnswers.toString());
+        console.log(usedAnswers.toString());
         return falseAnswers;
     }
     else if(questionType === 4){ //Invention significance
         usedAnswers.push(correct.significance);
             
-        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length < numAnswers ){
                         
             var potential;
             
@@ -408,7 +410,7 @@ function genFalseAnswers(questionType, correct){
     else if(questionType === 5){ //Election notable
         usedAnswers = correct.notables;
             
-        while(timeout < timeoutMax && usedAnswers.length < numAnswers){
+        while(timeout < timeoutMax && usedAnswers.length -1< numAnswers){
                 
             var potential;
             
@@ -431,8 +433,9 @@ function genFalseAnswers(questionType, correct){
             usedAnswers.push(-1); 
         }
         
-        var falseAnswers = usedAnswers.splice(correct.notables.length-1, usedAnswers.length);
-        
+        var falseAnswers = usedAnswers.splice(correct.notables.length-3, usedAnswers.length);
+        console.log(falseAnswers.toString());
+        console.log(usedAnswers.toString());
         return falseAnswers;
     }
     else if(questionType === 6){ //Court ruling
@@ -598,6 +601,7 @@ function questionSetup(){
 
     console.log(currentScore);
 
+
     var addScore=0;
     var time=0;
     if(qSet>1){
@@ -737,7 +741,8 @@ function questionSetup(){
 
             }
 
-            
+            console.log(falseAnswersA.toString());
+            console.log(falseAnswersB.toString());
             prevEvent= ranEvent;
             qSet++;
 
@@ -809,7 +814,9 @@ function addFalseAnswers(AorB, falseAnswers){ //Usage AorB = "#a" or "#b"
 }
 
 function getRanYear(){
-    var category = Math.floor(Math.random()*5)+1; //Randomly pick from categories
+    var category = Math.floor(Math.random()*4)+1; //Randomly pick from categories
+    var index = Math.floor(Math.random()*gameEvents.battles.length);
+    return gameEvents.battles[index].year;
     
     if(category === 1){ //Battle
         var index = Math.floor(Math.random()*gameEvents.battles.length);
@@ -819,18 +826,16 @@ function getRanYear(){
         var index = Math.floor(Math.random()*gameEvents.inventions.length);
         return gameEvents.inventions[index].year;
     }
-    else if(category === 3){ //Election
-        var index = Math.floor(Math.random()*gameEvents.elections.length);
-        return gameEvents.elections[index].year;
-    }
-    else if(category === 4){ //Court Case
+
+    else if(category === 3){ //Court Case
         var index = Math.floor(Math.random()*gameEvents.court.length);
         return gameEvents.court[index].year;
     }
-    else if(category === 5){ //Other
+    else if(category === 4){ //Other
         var index = Math.floor(Math.random()*gameEvents.other.length);
         return gameEvents.other[index].year;
     }
+    
 }
 
 function getRanLocation(){
