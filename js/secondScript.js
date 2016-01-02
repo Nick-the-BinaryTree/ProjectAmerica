@@ -77,6 +77,8 @@ function eraBackground(era){
 }
 
 function gameStart(){
+    timeElapsed=0;
+    currentScore=0;
     inGame =true;
     startTimer();
     questionSetup();
@@ -169,6 +171,7 @@ function startTimer(){
     $( "p.timeText" ).html("Time: "+timeElapsed);
     var timer= setInterval(function() {
     timeElapsed++;
+    questionTime++;
     if(inGame){
         $( "p.timeText" ).html("Time: "+timeElapsed);
     }
@@ -241,9 +244,10 @@ function genY() {
 return y;
 }
 
-function calculateScore(numWrong){
+//time is 30-time spent, or 0 if more than 30 seconds were spent
+function calculateScore(numWrong, time){
      var score = stdScore - (stdScore * deduction * numWrong);
-     //time will also be factored in somehow 
+     score = score + (speedBonus * time);
      return score;
 
  
