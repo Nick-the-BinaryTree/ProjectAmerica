@@ -881,7 +881,110 @@
 	"era5": {
 
 		"battles": [
-
+			{
+				"name":"Action of 12 October 1950",
+				"year":"1950",
+				"location":"Sea of Japan",
+				"result":{
+					"victor":"Americans",
+					"loser":"North Koreans"
+				},
+				"notables":[
+					"Two out of five minesweeping ships in Korean waters sank, one damaged",
+					"American survivors of the sunken ships were fired upon by enemy aircraft until they could be rescued over 4 hours later"
+					]
+			},
+			{
+				"name":"Battle of Chumonchin Chan",
+				"year":"1950",
+				"location":"Sea of Japan",
+				"result":{
+					"victor":"United Nations",
+					"loser":"North Koreans"
+				},
+				"notables":[
+					"The only major battle fought between surface combatants during the main phase of the Korean War",
+					"Four North Korean torpedo and gunboats encountered an Allied flotilla of three ships, but three were destroyed by gunfire before their torpedoes could be fired"
+					]
+			},
+			{
+				"name":"Attack on the Sui-ho Dam",
+				"year":"1952"
+				"location":"North Korea"
+				"result":{
+					"victor":"United Nations",
+					"loser":"Soviet Union and North Koreans"
+				},
+				"notables":[
+					"The attacks succeeded in permanently destroying 90% of the hydroelectric generating facilities struck and completely knocked out power in North Korea for two weeks",
+					"UN forces followed up these attacks by targeting smaller power-generating plants to prevent North Koreans from filling the void in power generation"
+					]
+			},
+			{
+				"name":"Bay of Pigs Invasion",
+				"year":"1961",
+				"location":"Vietnam"
+				"result":{
+					"victor":"Cuba",
+					"loser":"Americans"
+				},
+				"notables":[
+					"The invaders were badly outnumbered by Castro’s troops, and they surrendered after less than 24 hours of fighting",
+					"114 Americans were killed and over 1,100 were taken prisoner; The failed invasion strengthened the position of Castro's leadership as well as his ties with the USSR"
+				]
+			},
+			{
+				"name":"Battle of Ap Bac",
+				"year":"1961",
+				"location":"Vietnam"
+				"result":{
+					"victor":"Viet Cong",
+					"loser":"Americans, South Vietnamese"
+				},
+				"notables":[
+					"The battle resulted in heavy casualties on South Vietnamese troops (83 dead and more than 100 wounded)",
+					"It exemplified poor performances in both fighting ability and spirit of the South Vietnamese forces in compared to the Viet Cong"
+					]
+			},
+			{
+				"name":"Battle of la Drang",
+				"year":"1965",
+				"location":"Vietnam",
+				"result":{
+					"victor":"Unclear",
+					"loser":"Unclear"
+				},
+				"notables":[
+					"Battle of Ia Drang was the first major battle between regular U.S. and People’s Army of Vietnam (PAVN) troops",
+					"Set the blueprint for tactics for both sides during the conflict"
+					]
+			}
+			{
+				"name":"Battle of Khe Sanh",
+				"year":"1968",
+				"location":"Vietnam",
+				"result":{
+					"victor":"Unclear",
+					"loser":"Unclear"
+				},
+				"notables":[
+					"This turned out to be one of the longest and bloodiest battles of the Vietnam War",
+					"Both sides claimed victory despite heavy casualties on the communists and the fact that the U.S. had to abandon a key combat base due to enemy pressure for the first time"
+					]
+			},
+			{
+				"name":"The Tet Offensive",
+				"year":"1968",
+				"location":"Vietnam",
+				"result":{
+					"victor":"Americans and South Vietnamese",
+					"loser":"Viet Cong and North Vietnamese"
+				},
+				"notables":[
+					"Despite its surprise and initial success, the communists were quickly repelled within several hours or days",
+					"However, the offensive could be seen as a “strategic”, “psychological” win and a turning point in the war for North Vietnam as it shocked the U.S. government and public at home"
+					]
+			}
 		],
 
 		"inventions": [
