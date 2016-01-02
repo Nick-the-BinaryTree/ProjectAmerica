@@ -511,7 +511,7 @@
 			}, {
 				"name": "Missouri Compromise",
 				"year": "1820",
-				"significance": "Henry Clay pushed this compromise through Congress to ban slavery north of the 36.5 degree parallel running through the US and allow it in the south. Missouri was the exception - allowed to practice slavery despite being in the northern section."
+				"significance": "Henry Clay pushed this compromise through Congress to ban slavery north of the 36.5 degree parallel but allow it in the south. Missouri was the exception and allowed slavery anyway."
 			}, {
 				"name": "Erie Canal",
 				"year": "1825",
@@ -796,15 +796,137 @@
 		],
 
 		"elections": [
-
+			{
+				"name": "Election of 1900",
+				"result": "Republican McKinley defeated Democrat-Populist Bryan",
+				"notables": [
+					"It was a rematch of the 1896 elections",
+					"The winner died a year later, and was replaced by Theodore Roosevelt"
+                   		]
+			},
+{
+				"name": "Election of 1904",
+				"result": "Republican Theodore Roosevelt defeated Democratic Parker",
+				"notables": [
+					"The winner's popular vote margin was the largest recorded since 1820",
+					"The Republican Party unanimously nominated the winner during their 1904 national convention"
+                   		]
+			},{
+				"name": "Election of 1908",
+				"result": "Republican Taft defeated Democratic Bryan",
+				"notables": [
+					"Theodore Roosevelt persuaded the Republican Party to nominate the winner, his close friend and Secretary of War, to become his successor",
+					"Despite two previous defeats, the loser ran a vigorous campain against the winner, but suffered the worst loss in his three presidential campaigns"
+                   		]
+			},{
+				"name": "Election of 1912",
+				"result": "Democratic Wilson defeated Progressive Roosevelt and Republican Taft",
+				"notables": [
+					"After failing to recieve the Republican nomination, Roosevelt created the Progressive Party to run against Wilson and Taft",
+					"Taft's 8 electoral votes fewest ever for an incumbent president"
+                   		]
+			},{
+				"name": "Election of 1916",
+				"result": "Democratic Wilson defeated Republican Hughes",
+				"notables": [
+					"The winner's campaign slogan 'he kept us out of the war' was popular among Americans who wanted to avoid involvement in WWI,
+					"The Republican candidate was a Supreme Court Justice"
+                   		]
+			},{
+				"name": "Election of 1920",
+				"result": "Republican Harding defeated Democratic Cox",
+				"notables": [
+					"Women were allowed to vote in this election cycle",
+					"The New president died three years later and was replaced by Coolidge",
+					"The 1920 election was dominated by the aftermath of WWI and the hostile reaction to former president Wilson"
+                   		]
+			},{
+				"name": "Election of 1924",
+				"result": "Republican Coolidge defeated Democratic Davis and Progressive LaFollette",
+				"notables": [
+					"The winner was credited with a booming home economy and no visible crises abroad during his brief time as president (following the former's death)",
+					"A split in the Democratic party divded his competition between two candidates, helping him to win the presidency"
+                   		]
+			},{
+				"name": "Election of 1928",
+				"result": "Republican Hoover defeated Democratic Smith",
+				"notables": [
+					"The winner won a landslide victory on pledges to continue the economic boom of the Coolidge years",
+					"The loser suffered politically from anti-Catholic prejudice, his anti-prohibitionist stance, and association with the corruption of Tammany Hall"
+                   		]
+			},{
+				"name": "Election of 1932",
+				"result": "Democratic F.D. Roosevelt defeated Republican Hoover",
+				"notables": [
+					"The winner promised reform in his policy called the New Deal",
+					"The incumbent president lost popularity due to the economic collapse and prohibition"
+                   		]
+			},{
+				"name": "Election of 1936",
+				"result": "Democratic F.D. Roosevelt defeated Republican Landon",
+				"notables": [
+					"The New Deal policies already enacted by the incumbent president (such as Social Security and unemployment benefits) were highly popular",
+					"This election is notable for the The Literary Digest poll, which had accurately predicted the last 5 elections, which was wrong.  The same year, the Gallop Poll not only predicted the correct winning candidate, it also predicted The Literary Digest's mis-prediction"
+                   		]
+			},{
+				"name": "Election of 1940",
+				"result": "Democratic F.D. Roosevelt defeated Republican Willkie",
+				"notables": [
+					"The winner became the first and only President elected for a 3rd consecutive term",
+					"The winner promised there would be no foreign wars if he were reelected"
+                   		]
+			},{
+				"name": "Election of 1944",
+				"result": "Democratic F.D. Roosevelt defeated Republican Dewey",
+				"notables": [
+					"The winner became the first and only President elected for a 4th consecutive term",
+					"The winner died the next year, and was replaced by Truman"
+                   		]
+			},
+			{
+				"name": "Election of 1948",
+				"result": "Democratic Truman defeated Republican Dewey",
+				"notables": [
+					"Virtually every prediction indicated that the incumbent president (the winner) would be defeated by his opponent",
+					"The winner's surprise victory was the fifth consecutive win for the Democratic Party in a presidential election"
+                   		]
+			}
 		],
 
 		"court": [
-
+			{
+				"name":"Lochner v. New York",
+				"year":"1905",
+				"ruling":"The Constitution bars a state from interfering with an employee’s right to contract with an employer"
+			},
+			{
+				"name":"Schenck v. United States",
+				"year":"1919",
+				"ruling":"Speech that presents a “clear and present danger” to the security of the United States is in violation of the principle of free speech"
+			},
+			{
+				"name":"Near v. Minnesota",
+				"year":"1931",
+				"ruling":"The liberty of the pres is safeguarded from invasion by state action""
+			}
 		],
 
 		"other": [
-
+			{
+				"name":"Stock Market Crash",
+				"year":"1929",
+				"significance":"Started the Great Depression, worldwide GDP fell by an estimated 15% between 1929 and 1932"
+			},
+			{
+				"name":"Marshall Plan",
+				"year":"1948",
+				"significance":"An American initiave to help rebuild Western European economies after the end of WWII"
+			},
+			{
+				"name":"Creation of NATO",
+				"year":"1949",
+				"significance":"Constitutes a system of collective defence whereby its member states agree to mutual defense in repsonce to an attack by any external party"
+			}
 		]
 
 	},
