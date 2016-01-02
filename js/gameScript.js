@@ -17,6 +17,13 @@ var numWrong=0;
 
 //Timer
 var timeElapsed=0;
+
+//for every second less than stdtime you use, you get a score bonus of 5 points
+var stdtime=30;
+var speedBonus =5;
+
+//time spent on question
+var questionTime=0;
 //true during gameplay, for timer use
 var inGame;
 
@@ -592,12 +599,17 @@ function questionSetup(){
     console.log(currentScore);
 
     var addScore=0;
+    var time=0;
     if(qSet>1){
-       addScore = calculateScore(numWrong);
+        if(questionTime<stdtime){
+            time=stdtime-questionTime;
+        }
+       addScore = calculateScore(numWrong,time);
     }
 
     updateScore(addScore);
     numWrong=0;
+    questionTime=0;
     
     if(qSet <= qLimit){
         
