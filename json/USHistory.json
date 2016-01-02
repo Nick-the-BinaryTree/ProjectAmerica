@@ -910,9 +910,10 @@
 		"elections": [
 			{
 				"name":"Election of 1952",
-				"result":"Republican Eisenhower defeated Democratic Stevenson"
+				"result":"Republican Eisenhower defeated Democratic Stevenson",
 				"notables":[
-					"Ended 20 consecutive years of Democratic control of the White House"
+					"Ended 20 consecutive years of Democratic control of the White House",
+					"The winner's campaign slogan, \"I Like Ike,\" was one of the most popular in American history"
 				]
 			},
 			{
@@ -927,8 +928,8 @@
 				"name":"Election of 1960",
 				"result":"Democratic Kennedy defeated Republican Nixon and Democratic Byrd",
 				"notables":[
-					"This election also remains a source of debate among some historians as to whether vote theft in selected states aided Kennedy's victory",
-					"his was the first presidential election in which Alaska and Hawaii participated, having been granted statehood, respectively, on January 3 and August 21 of the previous year"
+					"This election remains a source of debate among some historians as to whether vote theft in selected states aided Kennedy's victory",
+ 					"This was the first presidential election in which Alaska and Hawaii participated, having been granted statehood the previous year"
 				]
 			},
 			{
