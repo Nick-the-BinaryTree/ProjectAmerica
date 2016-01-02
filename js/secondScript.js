@@ -107,9 +107,7 @@ function dragManager(){
                     of: $(this)
                     });
 
-                setTimeout((function() {
-                $(this).draggable("destroy");
-                }).bind(ui.draggable),50);
+                setTimeout($("#"+ui.draggable.attr("id")).draggable( "destroy" ),50);
                 if(q2){ //If other question was also answered correctly, go to next set
                     questionSetup();
                 }
@@ -135,9 +133,7 @@ function dragManager(){
                     at: "center",
                     of: $(this)
                     });
-                setTimeout((function() {
-                $(this).draggable("destroy");
-                }).bind(ui.draggable),50);
+                setTimeout($("#"+ui.draggable.attr("id")).draggable( "destroy" ),50);
                 if(q1){
                     questionSetup();
                 }
