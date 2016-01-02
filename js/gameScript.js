@@ -103,7 +103,7 @@ function gameSetup(){
         
             var era = this.id;
             
-            $(".eraOption").hide();
+            $(".eraChoice").hide();
             $(".settings").show();
         
             $(".goButton").click(function(){

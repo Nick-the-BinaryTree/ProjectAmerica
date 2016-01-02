@@ -196,10 +196,10 @@ function toScore(){
 function backToMenu(){
     $(".scoreBoard").hide();
     $(".pregame").show();
-    $(".eraOption").hide();
+    $(".eraChoice").hide();
     $(".settings").hide();
-    $(".mainContainer").show();
-    selection = gameSetup(); //The cycle never ends! What is life?
+    $(".startContainer").show();
+    gameSetup(); //The cycle never ends! What is life?
 }
 
 function resetGame(){
