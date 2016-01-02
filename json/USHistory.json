@@ -791,8 +791,12 @@
 				"name": "First Nuclear Reactor",
 				"year": "1942",
 				"significance": "Allowed mass production of plutonium for nuclear weapons at the time"
+			},
+			{
+				"name":"Cyclotron Atom-Smasher",
+				"year":"1939".
+				"significance":"This is is a type of particle accelerator, currently used in particle beam cancer treatments"
 			}
-
 		],
 
 		"elections": [
@@ -938,7 +942,26 @@
 		],
 
 		"inventions": [
-
+			{
+				"name":"Voyager 1",
+				"year":"1977",
+				"significance":"This craft takes pictures and transmits data back to NASA. It is now approximately 11.5 billion miles away from Earth"
+			},
+			{
+				"name":"Saturn V",
+				"year":"1967",
+				"significance":"This rocket remains literally the heaviest thing that has ever flown"
+			}
+			{
+				"name":"6-axis Stanford Arm",
+				"year":"1969",
+				"significance":"Scheinman invented the first robot designed for computer control, which was later modified into an assembly line machine"
+			},
+			{
+				"name":"LASER",
+				"year":"1960",
+				"signifiance":"Mainman's invention has a variety of everyday applications, including CDs, DVDs, and surgery, but not as a 'death ray'"
+			}
 		],
 
 		"elections": [
@@ -946,7 +969,37 @@
 		],
 
 		"court": [
-
+			{
+				"name":"Brown v. Board of Education",
+				"year":"1954",
+				"ruling":"In the field of public education, the doctrine of ‘separate but equal’ has no place."
+			},
+			{
+				"name":"Napp v. Ohio",
+				"year":1961",
+				"ruling":"Evidence that is illegally obtained by the state may not be used against a defendant in court"
+			},
+			{
+				"name":"Baker v. Carr",
+				"year":"1962",
+				"ruling":"Voting districts cannot be drawn in such a way that they violate the Equal Protection clause of the 14th Amendment"
+			},
+			{
+				"name":"Engel v. Vitale",
+				"year":"1962",
+				"ruling":"Public institutions (i.e., a school system) cannot require prayer"
+			},
+			{
+				"name":"Gideon v. Wainwright",
+				"year":"1963",
+				"ruling":"Defendants in criminal cases have an absolute right to counsel"
+			},
+			{
+				"name":"Miranda v. Arizona",
+				"year":"1966",
+				"ruling":"You have the right to remain silent"
+			},
+			
 		],
 
 		"other": [
