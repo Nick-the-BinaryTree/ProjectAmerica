@@ -1,5 +1,6 @@
 
 //Sizing
+
 var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/4;
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
