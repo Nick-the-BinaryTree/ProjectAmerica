@@ -202,6 +202,11 @@
 			"name": "Bill of Rights",
 			"year": "1789",
 			"significance": "First 10 amendments to the Constitutions, listing the fundamental rights of U.S. citizens"
+		},
+		{
+			"name":"11th Constitutional Ammendment passed",
+			"year":"1795",
+			"significance":"Makes states immune from suits from out-of-state citizens and foreigners not living within the state borders"
 		}
 		
 		]
@@ -311,11 +316,25 @@
 			"name": "McCormick's Mechanical Reaper",
 			"year": "1831",
 			"significance": "Allowed farmers to harvest five times as quickly compared to using a scythe"
-		}, {
+		}, 
+		{
+			"name":"Rotary Printing Press",
+			"year":"1843",
+			"significance":"Printed images on a large number of substrates (including paper, cardboard, and plastic) by curving image around a cylinder"
+		},
+		{
 			"name": "Telegraph/Morse Code",
 			"year": "1844",
 			"significance": "Made instant communication between distant places in the country possible"
-		}, {
+		}, 
+		
+			{
+				"name":"Steel Plow",
+				"year":"1837",
+				"significance":"Deere's design was so much stronger than iron designs that it could work soil in areas of the US that had previously been considered unsuitable for farming"
+			},
+		
+		{
 			"name": "Vulcanization",
 			"year": "1844",
 			"significance": "Goodyear's chemical process to make rubber strong and supple to create tires"
@@ -503,7 +522,47 @@
 					"Single bloodiest day of the Civil War, with 23,000 casualties",
 					"Union General McClellan failed to pursue the Confederate troops and was therefore replaced by General Burnside"
 				]
-			}, {
+			}, 
+			{
+				"name":"Battle of Gettysburg",
+				"year":"1863",
+				"location":"Pennsylvania",
+				"result": {
+					"victor":"Union",
+					"loser":"Confederates"
+				},
+				"notables":[
+					"The battle involved the largest number of casualties of the entire Civil War",
+					"Between 46,000 and 51,000 soldiers from both armies were casualties in the three-day battle"
+					]
+			},
+			{
+				"name":"Battle of Vicksburg",
+				"year":"1863",
+				"location":"Mississippi",
+				"result": {
+					"victor":"Union",
+					"loser":"Confederates"
+				},
+				"notables":[
+					"This location was last major Confederate stronghold on the Mississippi River.  After two failed assaults, Grant laid seige to the city until it surrendered",
+					"This victory cut off the states of Arkansas, Louisiana, and Texas from the rest of the Confederacy, as well as communication with Confederate forces in the Trans-Mississippi Department for the remainder of the war"
+					]
+			},
+			{
+				"name":"Siege of Petersburg",
+				"year":"1865",
+				"location":"Virginia",
+				"result": {
+					"victor":"Union",
+					"loser":"Confederates"
+				},
+				"notables":[
+					"After an unsuccessful asault, Union forces commanded by Lt. Gen. Grant constructed trench lines that eventually extended over 30 miles",
+					"This location was crucial to the supply of the Confederate army and the Confederate capital of Richmond. Numerous raids were conducted and battles fought in attempts to cut off the railroad supply lines through this location to Richmond"
+					]
+			},
+			{
 				"name": "Battle of Manilla Bay",
 				"year": "1898",
 				"location": "Phillipines",
@@ -544,7 +603,7 @@
 				"year": "1867",
 				"significance": "Roper fixed a coal-fired boiler between the wheels, but he died demonstrating one of his machines"
 			}
-
+			
 		],
 
 		"elections": [{
@@ -673,6 +732,21 @@
 				"name":"Emancipation Proclamation",
 				"year":"1862",
 				"significance":"As a result of this, Britain and France withheld recognition of the Confederacy. Freed slaves in the Confederacy, encouraging them to escape."
+			},
+			{
+				"name":"13th Constitutional Ammendment passed",
+				"year":"1865",
+				"significance":"Abolishes slavery, and involuntary servitude, except as punishment for a crime"
+			},
+			{
+				"name":"14th Constitutional Ammendment passed",
+				"year":"1868",
+				"significance":"Defines citizenship, contains the Privileges or Immunities Clause, the Due Process Clause, the Equal Protection Clause, and deals with post-Civil War issues"
+			},
+			{
+				"name":"15th Constitutional Ammendment passed",
+				"year":"1870",
+				"significance":"Prohibits the denial of the right to vote based on race, color, or previous condition of servitude"
 			}
 
 		]
@@ -686,8 +760,8 @@
 				"year": "1918",
 				"location": "Cantigny, Germany",
 				"result": {
-					"victor": "USA and France",
-					"loser": "Germany"
+					"victor": "Americans and French",
+					"loser": "Germans"
 
 				},
 				"notables": [
@@ -699,8 +773,8 @@
 				"year": "1941",
 				"location": "Pearl Harbor, Hawaii",
 				"result": {
-					"victor": "Japan",
-					"loser": "USA"
+					"victor": "Japanese",
+					"loser": "Americans"
 				},
 				"notables": [
 					"All of the Americans killed or wounded during the attack were non-combatants, given the fact there was no state of war when the attack occurred",
@@ -711,8 +785,8 @@
 				"year": "1945",
 				"location": "Hiroshima, Japan and Nagasaki, Japan",
 				"result": {
-					"victor": "USA",
-					"loser": "Japan"
+					"victor": "Americans",
+					"loser": "Japanese"
 				},
 				"notables": [
 					"129,000–246,000+ killed, mostly civilians",
@@ -873,6 +947,36 @@
 				"name":"Creation of NATO",
 				"year":"1949",
 				"significance":"Constitutes a system of collective defence whereby its member states agree to mutual defense in repsonce to an attack by any external party"
+			},
+			{
+				"name":"16th Constitutional Ammendment passed",
+				"year":"1913",
+				"significance":"Permits Congress to levy an income tax without apportioning it among the states or basing it on the United States Census"
+			},
+			{
+				"name":"17th Constitutional Ammendment passed",
+				"year":"1913",
+				"significance":"Establishes the direct election of United States Senators by popular vote"
+			},
+			{
+				"name":"18th Constitutional Ammendment passed",
+				"year":"1919",
+				"significance":"Prohibited the manufacturing or sale of alcohol within the United States (repealed 1933)"
+			},
+			{
+				"name":"19th Constitutional Ammendment passed",
+				"year":"1920",
+				"significance":"Prohibits the denial of the right to vote based on sex"
+			},
+			{
+				"name":"20th Constitutional Ammendment passed",
+				"year":"1933",
+				"significance":"Changes the date on which the terms of the President and Vice President, and Senators and Representatives end and begin"
+			},
+			{
+				"name":"21st Constitutional Ammendment passed",
+				"year":"1933",
+				"significance":"Repeals the 18th Amendment and gives the States the power to prohibit or regulate the transportation or importation of alcohol for delivery or use"
 			}
 		]
 
@@ -906,6 +1010,20 @@
 					"The only major battle fought between surface combatants during the main phase of the Korean War",
 					"Four North Korean torpedo and gunboats encountered an Allied flotilla of three ships, but three were destroyed by gunfire before their torpedoes could be fired"
 					]
+			},
+			{
+				"name":"Battle of Inchon",
+				"year":"1950",
+				"location":"South Korea",
+				"result":{
+					"victor":"United Nations",
+					"loser":"North Koreans"
+				},
+				"notables":[
+					"The code name for the operation was Operation Chromite",
+					"This amphibious invasion and battle of the Korean War resulted in a decisive victory and strategic reversal in favor of the United Nations, and led to the recapture of the South Korean capital of Seoul two weeks later"
+					]
+				
 			},
 			{
 				"name":"Attack on the Sui-ho Dam",
@@ -1147,7 +1265,7 @@
 
 		"other": [
 			{
-				"name":"22nd Amendment",
+				"name":"22nd Constitutional Amendment Passed",
 				"year":"1951",
 				"significance":"Set presidential term limits"
 			},
@@ -1165,6 +1283,32 @@
 				"name":"Watergate Scandal",
 				"year":"1973",
 				"significance":"A break-in at the Democratic National Committee headquarters at the Watergate office complex in Washington, D.C. and President Richard Nixon's administration's attempted cover-up of its involvement led to the discovery of multiple abuses of power by the Nixon administration and his eventual resignation"
+			},
+			
+			{
+				"name":"23rd Constitutional Ammendment passed",
+				"year":"1961",
+				"significance":"Grants the District of Columbia electors (the number of electors being equal to the least populous state) in the Electoral College."
+			},
+			{
+				"name":"24th Constitutional Ammendment passed",
+				"year":"1964",
+				"significance":"Prohibits the revocation of voting rights due to the non-payment of a poll tax or any other tax"
+			},
+			{
+				"name":"25th Constitutional Ammendment passed",
+				"year":"1967",
+				"significance":"Addresses succession to the Presidency and establishes procedures both for filling a vacancy in the office of the Vice President, as well as responding to Presidential disabilities"
+			},
+			{
+				"name":"26th Constitutional Ammendment passed",
+				"year":"1971",
+				"significance":"Prohibits the denial of the right of US citizens, eighteen years of age or older, to vote on account of age"
+			},
+			{
+				"name":"27th Constitutional Ammendment passed",
+				"year":"1992",
+				"significance":"Delays laws affecting Congressional salary from taking effect until after the next election of representatives"
 			}
 
 		]
