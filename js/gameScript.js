@@ -217,7 +217,7 @@ function getRanEvent(){
     var timeout = 0;
     var timeoutMax = 2000;
     
-    while(timeout < 2000 && alreadyAsked(gameEvents[category][ranEvent].name)){
+    while(timeout < timeoutMax && alreadyAsked(gameEvents[category][ranEvent].name)){
         ranCategory = Math.floor(Math.random() * categories.length);
         category = categories[ranCategory];
         ranEvent = Math.floor(Math.random() * gameEvents[category].length);
