@@ -1,5 +1,9 @@
 function setQuestionLimit(lengthSelect){
     var limit = lengthSelect;
+    numAvailableQs=0;
+    for(var i=0;i<categories.length;i++){
+        numAvailableQs += gameEvents[categories[i]].length;
+    }
     
     if(limit==="quick"){
         qLimit = 10;
@@ -11,7 +15,7 @@ function setQuestionLimit(lengthSelect){
         qLimit = 30;
     }
     else{
-        qLimit = -1; //Code to use every event
+        qLimit = numAvailableQs; //Code to use every event
     }
 }
 

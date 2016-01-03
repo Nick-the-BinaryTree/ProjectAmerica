@@ -61,6 +61,9 @@ var followup=false;
 //always set but only used for battles
 var prevEvent;
 
+//number of available questions for the game
+var numAvailableQs;
+
 //creates client
 /*
 var client = new Client("project-america.herokuapp.com", 80, function(error) { 
@@ -121,12 +124,13 @@ function gameSetup(){
                 var court = $('#court')[0].checked;
                 var other = $('#other')[0].checked;
                 var length = $('input[name="length"]:checked', '#lengthForm').val();
-                
-                setQuestionLimit(length);
-                
                 selection = [era, battles, inventions, elections, court, other, length];
                 getEvents();
                 console.log(gameEvents);
+                
+                setQuestionLimit(length);
+                
+                
         
             
                 $(".pregame").hide();
@@ -603,6 +607,8 @@ function questionSetup(){
     $(".answerBox2").removeClass( "answerBox2Dropped" );
 
     console.log(currentScore);
+    console.log(numAvailableQs);
+    console.log(qSet);
 
 
     var addScore=0;
@@ -617,6 +623,10 @@ function questionSetup(){
     updateScore(addScore);
     numWrong=0;
     questionTime=0;
+
+    if(qSet>numAvailableQs){
+        toScore();
+    }
     
     if(qSet <= qLimit){
         
