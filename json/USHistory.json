@@ -792,6 +792,45 @@
 					"129,000–246,000+ killed, mostly civilians",
 					"Japan surrendered 6 days after the bombings"
 				]
+			},
+			{
+				"name":"D-Day",
+				"year":"1944",
+				"location":"France",
+				"result":{
+					"victor":"Allied Forces",
+					"loser":"Germans"
+				},
+				"notables":[
+					"The largest seaborne invasion in history",
+					"Amphibious beach landings in non-ideal weather drive German defenders from their positions, but at a high cost"
+					]
+			},
+			{
+				"name":"Battle of the Bulge",
+				"year":"1944",
+				"location":"France",
+				"result":{
+					"victor":"Allied Forces",
+					"loser":"German"
+				},
+				"notables":[
+					"A major German offensive campaign through the forest of the Adrennes region to split the Allied troops in two",
+					"The terrain and improving weather conditions favoured the Allies. It was one of the largest and bloodiest battles of WWII"
+					]
+			},
+			{
+				"name":"Battle of Okinawa",
+				"year":"1945",
+				"location":"Okinawa",
+				"result":{
+					"victor":"Allied Forces",
+					"loser":"Japan"
+				},
+				"notables":[
+					"The Japanese fought against U.S. invasion of this strategic island fiercely using kamikazes and launching a ground counterattack, however, they failed",
+					"100,000 Japanese soldiers and 12,000 American soldiers were counted as casualties of this long battle"
+					]
 			}
 
 		],
@@ -929,6 +968,11 @@
 				"name":"Near v. Minnesota",
 				"year":"1931",
 				"ruling":"The liberty of the pres is safeguarded from invasion by state action"
+			},
+			{
+				"name":"Tennessee v. Scopes",
+				"year":"1925",
+				"ruling":"Scopes was found guilty of violating the Butler Act (teaching evolution in public schools where it was illegal) and fined, but the verdict was thrown out on a technicality on an appeal"
 			}
 		],
 
@@ -1101,6 +1145,32 @@
 				"notables":[
 					"Despite its surprise and initial success, the communists were quickly repelled within several hours or days",
 					"However, the offensive could be seen as a “strategic”, “psychological” win and a turning point in the war for North Vietnam as it shocked the U.S. government and public at home"
+					]
+			},
+			{
+				"name":"Gurf War Air Campaign",
+				"year":"1990",
+				"location":"Kuwait and Iraq",
+				"result":{
+					"victor":"Coalition",
+					"loser":"Iraq"
+				},
+				"notables":[
+					"Arial bombing destroyed Iraq's Air Force and anti-aircraft facilities, command and communication facilities, and military targets",
+					"U.S. and British special operations forces had been covertly inserted into western Iraq to aid in the search for and destruction of Scuds (tatical balistic missiles)"
+					]
+			},
+			{
+				"name":"Battle of Khafji",
+				"year":"1991",
+				"location":"Saudi Arabia",
+				"result":{
+					"victor":"Coalition",
+					"loser":"Iraq"
+				},
+				"notables":[
+					"First major ground engagement of the Persian Gulf War and marked the culmination of the Coalition's air campaign over Kuwait and Iraq",
+					"Two Saudi Arabian National Guard battalions and two Qatari tank companies successfully attempted to retake control of the city occupied by an Iraqi column, aided by Coalition aircraft and American artillery."
 					]
 			}
 		],
