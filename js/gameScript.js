@@ -173,36 +173,38 @@ function getEvents(){ //Working! (At least w/ server)
                 era = master.era5;
             }
             
-            var blankCopy = '{"battles" : [],"inventions" : [],"elections" : [],"court": [], "other" : [] }';
+            //var blankCopy = '{"battles" : [],"inventions" : [],"elections" : [],"court": [], "other" : [] }';
 
             //console.log(blankCopy);
 
 
               
-            var newCopy=JSON.parse(blankCopy);
+            //var newCopy=JSON.parse(blankCopy);
             
             if(selection[1]===true){
-                newCopy["battles"] = era.battles;
+                //newCopy["battles"] = era.battles;
                 categories.push("battles");
             }
             if(selection[2]===true){
-                newCopy["inventions"] = era.inventions;
+                //newCopy["inventions"] = era.inventions;
                 categories.push("inventions");
             }
             if(selection[3]===true){
-                newCopy["elections"] = era.elections;
+                //newCopy["elections"] = era.elections;
                 categories.push("elections");
             }
             if(selection[4]===true){
-                newCopy["court"] = era.court;
+                //newCopy["court"] = era.court;
                 categories.push("court");
             }
             if(selection[5]===true){
-                newCopy["other"] = era.other;
+                //newCopy["other"] = era.other;
                 categories.push("other");
             }
     
-        gameEvents = newCopy;
+            //gameEvents = newCopy;
+            gameEvents = era;
+    
         }
     });
 }
