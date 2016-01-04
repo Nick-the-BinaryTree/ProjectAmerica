@@ -10,7 +10,7 @@
 			},
 			"notables": [
 				"Start of revolutionary war",
-				"Paul Revere's midnight ride to Concord warned the people in advance. There were also those other guys who no one remembers.",
+				"Paul Revere's midnight ride to Concord warned the people in advance",
 				"\"Shot heard round the world\" was fired"
 			]
 		}, {
@@ -134,7 +134,7 @@
 		}, {
 			"name": "Cotton Gin",
 			"year": "1794",
-			"significance": "Whitney's invention offered Southern planters an economic justification to maintain and expand slavery by greatly increasing productivity. Whitney got bogged down in legal battles over his patent."
+			"significance": "Whitney's invention offered an economic justification to maintain and expand slavery by increasing productivity"
 		}],
 
 		"elections": [{
@@ -181,11 +181,11 @@
 		}, {
 			"name": "Publication of Thomas Paine's Common Sense",
 			"year": "1776",
-			"significance": "\"Small islands, not capable of protecting themselves, are the proper objects for kingdoms to take under their care; but there is something absurd, in supposing a continent to be perpetually governed by an island.\""
+			"significance": "\"...there is something absurd, in supposing a continent to be perpetually governed by an island.\""
 		}, {
 			"name": "United States Declaration of Independance",
 			"year": "1776",
-			"significance": "Announced the people's unalienable rights to \"life, liberty, and the pursuit of happiness\" were being violated, justifying a revolution"
+			"significance": "Announced violation of the people's rights to \"life, liberty, and the pursuit of happiness\" justified a revolution"
 		}, {
 			"name": "Treaty of Paris",
 			"year": "1783",
@@ -197,7 +197,7 @@
 		}, {
 			"name": "Constitutional Convention",
 			"year": "1787",
-			"significance": "Created a three branch government with a bicarmel legislature stronger than the one previously set up by the Articles of Confederation. Federalist and Anti-federalist parties developed to support and oppose passing the new Constitution."
+			"significance": "Developed a three branch government and political parties support and oppose passing the new Constitution."
 		}, {
 			"name": "Bill of Rights",
 			"year": "1789",
@@ -320,7 +320,7 @@
 		{
 			"name":"Rotary Printing Press",
 			"year":"1843",
-			"significance":"Printed images on a large number of substrates (including paper, cardboard, and plastic) by curving image around a cylinder"
+			"significance":"Printed images on a large number of substrates by curving image around a cylinder"
 		},
 		{
 			"name": "Telegraph/Morse Code",
@@ -329,9 +329,9 @@
 		}, 
 		
 			{
-				"name":"Steel Plow",
-				"year":"1837",
-				"significance":"Deere's design was so much stronger than iron designs that it could work soil in areas of the US that had previously been considered unsuitable for farming"
+			"name":"Steel Plow",
+			"year":"1837",
+			"significance":"Deere's design could work soil in areas of the US that had previously been considered unsuitable for farming"
 			},
 		
 		{
@@ -397,7 +397,8 @@
 			"result": "Democratic-Republican J.Q. Adams defeated Democratic Republicans Jackson, Crawford, and Clay",
 			"notables": [
 				"The winner was son of the United States' second president",
-				"No candidate received a majority of the electoral vote, so the House of Representatives decided. Henry Clay agreed to support Adams, causing Jackson to accuse them of making a \"Corrupt Bargain.\""
+				"No candidate received a majority of the electoral vote, so the House of Representatives decided",
+				"Henry Clay agreed to support Adams, causing Jackson to accuse them of making a \"Corrupt Bargain.\""
 			]
 		}, {
 			"name": "Election of 1828",
@@ -463,21 +464,21 @@
 		}],
 
 		"other": [{
-				"name": "Louisiana Purchase",
-				"year": "1803",
-				"significance": "Doubled the country's size and opened up the possibilities for westward expansion. By making the purchase from Napoleon, Jefferson pushed the powers of president."
+			"name": "Louisiana Purchase",
+			"year": "1803",
+			"significance": "Doubled the country's size and opened up the possibilities for westward expansion."
 			}, {
-				"name": "Hartford Convention",
-				"year": "1814-15",
-				"significance": "New England Federalists discussed peace with Britain in order to continue trade, and there were even radical calls for secession."
+			"name": "Hartford Convention",
+			"year": "1814-15",
+			"significance": "Peace-talks between New England Federalists and Britain to continue trade (there were even calls for secession)."
 			}, {
-				"name": "Missouri Compromise",
-				"year": "1820",
-				"significance": "Henry Clay pushed this compromise through Congress to ban slavery north of the 36.5 degree parallel but allow it in the south. Missouri was the exception and allowed slavery anyway."
+			"name": "Missouri Compromise",
+			"year": "1820",
+			"significance": "Clay pushed this compromise to ban slavery north of the 36.5 degree parallel. Missouri was allowed an exception."
 			}, {
-				"name": "Erie Canal",
-				"year": "1825",
-				"significance": "Gave the western states direct access to the Atlantic Ocean without using the Mississippi River"
+			"name": "Erie Canal",
+			"year": "1825",
+			"significance": "Gave the western states direct access to the Atlantic Ocean without using the Mississippi River"
 			}
 
 		]
@@ -545,8 +546,8 @@
 					"loser":"Confederates"
 				},
 				"notables":[
-					"This location was last major Confederate stronghold on the Mississippi River.  After two failed assaults, Grant laid seige to the city until it surrendered",
-					"This victory cut off the states of Arkansas, Louisiana, and Texas from the rest of the Confederacy, as well as communication with Confederate forces in the Trans-Mississippi Department for the remainder of the war"
+					"This location was last major Confederate stronghold on the Mississippi River.  After two failed assaults, Grant laid seige to the city",
+					"This victory cut off the states of Arkansas, Louisiana, and Texas from the rest of the Confederacy"
 					]
 			},
 			{
@@ -558,8 +559,8 @@
 					"loser":"Confederates"
 				},
 				"notables":[
-					"After an unsuccessful asault, Union forces commanded by Lt. Gen. Grant constructed trench lines that eventually extended over 30 miles",
-					"This location was crucial to the supply of the Confederate army and the Confederate capital of Richmond. Numerous raids were conducted and battles fought in attempts to cut off the railroad supply lines through this location to Richmond"
+					"After an unsuccessful asault, Union forces commanded by Lt. Gen. Grant constructed trench lines that extended over 30 mi",
+					"This location was crucial to the supply of the Confederate army and Richmond.  The union tried to cut off its railroad supply lines"
 					]
 			},
 			{
@@ -618,9 +619,9 @@
 				"name": "Election of 1856",
 				"result": "Democratic Buchanan defeated Republican Fremont and American Fillmore",
 				"notables": [
-					"The Whig Party had disintegrated over the issue of slavery, and new organizations such as the Republican Party and the American Party competed to replace them",
+					"The Whig Party had disintegrated over the issue of slavery, and the new Republican and American Parties competed to replace them",
 					"Winner Buchanan received only about 45% of the popular vote",
-                    "Buchanan is ranked one of the worst US presidents for failed efforts to keep peace between the North and South"
+                			"Buchanan is ranked one of the worst US presidents for failed efforts to keep peace between the North and South"
 				]
 			}, {
 				"name": "Election of 1860",
@@ -635,8 +636,8 @@
 				"result": "Republican Lincoln defeated Democratic McClellan",
 				"notables": [
 					"The 1864 election occurred during the Civil War, so none of the states loyal to the Confederate States of America participated",
-                    "McClellan had been a relatively poor general who disobeyed Lincoln and trash-talked him in private",
-                    "The Copperheads were Peace Democrats, staying in the Union although most of the Democratic Party had gone South",
+                    			"McClellan had been a relatively poor general who disobeyed Lincoln and trash-talked him in private",
+                			"The Copperheads were Peace Democrats, staying in the Union although most of the Democratic Party had gone South",
 					"Several states allowed their citizens serving as soldiers in the field to cast ballots (a first in United States history)"
 				]
 			},
@@ -644,17 +645,17 @@
 				"name": "Election of 1868",
 				"result": "Republican Grant defeated Democratic Seymour",
 				"notables": [
-					"Texas, Mississippi, and Virginia (former Confederate states) were not yet restored to the Union and therefore could not vote in the election",
+					"Texas, Mississippi, and Virginia were not yet restored to the Union and therefore could not vote in the election",
 					"The Republican campaign theme — Let us have peace — was popular in the post-war nation",
-                    "Grant had been Commanding General of the US Army prior to the election"
+                    			"Grant had been Commanding General of the US Army prior to the election"
 				]
 			},
 			{
 				"name":"Election of 1872",
 				"result":"Republican Grant defeated Democratic and Liberal Republicans Hendricks and Greeley",
 				"notables":[
-					"Greeley died after the popular vote but before the Electoral College cast its votes (as a result, electors previously committed to Greeley voted for four different candidates for President) - the Liberal Republican Party died with  him",
-                    "Horace Greeley had been publisher of the New York Tribune",
+					"Greeley died after the popular vote but before the Electoral College cast its vote (as did the Liberal Republican Party)",
+                	  		"Horace Greeley had been publisher of the New York Tribune",
 					"Arkansas and Louisiana did not participate"
 				]
 			},
@@ -663,7 +664,7 @@
 				"result": "Republican Hayes defeated Democratic Tilden",
 				"notables": [
 					"While Tilden narrowly won the popular vote, Hayes won the electoral vote by only 1 vote after much dispute",
-					"Many historians believe that an informal deal was struck to resolve the dispute: the Republicans agreed to end Reconstruction in return for Hayes’ election"
+					"The Republicans may have agreed to end Reconstruction in return for Hayes’ election to resolve the voting dispute"
 				]
 			},
 			{
@@ -672,7 +673,7 @@
 				"notables":[
 					"It is to date the smallest popular vote victory in American history: 48.27% to 48.25%",
 					"Incumbent President Rutherford Hayes did not seek re-election, keeping a promise made during the 1876 campaign",
-                    "Garfield would get assassinated"
+                	 		"Garfield would be assassinated"
 				]
 			}, 
 			{
@@ -689,7 +690,7 @@
 				"notables": [
 					"One of only 4 elections (1824, 1876, 1888, 2000) where the popular vote winner was defeated",
 					"Harrison won by buying votes from groups of electors called “Blocks of Five",
-                    "Harrison supported high tarrifs favored by businesses, and Cleveland supported low tariffs that would get better priced goods for consumers"
+                    			"The winner supported high tarrifs favored by businesses, while the Cleveland supported low ones favored by consumers"
 				]
 			},
 			{
@@ -704,10 +705,10 @@
 				"result": "Republican McKinley defeated Democrat-Populist Bryan",
 				"notables": [
 					"Bryan was the first ever to criss-cross the nation and meet voters in person",
-					"McKinley’s political manager brought 500,000 voters by train to McKinley's home in Ohio, where he would give a speech to the men from his porch - the Front Porch Campaign",
-                    "McKinley would get assassinated",
-                    "McKinley supported businesses and industrialists",
-                    "Bryan got the support of the Populist Party after taking on their Free Silver platform - using silver as a currency to raise inflation and reduce farmer debt"
+					"500K voters were brought by train to McKinley's home, where he would give a speech to them from his porch (the Front Porch Campaign)",
+                    			"McKinley would get assassinated",
+                    			"McKinley supported businesses and industrialists",
+                    			"Populist Party supported Bryan when he took on their Free Silver platform: silver as a currency raised inflation and reduced farmer debt"
 				]
 			}
 
@@ -731,7 +732,7 @@
 			{
 				"name":"Emancipation Proclamation",
 				"year":"1862",
-				"significance":"As a result of this, Britain and France withheld recognition of the Confederacy. Freed slaves in the Confederacy, encouraging them to escape."
+				"significance":"The Conederacy the favor of Britain and France, and its slaves were freed, encouraging them to escape."
 			},
 			{
 				"name":"13th Constitutional Ammendment passed",
@@ -741,7 +742,7 @@
 			{
 				"name":"14th Constitutional Ammendment passed",
 				"year":"1868",
-				"significance":"Defines citizenship, contains the Privileges or Immunities Clause, the Due Process Clause, the Equal Protection Clause, and deals with post-Civil War issues"
+				"significance":"Defines citizenship, contains Clauses (Privileges or Immunities, Due Process, Equal Protection), and deals with post-Civil War issues"
 			},
 			{
 				"name":"15th Constitutional Ammendment passed",
