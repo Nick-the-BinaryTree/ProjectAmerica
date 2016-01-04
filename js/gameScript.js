@@ -355,9 +355,10 @@ function genFalseAnswers(questionType, correct){
     }
     else if(questionType === 3){ //Battle notable fact
         usedAnswers = correct.notables;
+         var numNotables =correct.notables.length;
             
-        while(timeout < timeoutMax && usedAnswers.length -1< numAnswers){
-                
+        while(timeout < timeoutMax && (usedAnswers.length - (numNotables -1))< numAnswers){
+    
             var potential;
             
             if(timeout<timeoutFallback){
@@ -379,9 +380,7 @@ function genFalseAnswers(questionType, correct){
             usedAnswers.push(-1); 
         }
         
-        var falseAnswers = usedAnswers.splice(correct.notables.length-3, usedAnswers.length); //Remove correct notable facts from array
-        console.log(falseAnswers.toString());
-        console.log(usedAnswers.toString());
+        var falseAnswers = usedAnswers.splice((correct.notables.length-(numAnswers-1)), usedAnswers.length); //Remove correct notable facts from array
         return falseAnswers;
     }
     else if(questionType === 4){ //Invention significance
@@ -416,9 +415,10 @@ function genFalseAnswers(questionType, correct){
     }
     else if(questionType === 5){ //Election notable
         usedAnswers = correct.notables;
-            
-        while(timeout < timeoutMax && usedAnswers.length -1< numAnswers){
-                
+          var numNotables =correct.notables.length;
+         
+        while(timeout < timeoutMax && (usedAnswers.length - (correct.notables.length -1)) < numAnswers){
+    
             var potential;
             
             if(timeout<timeoutFallback){
@@ -440,9 +440,8 @@ function genFalseAnswers(questionType, correct){
             usedAnswers.push(-1); 
         }
         
-        var falseAnswers = usedAnswers.splice(correct.notables.length-3, usedAnswers.length);
-        console.log(falseAnswers.toString());
-        console.log(usedAnswers.toString());
+        var falseAnswers = usedAnswers.splice((correct.notables.length-(numAnswers-1)), usedAnswers.length);
+    
         return falseAnswers;
     }
     else if(questionType === 6){ //Court ruling
