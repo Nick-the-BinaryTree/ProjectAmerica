@@ -766,8 +766,8 @@
 
 				},
 				"notables": [
-					"First American Battle fought in World War 1",
-					"The objective was partly to reduce a salient made by the front lines of the German Army, but mostly to prove the ability of the inexperienced American troops."
+					"First American Battle fought in WWI",
+					"Reduced a German Army salient proved the ability of the inexperienced American troops."
 				]
 			}, {
 				"name": "Attack on Pearl Harbor",
@@ -778,8 +778,8 @@
 					"loser": "Americans"
 				},
 				"notables": [
-					"All of the Americans killed or wounded during the attack were non-combatants, given the fact there was no state of war when the attack occurred",
-					"The US entered World War 2 and declared war on Japan, Germany, and Italy"
+					"All of the Americans casualities were non-combatants, because there was no state of war when the attack occurred",
+					"The US entered WWII and declared war on the Axis powers"
 				]
 			}, {
 				"name": "Atomic Bombings of Hiroshima and Nagasaki",
@@ -804,7 +804,7 @@
 				},
 				"notables":[
 					"The largest seaborne invasion in history",
-					"Amphibious beach landings in non-ideal weather drive German defenders from their positions, but at a high cost"
+					"Amphibious beach landings in non-ideal weather drove German defenders from their positions, but at a high cost"
 					]
 			},
 			{
@@ -817,7 +817,7 @@
 				},
 				"notables":[
 					"A major German offensive campaign through the forest of the Adrennes region to split the Allied troops in two",
-					"The terrain and improving weather conditions favoured the Allies. It was one of the largest and bloodiest battles of WWII"
+					"The terrain and improving weather conditions favoured the Allies. It was one of the largest/bloodiest battles of WWII"
 					]
 			},
 			{
@@ -839,11 +839,11 @@
 		"inventions": [{
 				"name": "First Powered Flight",
 				"year": "1903",
-				"significance": "The Wright brothers developed the first fully functional airplane, which has since been used for many purposes, such as travel. They also improved rear rudder technology by making their plane steerable"
+				"significance": "The Wright brothers developed the first, fully functional, steerable, airplane"
 			}, {
 				"name": "Penicillin",
 				"year": "1928",
-				"significance": "Fleming's new antibiotics saved many lives, and were the first medications to be effective against many bacterial infections"
+				"significance": "Fleming's new antibiotics were the first medications to be effective against many bacterial infections"
 			}, {
 				"name": "First Nuclear Reactor",
 				"year": "1942",
@@ -876,21 +876,21 @@
 				"name": "Election of 1908",
 				"result": "Republican Taft defeated Democratic Bryan",
 				"notables": [
-					"Theodore Roosevelt persuaded the Republican Party to nominate the winner, his close friend and Secretary of War, to become his successor",
-					"Despite two previous defeats, the loser ran a vigorous campain against the winner, but suffered the worst loss in his three presidential campaigns"
+					"T.D. Roosevelt persuaded the Republican Party to nominate his close friend and Secretary of War to become his successor",
+					"The loser ran a vigorous campain against the winner, but suffered the worst loss in his three presidential campaigns"
                    		]
 			},{
 				"name": "Election of 1912",
 				"result": "Democratic Wilson defeated Progressive Roosevelt and Republican Taft",
 				"notables": [
-					"After failing to recieve the Republican nomination, Roosevelt created the Progressive Party to run against Wilson and Taft",
+					"After not recieving the Republican nomination, Roosevelt created the Progressive Party to run against Wilson and Taft",
 					"Taft's 8 electoral votes fewest ever for an incumbent president"
                    		]
 			},{
 				"name": "Election of 1916",
 				"result": "Democratic Wilson defeated Republican Hughes",
 				"notables": [
-					"The winner's campaign slogan 'he kept us out of the war' was popular among Americans who wanted to avoid involvement in WWI",
+					"The winner's campaign slogan 'he kept us out of the war' was popular with Americans who wanted to avoid involvement in WWI",
 					"The Republican candidate was a Supreme Court Justice"
                    		]
 			},{
@@ -905,7 +905,7 @@
 				"name": "Election of 1924",
 				"result": "Republican Coolidge defeated Democratic Davis and Progressive LaFollette",
 				"notables": [
-					"The winner was credited with a booming home economy and no visible crises abroad during his brief time as president (following the former's death)",
+					"The winner was credited with a booming home economy and no visible crises abroad during his brief time as president",
 					"A split in the Democratic party divded his competition between two candidates, helping him to win the presidency"
                    		]
 			},{
@@ -913,7 +913,7 @@
 				"result": "Republican Hoover defeated Democratic Smith",
 				"notables": [
 					"The winner won a landslide victory on pledges to continue the economic boom of the Coolidge years",
-					"The loser suffered politically from anti-Catholic prejudice, his anti-prohibitionist stance, and association with the corruption of Tammany Hall"
+					"The loser suffered from anti-Catholic prejudice, anti-prohibitionist stance, and association with the corruption of Tammany Hall"
                    		]
 			},{
 				"name": "Election of 1932",
@@ -926,8 +926,8 @@
 				"name": "Election of 1936",
 				"result": "Democratic F.D. Roosevelt defeated Republican Landon",
 				"notables": [
-					"The New Deal policies already enacted by the incumbent president (such as Social Security and unemployment benefits) were highly popular",
-					"This election is notable for the The Literary Digest poll, which had accurately predicted the last 5 elections, which was wrong.  The same year, the Gallop Poll not only predicted the correct winning candidate, it also predicted The Literary Digest's mis-prediction"
+					"The New Deal policies already enacted by the incumbent president were highly popular",
+					"Gallop Poll not only predicted the correct winning candidate, it also predicted The Literary Digest's mis-prediction"
                    		]
 			},{
 				"name": "Election of 1940",
@@ -963,7 +963,7 @@
 			{
 				"name":"Schenck v. United States",
 				"year":"1919",
-				"ruling":"Speech that presents a “clear and present danger” to the security of the United States is in violation of the principle of free speech"
+				"ruling":"Speech that presents a “clear and present danger” to the security of the United States violates free speech"
 			},
 			{
 				"name":"Near v. Minnesota",
@@ -973,7 +973,7 @@
 			{
 				"name":"Tennessee v. Scopes",
 				"year":"1925",
-				"ruling":"Scopes was found guilty of violating the Butler Act (teaching evolution in public schools where it was illegal) and fined, but the verdict was thrown out on a technicality on an appeal"
+				"ruling":"Scopes was found guilty of violating the Butler Act, but the verdict was thrown out on a technicality"
 			}
 		],
 
@@ -991,12 +991,12 @@
 			{
 				"name":"Creation of NATO",
 				"year":"1949",
-				"significance":"Constitutes a system of collective defence whereby its member states agree to mutual defense in repsonce to an attack by any external party"
+				"significance":"Created an intergovernmental military alliance based on the North Atlantic Treaty"
 			},
 			{
 				"name":"16th Constitutional Ammendment passed",
 				"year":"1913",
-				"significance":"Permits Congress to levy an income tax without apportioning it among the states or basing it on the United States Census"
+				"significance":"Permits Congress to levy an income tax without diving it among the states or basing it on the Census"
 			},
 			{
 				"name":"17th Constitutional Ammendment passed",
@@ -1016,12 +1016,12 @@
 			{
 				"name":"20th Constitutional Ammendment passed",
 				"year":"1933",
-				"significance":"Changes the date on which the terms of the President and Vice President, and Senators and Representatives end and begin"
+				"significance":"Changes the date on which the terms of the President,Vice President, Senators and Representatives end/begin"
 			},
 			{
 				"name":"21st Constitutional Ammendment passed",
 				"year":"1933",
-				"significance":"Repeals the 18th Amendment and gives the States the power to prohibit or regulate the transportation or importation of alcohol for delivery or use"
+				"significance":"Repeals the 18th Amendment and gives the States the power to prohibit or regulate alcohol"
 			}
 		]
 
@@ -1053,7 +1053,7 @@
 				},
 				"notables":[
 					"The only major battle fought between surface combatants during the main phase of the Korean War",
-					"Four North Korean torpedo and gunboats encountered an Allied flotilla of three ships, but three were destroyed by gunfire before their torpedoes could be fired"
+					"3/4 North Korean torpedo and gunboats were destroyed by an Allied flotilla before their torpedoes could be fired"
 					]
 			},
 			{
@@ -1066,7 +1066,7 @@
 				},
 				"notables":[
 					"The code name for the operation was Operation Chromite",
-					"This amphibious invasion and battle of the Korean War resulted in a decisive victory and strategic reversal in favor of the United Nations, and led to the recapture of the South Korean capital of Seoul two weeks later"
+					"This amphibious invasion/battle resulted in a decisive victory for the UN, and led to the recapture of Seoul 2 weeks later"
 					]
 				
 			},
