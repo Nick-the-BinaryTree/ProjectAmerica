@@ -75,7 +75,7 @@ function eraBackground(era){
             $(document.body).css('background-image','url(img/era5/Reagan.jpg)');
         }
         else{
-            $(document.body).css('background-image','url(img/era5/Beatles.jpg)');
+            $(document.body).css('background-image','url(img/era5/Unix.jpg)');
         }
     }
 }
