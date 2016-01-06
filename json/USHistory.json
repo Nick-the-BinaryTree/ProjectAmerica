@@ -587,6 +587,17 @@
                "Complete destruction of the Spanish fleet",
                "End of large-scale naval operations in the Spanish-American war"
             ]
+         },
+         {
+            "name":"Monitor vs. Merrimack",
+            "year":"1862",
+            "location":"Virginia",
+            "victor":"Unclear",
+            "loser":"Unclear",
+            "notables":[
+               "history’s first duel between ironclad warships and the beginning of a new era of naval warfare",
+               "The Confederacy struggled to source the iron plating needed for their ship, resorting to melted tools and railroad tracks"
+               ]
          }
 
       ],
@@ -748,6 +759,16 @@
             "name":"15th Constitutional Ammendment passed",
             "year":"1870",
             "significance":"Prohibits the denial of the right to vote based on race, color, or previous condition of servitude"
+         },
+         {
+            "name":"Homestead Act",
+            "year":"1862",
+            "significance":"Encouraged Western migration by providing settlers 160 acres of public land"
+         },
+         {
+            "name":"Morril Act",
+            "year":"1862",
+            "significance":"Granted states land to finance new colleges specializing in agriculture and the mechanic arts"
          }
 
       ]
@@ -1022,6 +1043,11 @@
             "name":"21st Constitutional Ammendment passed",
             "year":"1933",
             "significance":"Repeals the 18th Amendment and gives the States the power to prohibit or regulate alcohol"
+         },
+         {
+            "name":"Pure Food and Drugs Act",
+            "year":"1906",
+            "significance":"A consumer protection law requiring companies to label active ingredients and uphold purity levels"
          }
       ]
 
