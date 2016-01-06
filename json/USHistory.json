@@ -487,7 +487,19 @@
 
    "era3": {
 
-      "battles": [{
+      "battles": [
+         {
+           "name":"Raid on Harper's Ferry",
+           "year":"1859",
+           "location":"Virginia",
+           "victor":"US Marines",
+           "loser":"John Brown & Abolitionists",
+           "notables":[
+              "An attempt to start an armed slave revolt and destroy the institution of slavery",
+              "Helped make further accommodation between North and South nearly impossible and thus became an important impetus of the Civil War"
+              ]
+         },
+         {
             "name": "First Battle of Bull Run",
             "year": "1861",
             "location": "Virginia",
@@ -1048,6 +1060,16 @@
             "name":"Pure Food and Drugs Act",
             "year":"1906",
             "significance":"A consumer protection law requiring companies to label active ingredients and uphold purity levels"
+         },
+         {
+            "name":"Sinking of the RMS Lusitania",
+            "year":"1915",
+            "significance":"Turned public opinion against Germany, contributed to the American entry into WWI"
+         },
+         {
+            "name":"Zimmermann Telegram",
+            "year":"1917",
+            "significance":"The coded message instructed Mexico to form military alliance with Germany against the US if it entered WWI"
          }
       ]
 
