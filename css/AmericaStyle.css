@@ -63,6 +63,18 @@ body{
     z-index: 1;
 }
 
+.floating{
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;
+    animaton-timing-function: linear;
+}
+
+.ui-draggable-dragging{
+    animation: none;
+}
+
 .optionA{
     background: rgba(255, 20, 40, .7);
 }
@@ -272,3 +284,11 @@ input[type=radio]{
     font-size:2em;
 }
 
+@keyframes float{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-1.5em);
+    }
+}

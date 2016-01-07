@@ -602,12 +602,6 @@ function getQuestions(ranCategory){
 
 }
 
-
-
-
-
-
-
 function getFallbackFact(){
     var category = Math.floor(Math.random()*5)+1; //Randomly pick from categories
     
@@ -628,3 +622,21 @@ function getFallbackFact(){
     }
 }
 
+function isCorrect(ans){
+    //temporary implementation 
+    return $(ans).hasClass("correct");
+}
+
+//time is 30-time spent, or 0 if more than 30 seconds were spent
+function calculateScore(numWrong, time){
+     var score = stdScore - (stdScore * deduction * numWrong);
+     score = score + (speedBonus * time);
+     return score;
+
+ 
+}
+
+function updateScore(newScore){
+   currentScore+=newScore;
+   $( "p.scoreText" ).html("Score: "+currentScore);
+}

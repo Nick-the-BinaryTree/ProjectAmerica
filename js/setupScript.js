@@ -88,72 +88,6 @@ function gameStart(){
     questionSetup();
 }
 
-
-function dragManager(){
-    
-        $( ".option" ).draggable({
-            containment: "window",
-            scroll: false
-        });
-    
-        q1=false;
-        q2=false;
-
-    $(".answerBox1").droppable({
-        accept: ".optionA",
-        activeClass:"answerBox1Active",
-        tolerance: "touch",
-        drop: function(event, ui) {
-            if(isCorrect("#"+ui.draggable.attr("id"))){
-                q1=true;
-                $(this).addClass( "answerBox1Dropped" )
-                ui.draggable.position({
-                    my: "center",
-                    at: "center",
-                    of: $(this)
-                    });
-
-                setTimeout($("#"+ui.draggable.attr("id")).draggable( "destroy" ),50);
-                if(q2){ //If other question was also answered correctly, go to next set
-                    questionSetup();
-                }
-
-            }
-            else{
-                $("#"+ui.draggable.attr("id")).draggable({ revert: "valid" });
-                numWrong++;
-            }
-
-      }
-      });
-
-      $(".answerBox2").droppable({
-        accept: ".optionB",
-        activeClass:"answerBox2Active",
-        drop: function(event, ui) {
-            if(isCorrect("#"+ui.draggable.attr("id"))){
-                q2=true;
-                $(this).addClass( "answerBox2Dropped" )
-                ui.draggable.position({
-                    my: "center",
-                    at: "center",
-                    of: $(this)
-                    });
-                setTimeout($("#"+ui.draggable.attr("id")).draggable( "destroy" ),50);
-                if(q1){
-                    questionSetup();
-                }
-
-            }
-            else{
-                $("#"+ui.draggable.attr("id")).draggable({ revert: "valid" });
-                numWrong++;
-            }
-
-        }
-    });
-}
-
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
 /*function getQuestion(){
@@ -168,55 +102,16 @@ function dragManager(){
 */
 
 
-
-
 //called once at start of game
 function startTimer(){
     $( "p.timeText" ).html("Time: "+timeElapsed);
     var timer= setInterval(function() {
-    timeElapsed++;
-    questionTime++;
-    if(inGame){
-        $( "p.timeText" ).html("Time: "+timeElapsed);
-    }
+        timeElapsed++;
+        questionTime++;
+        if(inGame){
+            $( "p.timeText" ).html("Time: "+timeElapsed);
+        }
     }, 1000);
-}
-
-
-
-function isCorrect(ans){
-    //temporary implementation 
-    return $(ans).hasClass("correct");
-}
-
-function toScore(){
-    $("#yourScore").text("Your Score: " + currentScore);
-    $(".game").hide();
-    $(".scoreBoard").show();
-    inGame=false;
-    $(".returnOption").click(function(){
-        resetGame();
-        backToMenu();
-    });
-}
-
-function backToMenu(){
-    $(".scoreBoard").hide();
-    $(".pregame").show();
-    $(".eraChoice").hide();
-    $(".settings").hide();
-    $(".startContainer").show();
-    gameSetup(); //The cycle never ends! What is life?
-}
-
-function resetGame(){
-    currentScore = 0;
-    qSet = 0;
-    count1=-1;
-    count2=0;
-    timeElapsed = 0;
-    
-    $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
 }
 
 function setBlock(tile) {
@@ -233,10 +128,14 @@ function setBlock(tile) {
         "left": x,
         "top": y       
      });
+    
+    
+    $(tile).css({
+        "animation-delay": Math.random()*4 + "s" 
+    });  
  
     $(tile).show(); //In case any were hidden because they contained nothing
 }
-
 
 function genX() {
     var x = Math.floor(Math.random() * (window.innerWidth-marginX))+2;
@@ -245,23 +144,7 @@ function genX() {
 
 function genY() {
     var y = Math.floor(Math.random() * (window.innerHeight-marginY*2.5))+marginY;
-return y;
-}
-
-//time is 30-time spent, or 0 if more than 30 seconds were spent
-function calculateScore(numWrong, time){
-     var score = stdScore - (stdScore * deduction * numWrong);
-     score = score + (speedBonus * time);
-     return score;
-
- 
- }
-
-function updateScore(newScore){
-  
-    
-   currentScore+=newScore;
-   $( "p.scoreText" ).html("Score: "+currentScore);
+    return y;
 }
 
 //checks overlap given point and arrays of previous x and y positions
@@ -278,8 +161,6 @@ function checkOverlap(xCoor, yCoor){
 
 }
 
-
-
 //calculates distance between two top left corners, compares that with diagonal
 function willOverlap(x1,x2,y1,y2){
     var d = Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2));
@@ -294,7 +175,6 @@ function getAnswerSize(){
       return dist*1.25;
 
 }
-
 
 //returns array with numeric values of x positions of all answer bubbles 
 function getXPositions(){
@@ -325,6 +205,7 @@ function getYPositions(){
     return YPos;
 
 }
+
 /*http://codepen.io/anon/pen/myyzXV
 
 function animateDiv(){
