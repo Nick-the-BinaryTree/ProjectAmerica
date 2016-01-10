@@ -63,6 +63,10 @@ body{
     z-index: 1;
 }
 
+.option:hover{
+    cursor: pointer;
+}
+
 .floating{
     animation-name: float;
     animation-duration: 4s;
@@ -201,7 +205,8 @@ body{
 .buttonOption:hover{
     -webkit-box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
 }
 
 .buttonText{
@@ -259,7 +264,8 @@ input[type=radio]{
 .goButton:hover{
     -webkit-box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
 }
 
 .startButton{
@@ -277,7 +283,8 @@ input[type=radio]{
 .startButton:hover{
     -webkit-box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 48px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
 }
 
 .startText{
