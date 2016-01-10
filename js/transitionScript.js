@@ -1,4 +1,5 @@
 function toScore(){
+    console.log("score");
     $("#yourScore").text("Your Score: " + currentScore);
     $(".game").hide();
     $(".scoreBoard").show();
@@ -20,10 +21,9 @@ function backToMenu(){
 
 function resetGame(){
     currentScore = 0;
-    qSet = 0;
-    count1=-1;
-    count2=0;
+    questionTime=0;
     timeElapsed = 0;
-    
+    categories=[];
+    askedQuestions=[];
     $(document.body).css('background-image','url(img/HomeInTheWoods.jpg)');
 }

@@ -105,6 +105,7 @@ function gameSetup(){
     });
     */
     
+    
     $(".create").click(function(){
 
         $(".startContainer").hide();
@@ -131,12 +132,13 @@ function gameSetup(){
                 
                 
         
-            
+                qSet=1;
                 $(".pregame").hide();
                 $(".game").show();
                 console.log(genFalseAnswers("year",false,gameEvents.battles[0]));
             
                 eraBackground(era);
+            
 
                 gameStart();
             });
@@ -290,7 +292,11 @@ function genFalseAnswers(type, isNotable, correct){
 
 
 function questionSetup(){
-
+    $(".game").show();
+    console.log("questions");
+    console.log(qLimit);
+    console.log(qSet);
+    console.log(numAvailableQs);
     $(".answerBox1").removeClass( "answerBox1Dropped" );
     $(".answerBox2").removeClass( "answerBox2Dropped" );
 
@@ -412,34 +418,6 @@ function questionSetup(){
         toScore();
     }
     
-
-
-
-
-        
-        //Check if there is a second question set for event
-        /*
-        
-        var qa = getQuestion();
-        $('#questionBox td').eq(0).html(qa[0]);
-
-        $('#questionBox td').eq(2).html(qa[5]);
-
-        $( "#a1" ).html(qa[1]);
-        $( "#a2" ).html(qa[2]);
-        $( "#a3" ).html(qa[3]);
-        $( "#a4" ).html(qa[4]);
-        $( "#b1" ).html(qa[6]);
-        $( "#b2" ).html(qa[7]);
-        $( "#b3" ).html(qa[8]);
-        $( "#b4" ).html(qa[9]);
-        
-
-       
-        //$(".option").each(animateDiv);
-        //console.log("MarginX " + marginX);
-        //console.log("MarginY " + marginY);
-*/
         
     
    
