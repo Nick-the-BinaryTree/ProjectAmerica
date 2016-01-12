@@ -1,93 +1,3 @@
-function setQuestionLimit(lengthSelect){
-    var limit = lengthSelect;
-    numAvailableQs=0;
-    for(var i=0;i<categories.length;i++){
-        numAvailableQs += gameEvents[categories[i]].length;
-    }
-    
-    if(limit==="quick"){
-        qLimit = 10;
-    }
-    else if(limit==="medium"){
-        qLimit = 20;
-    }
-    else if(limit==="long"){
-        qLimit = 30;
-    }
-    else{
-        qLimit = numAvailableQs; //Code to use every event
-    }
-}
-
-function eraBackground(era){
-    
-    var ranImage = Math.floor(Math.random()*3)+1; //Random selection from 3 possible backgrounds
-    
-    if(era === "era1"){
-        if(ranImage === 1){
-            $(document.body).css('background-image','url(img/era1/CrossingDelaware.jpg)');
-        }
-        else if(ranImage === 2){
-            $(document.body).css('background-image','url(img/era1/DeclarationOfIndependence.jpg)');
-        }
-        else{
-            $(document.body).css('background-image','url(img/era1/SurrenderOfGeneralBurgoyne.jpg)');
-        }
-    }
-    else if(era === "era2"){
-        if(ranImage === 1){
-            $(document.body).css('background-image','url(img/era2/AndrewJackson.jpg)');
-        }
-        else if(ranImage === 2){
-            $(document.body).css('background-image','url(img/era2/EmigrantsCrossingThePlains.jpg)');
-        }
-        else{
-            $(document.body).css('background-image','url(img/era2/HenryClay.jpg)');
-        }
-    }
-    else if(era === "era3"){
-        if(ranImage === 1){
-            $(document.body).css('background-image','url(img/era3/Gettysburg.jpg)');
-        }
-        else if(ranImage === 2){
-            $(document.body).css('background-image','url(img/era3/McKinley.png)');
-        }
-        else{
-            $(document.body).css('background-image','url(img/era3/SouthManchuriaRailway.jpg)');
-        }
-    }
-    else if(era === "era4"){
-        if(ranImage === 1){
-            $(document.body).css('background-image','url(img/era4/Coca-Cola.jpg)');
-        }
-        else if(ranImage === 2){
-            $(document.body).css('background-image','url(img/era4/Coolidge.jpg)');
-        }
-        else{
-            $(document.body).css('background-image','url(img/era4/FlagRaising.jpg)');
-        }
-    }
-    else if(era === "era5"){
-        if(ranImage === 1){
-            $(document.body).css('background-image','url(img/era5/Nixon-Johnson.jpg)');
-        }
-        else if(ranImage === 2){
-            $(document.body).css('background-image','url(img/era5/Reagan.jpg)');
-        }
-        else{
-            $(document.body).css('background-image','url(img/era5/Unix.jpg)');
-        }
-    }
-}
-
-function gameStart(){
-    timeElapsed=0;
-    currentScore=0;
-    inGame =true;
-    startTimer();
-    questionSetup();
-}
-
 //temporary implementation for testing. 
 //returns array of form: [q1, correct, wrong, wrong, wrong, q2, correct, wrong,]
 /*function getQuestion(){
@@ -102,27 +12,15 @@ function gameStart(){
 */
 
 
-//called once at start of game
-function startTimer(){
-    $( "p.timeText" ).html("Time: "+timeElapsed);
-    var timer= setInterval(function() {
-        timeElapsed++;
-        questionTime++;
-        if(inGame){
-            $( "p.timeText" ).html("Time: "+timeElapsed);
-        }
-    }, 1000);
-}
-
 function setBlock(tile) {
     var x = genX();
     var y = genY();
-    var XArr = getXPositions();
-    var YArr = getYPositions();
-    while(checkOverlap(x,y)){
-        x=genX();
-        y=genY();
-    }
+    //var XArr = getXPositions();
+    //var YArr = getYPositions();
+    //while(checkOverlap(x,y)){
+    //    x=genX();
+    //    y=genY();
+    //}
     
     $(tile).css({
         "left": x,
@@ -132,8 +30,8 @@ function setBlock(tile) {
     
     $(tile).css({
         "animation-delay": Math.random()*4 + "s" 
-    });  
- 
+    });
+     
     $(tile).show(); //In case any were hidden because they contained nothing
 }
 
@@ -148,7 +46,7 @@ function genY() {
 }
 
 //checks overlap given point and arrays of previous x and y positions
-function checkOverlap(xCoor, yCoor){
+/*function checkOverlap(xCoor, yCoor){
     xArr = getXPositions();
     yArr = getYPositions();
     for(var i=0;i<xArr.length;i++){
@@ -204,7 +102,7 @@ function getYPositions(){
     YPos.push($("#b4").css("top").replace(/[^-\d\.]/g, ''));
     return YPos;
 
-}
+}*/
 
 /*http://codepen.io/anon/pen/myyzXV
 

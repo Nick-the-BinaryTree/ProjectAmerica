@@ -64,6 +64,9 @@ var prevEvent;
 //number of available questions for the game
 var numAvailableQs;
 
+//All bubbles
+var tiles=["#a1", "#a2", "#a3", "#a4", "#b1", "#b2", "#b3", "#b4"];
+
 //creates client
 /*
 var client = new Client("project-america.herokuapp.com", 80, function(error) { 
@@ -126,27 +129,15 @@ function gameSetup(){
                 var other = $('#other')[0].checked;
                 var length = $('input[name="length"]:checked', '#lengthForm').val();
                 selection = [era, battles, inventions, elections, court, other, length];
-                getEvents();
-                console.log(gameEvents);
-                setQuestionLimit(length);
                 
-                
-        
-                qSet=1;
-                $(".pregame").hide();
-                $(".game").show();
-                console.log(genFalseAnswers("year",false,gameEvents.battles[0]));
-            
                 eraBackground(era);
-            
-
-                gameStart();
+                
+                getEvents();
             });
         });
     });
 
 }
-
 
 function getEvents(){ //Working! (At least w/ server)
     //Create data set for game from master set
@@ -154,7 +145,7 @@ function getEvents(){ //Working! (At least w/ server)
     $.ajax({
         url:"json/USHistory.json",
         dataType:"text",
-        async: false,
+        async: true,
         success:function(data){
             
             var master = JSON.parse(data);
@@ -180,10 +171,6 @@ function getEvents(){ //Working! (At least w/ server)
             
             //var blankCopy = '{"battles" : [],"inventions" : [],"elections" : [],"court": [], "other" : [] }';
 
-            //console.log(blankCopy);
-
-
-              
             //var newCopy=JSON.parse(blankCopy);
             
             if(selection[1]===true){
@@ -209,11 +196,63 @@ function getEvents(){ //Working! (At least w/ server)
     
             //gameEvents = newCopy;
             gameEvents = era;
+        
+            setup2();
     
         }
     });
 }
 
+function setup2(){
+    setQuestionLimit(length);
+    qSet=1;
+    $(".pregame").hide();
+    $("body").css("overflow-y", "hidden");
+    $(".game").show();
+    gameStart();
+}
+
+function gameStart(){
+    timeElapsed=0;
+    currentScore=0;
+    inGame = true;
+    startTimer();
+    $(".game").show();
+    questionSetup();
+}
+
+//called once at start of game
+function startTimer(){
+    $( "p.timeText" ).html("Time: "+timeElapsed);
+    var timer= setInterval(function() {
+        timeElapsed++;
+        questionTime++;
+        if(inGame){
+            $( "p.timeText" ).html("Time: "+timeElapsed);
+        }
+    }, 1000);
+}
+
+function setQuestionLimit(lengthSelect){
+    var limit = lengthSelect;
+    numAvailableQs=0;
+    for(var i=0;i<categories.length;i++){
+        numAvailableQs += gameEvents[categories[i]].length;
+    }
+    
+    if(limit==="quick"){
+        qLimit = 10;
+    }
+    else if(limit==="medium"){
+        qLimit = 20;
+    }
+    else if(limit==="long"){
+        qLimit = 30;
+    }
+    else{
+        qLimit = numAvailableQs; //Code to use every event
+    }
+}
 
 //Correct is the current event whose information is correct for all questions
 //type is string with type of question, all lowercase. 
@@ -292,11 +331,13 @@ function genFalseAnswers(type, isNotable, correct){
 
 
 function questionSetup(){
-    $(".game").show();
-    console.log("questions");
-    console.log(qLimit);
-    console.log(qSet);
-    console.log(numAvailableQs);
+
+    resizeTiles();
+    
+    //console.log("questions");
+    //console.log(qLimit);
+    //console.log(qSet);
+    //console.log(numAvailableQs);
     $(".answerBox1").removeClass( "answerBox1Dropped" );
     $(".answerBox2").removeClass( "answerBox2Dropped" );
 
@@ -321,14 +362,9 @@ function questionSetup(){
 
         qSet++;
         
-        setBlock("#a1");
-        setBlock("#a2");
-        setBlock("#a3");
-        setBlock("#a4");
-        setBlock("#b1");
-        setBlock("#b2");
-        setBlock("#b3");
-        setBlock("#b4")
+        for(var x = 0; x < tiles.length; x++){
+            setBlock(tiles[x]);
+        }
 
         dragManager();
         //Put name of event at top
@@ -342,9 +378,6 @@ function questionSetup(){
         var falseAnswersB=[];
         var qA=(questions[0].toLowerCase()).replace(':', '');
         var qB=(questions[1].toLowerCase()).replace(':', '');
-        console.log(qA);
-        console.log(qB);
-
 
         $('#questionBox td').eq(0).html(questions[0]);
         $('#questionBox td').eq(2).html(questions[1]);
@@ -404,22 +437,15 @@ function questionSetup(){
 
             }
 
-            console.log(falseAnswersA.toString());
-            console.log(falseAnswersB.toString());
             prevEvent= ranEvent;
             
-            
+            sizeTiles();
 
-    
-        
     }
 
     else{
         toScore();
-    }
-    
-        
-    
+    }   
    
 }
 
@@ -617,4 +643,28 @@ function calculateScore(numWrong, time){
 function updateScore(newScore){
    currentScore+=newScore;
    $( "p.scoreText" ).html("Score: "+currentScore);
+}
+
+function sizeTiles(){
+    for(var x = 0; x < tiles.length; x++){
+        var tile = tiles[x];
+        
+        while(($(tile).height()/window.innerHeight)*100 > 12){
+            var size = parseInt($(tile).css("font-size"));
+            $(tile).css("font-size", size-.1);
+            
+            var width = $(tile).width();
+            $(tile).width(width+20);
+        }
+    }
+}
+
+function resizeTiles(){
+    for(var x = 0; x < tiles.length; x++){
+        var tile = tiles[x];
+        
+        $(tile).css("width", "10%");
+        $(tile).css("font-size", "1.2em");
+        
+    }
 }

@@ -21,7 +21,8 @@ function dragManager(){
                     at: "center",
                     of: $(this)
                     });
-                $(this).removeClass(".floating");
+                
+                $(ui.draggable).removeClass("floating");
 
                 setTimeout($("#"+ui.draggable.attr("id")).draggable( "destroy" ),50);
                 if(q2){ //If other question was also answered correctly, go to next set
@@ -49,7 +50,11 @@ function dragManager(){
                     at: "center",
                     of: $(this)
                     });
+                
+                $(ui.draggable).removeClass("floating");
+                
                 setTimeout($("#"+ui.draggable.attr("id")).draggable( "destroy" ),50);
+                
                 if(q1){
                     questionSetup();
                 }
