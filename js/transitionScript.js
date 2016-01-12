@@ -3,7 +3,7 @@ function toScore(){
     $("#yourScore").text("Your Score: " + currentScore);
     $(".game").hide();
     $(".scoreBoard").show();
-    $("body").css("overflow-y", "hidden");
+    $("body").css("overflow-y", "visible");
     inGame=false;
     $(".returnOption").click(function(){
         resetGame();

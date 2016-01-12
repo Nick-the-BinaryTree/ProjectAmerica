@@ -15,12 +15,12 @@
 function setBlock(tile) {
     var x = genX();
     var y = genY();
-    //var XArr = getXPositions();
-    //var YArr = getYPositions();
-    //while(checkOverlap(x,y)){
-    //    x=genX();
-    //    y=genY();
-    //}
+    /*var XArr = getXPositions();
+    var YArr = getYPositions();
+    while(checkOverlap(x,y)){
+        x=genX();
+        y=genY();
+    }*/
     
     $(tile).css({
         "left": x,
@@ -103,44 +103,3 @@ function getYPositions(){
     return YPos;
 
 }*/
-
-/*http://codepen.io/anon/pen/myyzXV
-
-function animateDiv(){
-    var newq = [makeNewPosition()];
-    var oldq = $('.option').offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-    $('.option').animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv();        
-    });
-    
-};
-
-function makeNewPosition(){
-    
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
-    
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    
-    return [nh,nw];    
-    
-}
-
-function calcSpeed(prev, next) {
-    
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-    
-    var greatest = x > y ? x : y;
-    
-    var speedModifier = 0.05;
-
-    var speed = Math.ceil(greatest/speedModifier);
-
-    return speed;
-
-}
-*/

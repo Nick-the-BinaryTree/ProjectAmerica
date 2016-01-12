@@ -5,6 +5,8 @@ var marginX = window.innerWidth/4;
 var marginY = window.innerHeight/4;
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
+//For ajax purposes
+var firstGame = true;
 
 //controls scoring 
 var deduction = 0.1; //percent deduction for wrong answers
@@ -27,7 +29,6 @@ var speedBonus =5;
 var questionTime=0;
 //true during gameplay, for timer use
 var inGame;
-
 
 //Set to false at the start of question, true when correct: control gameplay
 var q1=false;
@@ -66,6 +67,9 @@ var numAvailableQs;
 
 //All bubbles
 var tiles=["#a1", "#a2", "#a3", "#a4", "#b1", "#b2", "#b3", "#b4"];
+
+//All the history!
+var master;
 
 //creates client
 /*
@@ -141,69 +145,81 @@ function gameSetup(){
 
 function getEvents(){ //Working! (At least w/ server)
     //Create data set for game from master set
-
-    $.ajax({
-        url:"json/USHistory.json",
-        dataType:"text",
-        async: true,
-        success:function(data){
-            
-            var master = JSON.parse(data);
-            
-            var era;
-            
-            if(selection[0]==="era1"){
-                //Set newEvents = to JSON Object only containing that era
-                era = master.era1;
-            }
-            else if(selection[0]==="era2"){
-                era = master.era2;
-            }
-            else if(selection[0]==="era3"){
-                era = master.era3;
-            }
-            else if(selection[0]==="era4"){
-                era = master.era4;
-            }
-            else if(selection[0]==="era5"){
-                era = master.era5;
-            }
-            
-            //var blankCopy = '{"battles" : [],"inventions" : [],"elections" : [],"court": [], "other" : [] }';
-
-            //var newCopy=JSON.parse(blankCopy);
-            
-            if(selection[1]===true){
-                //newCopy["battles"] = era.battles;
-                categories.push("battles");
-            }
-            if(selection[2]===true){
-                //newCopy["inventions"] = era.inventions;
-                categories.push("inventions");
-            }
-            if(selection[3]===true){
-                //newCopy["elections"] = era.elections;
-                categories.push("elections");
-            }
-            if(selection[4]===true){
-                //newCopy["court"] = era.court;
-                categories.push("court");
-            }
-            if(selection[5]===true){
-                //newCopy["other"] = era.other;
-                categories.push("other");
-            }
     
-            //gameEvents = newCopy;
-            gameEvents = era;
-        
-            setup2();
-    
-        }
-    });
+    if(firstGame){
+
+        $.ajax({
+            url:"json/USHistory.json",
+            dataType:"text",
+            async: true,
+            success:function(data){
+
+                firstGame = false;
+            
+                master = JSON.parse(data);
+
+                setupData();
+
+            }
+        });
+    }
+    else{
+        setupData();
+    }
 }
 
-function setup2(){
+function setupData(){
+    var era;
+
+    if(selection[0]==="era1"){
+        //Set newEvents = to JSON Object only containing that era
+        era = master.era1;
+    }
+    else if(selection[0]==="era2"){
+        era = master.era2;
+    }
+    else if(selection[0]==="era3"){
+      era = master.era3;
+    }
+    else if(selection[0]==="era4"){
+        era = master.era4;
+    }
+    else if(selection[0]==="era5"){
+        era = master.era5;
+    }
+
+    //var blankCopy = '{"battles" : [],"inventions" : [],"elections" : [],"court": [], "other" : [] }';
+
+    //var newCopy=JSON.parse(blankCopy);
+
+    if(selection[1]===true){
+        //newCopy["battles"] = era.battles;
+        categories.push("battles");
+    }
+    if(selection[2]===true){
+        //newCopy["inventions"] = era.inventions;
+        categories.push("inventions");
+    }
+    if(selection[3]===true){
+        //newCopy["elections"] = era.elections;
+        categories.push("elections");
+     }
+    if(selection[4]===true){
+        //newCopy["court"] = era.court;
+        categories.push("court");
+    }
+    if(selection[5]===true){
+        //newCopy["other"] = era.other;
+         categories.push("other");
+    }
+
+    //gameEvents = newCopy;
+    gameEvents = era;
+
+    setupFinal();
+}
+
+function setupFinal(){
     setQuestionLimit(length);
     qSet=1;
     $(".pregame").hide();
@@ -233,8 +249,8 @@ function startTimer(){
     }, 1000);
 }
 
-function setQuestionLimit(lengthSelect){
-    var limit = lengthSelect;
+function setQuestionLimit(){
+    var limit = selection[6];
     numAvailableQs=0;
     for(var i=0;i<categories.length;i++){
         numAvailableQs += gameEvents[categories[i]].length;
